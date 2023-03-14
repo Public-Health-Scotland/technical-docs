@@ -1,9 +1,5 @@
 # Posit Workbench, SMR01 and Memory Usage
 
-## Background
-
-[Posit Team](https://posit.co/products/enterprise/team/) enterprise applications have been deployed for [Public Health Scotland (PHS)](https://publichealthscotland.scot/) on the [Microsoft Azure](https://azure.microsoft.com/en-gb/) cloud computing platform.
-
 ## Purpose
 
 This document aims to provide users with information on the minimum memory requirements in an R session for various sizes of extracts, using the SMR01 dataset as an example.

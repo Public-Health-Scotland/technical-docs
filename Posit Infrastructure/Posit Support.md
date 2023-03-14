@@ -1,17 +1,5 @@
 # Posit Support Information
 
-## Background
-
-[Posit Team](https://posit.co/products/enterprise/team/) enterprise applications have been deployed for [Public Health Scotland (PHS)](https://publichealthscotland.scot/) on the [Microsoft Azure](https://azure.microsoft.com/en-gb/) cloud computing platform.
-
-Posit Team comprises three applications:
-
-* [Posit Workbench](https://posit.co/products/enterprise/workbench/) - provides access to all the development environments RStudio, Jupyter and VS Code for both R and Python;
-* [Posit Package Manager](https://posit.co/products/enterprise/package-manager/) - a repository management server to organise and centralise R and Python packages across Public Health Scotland;
-* [Posit Connect](https://posit.co/products/enterprise/connect/) - publish the things you create in both R & Python, including interactive applications, documents, notebooks, and dashboards. Deploy models as APIs, and configure reports to run on a custom schedule.
-
-Please note that the deployment of Posit Connect for PHS is still in development.
-
 ## Purpose
 
 This document aims to provide users of Posit Team applications with contact information for seeking support.

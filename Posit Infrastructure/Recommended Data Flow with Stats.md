@@ -1,9 +1,5 @@
 # Recommendations for writing and reading data in Stats
 
-## Background
-
-[Posit Team](https://posit.co/products/enterprise/team/) enterprise applications have been deployed for [Public Health Scotland (PHS)](https://publichealthscotland.scot/) on the [Microsoft Azure](https://azure.microsoft.com/en-gb/) cloud computing platform.
-
 ## Purpose
 
 This document aims to provide users with information on the optimum method for writing data to, and reading data from Stats, when working in an R session in Posit Workbench.

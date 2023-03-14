@@ -1,9 +1,5 @@
 # Posit Workbench - Frequently Asked Questions
 
-## Background
-
-[Posit Team](https://posit.co/products/enterprise/team/) enterprise applications have been deployed for [Public Health Scotland (PHS)](https://publichealthscotland.scot/) on the [Microsoft Azure](https://azure.microsoft.com/en-gb/) cloud computing platform.
-
 ## Purpose
 
 This document aims to answer frequently asked questions from users in relation to the use of Posit Team applications.
