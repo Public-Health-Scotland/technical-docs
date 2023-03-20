@@ -77,7 +77,7 @@ The `{parallelly}` package allows the number of CPUs available to be correctly i
 remove.packages("parallelly")
 
 # Install the 'parallelly' package
-install.packages("parallelly", repos = getOption("repos")[["binaries"]])
+install.packages("parallelly")
 
 # Identify number of CPUs available
 ncpus <- as.numeric(parallelly::availableCores())
