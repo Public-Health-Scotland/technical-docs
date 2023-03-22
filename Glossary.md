@@ -21,7 +21,7 @@ A collection of terms and definitions used across Data Science in PHS.
 | ---- | ---------- |
 | **Bayes' Theorem** | A mathematical equation for calculation of conditional probability, i.e., the probability of event B occurring given that related event A has already happened. |
 | **Bias** | A systematic error in a model that causes it to consistently underestimate or overestimate the true value of the target variable. |
-| **Big Data** | A term used to describe the large volume of data – both structured and unstructured – that inundates a business on a day-to-day basis. |
+| **Big Data** | A term used to describe the large volume of data - both structured and unstructured - that inundates a business on a day-to-day basis. |
 
 ## C
 
