@@ -4,9 +4,9 @@
 
 If you have logged in to [Posit Workbench](https://pwb.publichealthscotland.org/), you may have noticed that your home directory is empty. This is because the contents of your home directory on the old [RStudio Server](https://rstudio.nhsnss.scot.nhs.uk/auth-sign-in) **have not and will not** be transferred across to the new infrastructure. Additionally, once we migrate fully to the new system, your home directory on the current server will no longer be accessible.
 
-Going forward, nothing should be saved in your home directory apart from files explicitly listed as exceptions in the [Posit Workbench Acceptable Use Policy](Posit%20Workbench%20Acceptable%20Use%20Policy.md). There is very little space allocated to home drives and using these areas for storage will have an impact on both the performance of the system and on storage costs. In addition, the home drive is **not an authorised storage location for data**.
+Going forward, nothing should be saved in your home directory apart from files explicitly listed as exceptions in the [Posit Workbench Acceptable Use Policy](Acceptable%20Usage%20Policy%20for%20Posit%20Workbench.md). There is very little space allocated to home drives and using these areas for storage will have an impact on both the performance of the system and on storage costs. In addition, the home drive is **not an authorised storage location for data**.
 
-If you do have files stored in your current home directory that you will need in future, you can follow the steps below to export the contents of your home directory. 
+If you do have files stored in your current home directory that you will need in future, you can follow the steps below to export the contents of your home directory.
 
 ## Export Steps
 
@@ -24,4 +24,4 @@ If you do have files stored in your current home directory that you will need in
 
 ![download_pop_up](https://user-images.githubusercontent.com/36995878/214899786-f2b55fb3-5c66-455d-a1e7-78746f9b4a80.png)
 
-**Note that the exported files should not be uploaded to your home directory on Posit workbench and files should not be saved there going forward. Saving any data (regardless of sensitivity) to your home directory is a violation of the** [Posit Workbench Acceptable Use Policy](Posit%20Workbench%20Acceptable%20Use%20Policy.md).
+**Note that the exported files should not be uploaded to your home directory on Posit workbench and files should not be saved there going forward. Saving any data (regardless of sensitivity) to your home directory is a violation of the** [Posit Workbench Acceptable Use Policy](Acceptable%20Usage%20Policy%20for%20Posit%20Workbench.md).

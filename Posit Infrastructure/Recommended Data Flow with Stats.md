@@ -1,4 +1,4 @@
-# Recommendations for writing and reading data in Stats
+# Recommendations for Writing and Reading Data in Stats
 
 ## Purpose
 

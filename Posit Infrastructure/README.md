@@ -4,7 +4,7 @@
 
 The PHS deployment of Posit Team comprises three applications:
 
-* [Posit Workbench](https://pwb.publichealthscotland.org/) - provides access to all the development environments RStudio, Jupyter and VS Code for both R and Python. Workbench has been designed to make use of the managed [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/products/kubernetes-service/#overview) to provide a scalable, performant and highly-available analytical environment.;
+* [Posit Workbench](https://pwb.publichealthscotland.org/) - provides access to all the development environments RStudio, Jupyter and VS Code for both R and Python. Workbench has been designed to make use of the managed [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/products/kubernetes-service/#overview) to provide a scalable, performant and highly-available analytical environment. There is more information available about this in [Posit Workbench and Kubernetes](Posit%20Workbench%20and%20Kubernetes.md);
 * [Posit Package Manager](https://ppm.publichealthscotland.org/) - a repository management server to organise and centralise R and Python packages across Public Health Scotland;
 * Posit Connect - publish the things you create in both R & Python, including interactive applications, documents, notebooks, and dashboards. Deploy models as APIs, and configure reports to run on a custom schedule.
   
