@@ -47,7 +47,11 @@ All directories need to be on a single level, with no sub-directories. Currently
 Files created should be a `.md` file, with the following considerations:
 
 * *File name* should be human readable, title case, with spaces. The name is directly used in the navigation bar, so should be as descriptive as possible.
+  * Where the document is a step-by-step set of instructions that are universal, the file name should start with "How to ".
+  * Where the document is a recommended practice, the file name should start with "Recommended ".
 * *File structure* should follow standard markdown linting rules.
+* *The purpose* of the document should be set out first, identifying what the document is for and what it covers.
+* *Content of the document* should be written in a way that is accessible to all users, with no jargon or technical terms. Where possible, links to other documents should be used to explain concepts. If suitable, documentation to learn about concepts can be developed seperately from instructions to perform a task.
 * *Within-repo links* should be relative to the root of the repo. For example, a link to the `Posit Infrastructure` directory would be `[Posit Infrastructure](/Posit%20Infrastructure)`.
 * *External links* should be absolute links, with the full URL. For example, a link to the Public Health Scotland website would be `[Public Health Scotland](https://publichealthscotland.scot)`.
 
