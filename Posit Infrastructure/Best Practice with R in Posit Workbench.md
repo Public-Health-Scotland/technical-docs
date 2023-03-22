@@ -6,7 +6,7 @@ This document aims to offer guidance to users on good practices for efficient an
 
 ## Posit Workbench Sessions
 
-### Close your session when you’re not using it
+### Close your session when you're not using it
 
 All active users on the server are sharing a part of the available resources. By closing your session when you are not using it, you free up the resources your session was using, allowing other users the resources needed to perform their analyses.
 
@@ -24,7 +24,7 @@ You can close your session in a number of ways, and may be prompted to save any 
 
 #### View all open sessions
 
-If you want to know if you’ve accidentally left sessions running, your home page will display a list of currently active sessions.
+If you want to know if you've accidentally left sessions running, your home page will display a list of currently active sessions.
 
 ![Posit Workbench session list](https://user-images.githubusercontent.com/45657289/213185308-ee5eed27-8622-478a-a80f-ae2edf63fa54.png)
 
@@ -43,18 +43,18 @@ If you have no sessions running, then the home page will list no active sessions
 
 ### Leave a clean workspace
 
-It can feel counter-intuitive to exit a session without saving the variables in your environment, given the obvious fact that those values will be lost. But what really matters is the R script that you produced, which loaded or generated that data in the first place—this is what you want to save for a number of reasons:
+It can feel counter-intuitive to exit a session without saving the variables in your environment, given the obvious fact that those values will be lost. But what really matters is the R script that you produced, which loaded or generated that data in the first place - this is what you want to save for a number of reasons:
 
 * A well-written R script can recreate your analysis in an automated way and using the most up-to-date datasets. You don't need to store old results as variables when you can quickly generate new ones on demand.
 * Good scripts will be portable, meaning they can be run in different sessions, on different computers and even by different people who want to perform your analysis.
 * R scripts have small file sizes, causing minimal impact to your available storage and making them easy to transfer to other computers or users.
 
-In order to write a good script that can run in any session by any computer, you should always assume the script is working in a brand-new, clean and empty environment, and is completely self-sufficient for the tasks it wants to do. If you create a script that uses a variable that only existed in your working environment and pass it onto someone else, they won’t be able to run the script since it relies on something only your session contains.
+In order to write a good script that can run in any session by any computer, you should always assume the script is working in a brand-new, clean and empty environment, and is completely self-sufficient for the tasks it wants to do. If you create a script that uses a variable that only existed in your working environment and pass it onto someone else, they won't be able to run the script since it relies on something only your session contains.
 
 To avoid accidentally using an existing variable in your environment, there are some steps we can take which all focus around keeping a clean working environment:
 
 * Set Posit Workbench to _never_ save your environment to an .RData file when exiting a session.
-  * Access the RStudio Global Options menu by going to _Tools → Global Options…_
+  * Access the RStudio Global Options menu by going to _Tools → Global Options..._
   * In the "General" menu, open the "Basic" tab.
   * Untick the "Restore .RData into workspace at startup" tab.
   * Set "Save workspace to .RData on exit" to "Never".
@@ -77,7 +77,7 @@ rm(a_data, b_data)
 
 This allows R to use that memory to store other potentially large objects without running out of memory.
 
-R will automatically perform _garbage collection_ — the process of freeing-up unused system memory that's no longer used — where necessary. But we can also manually trigger garbage collection by running `gc()` in the R console at any time, which can be especially effective after large objects have just been deleted from the environment. _Garbage collection_ will never delete anything that is still in use and happens automatically, however if you have an automated process that involves large objects, building in _garbage collection_ with `gc()` may help freeing up system memory before the next step of the process.
+R will automatically perform _garbage collection_ - the process of freeing-up unused system memory that's no longer used - where necessary. But we can also manually trigger garbage collection by running `gc()` in the R console at any time, which can be especially effective after large objects have just been deleted from the environment. _Garbage collection_ will never delete anything that is still in use and happens automatically, however if you have an automated process that involves large objects, building in _garbage collection_ with `gc()` may help freeing up system memory before the next step of the process.
 
 ### Overwriting existing objects
 
@@ -215,7 +215,7 @@ grid.arrange(g1, g2, nrow = 2)
 
 If you want your script to end the session automatically when it completes all its tasks, then include the `q()` or `quit()` function in your script. Both functions perform the same task of terminating the current session.
 
-The first argument, `save`, specifies whether the current environment should be saved. The default behaviour will often ask you interactively, which means it won’t automatically close by itself. As discussed earlier, it’s considered best practice to never save your environment, so we should pre-emptively tell it not to save the workspace variables:
+The first argument, `save`, specifies whether the current environment should be saved. The default behaviour will often ask you interactively, which means it won't automatically close by itself. As discussed earlier, it's considered best practice to never save your environment, so we should pre-emptively tell it not to save the workspace variables:
 
 ```r
 quit(save = "no")
@@ -232,9 +232,9 @@ Let's suppose you have a database containing 100,000 data points covering a whol
 1. Send a query to the database that loads all 100,000 data points from the database into R, then filter for the 1,000 data points you want in R.
 2. Send a query to the database to find the 1,000 regional data points out of its table of 100,000 entries, and send those to R.
 
-Of the two methods above, option 2 will _always_ be faster and more efficient; the database will always filter the data faster than R can. Even in the compromised situation where the region is not indexed in the database, the additional overhead of transferring 99,000 unnecessary data points to R — which have to be parsed and allocated memory in R — mean that the database will still be the faster and more efficient option.
+Of the two methods above, option 2 will _always_ be faster and more efficient; the database will always filter the data faster than R can. Even in the compromised situation where the region is not indexed in the database, the additional overhead of transferring 99,000 unnecessary data points to R - which have to be parsed and allocated memory in R - mean that the database will still be the faster and more efficient option.
 
-In short, querying the database for more than you need — for example, by using an SQL query of `SELECT * FROM HospitalRecords;` — wastes your time and everyone's shared resources.
+In short, querying the database for more than you need - for example, by using an SQL query of `SELECT * FROM HospitalRecords;` - wastes your time and everyone's shared resources.
 
 Make full use of your database's filtering and table-joining methods to take full advantage of the optimised algorithms and column indexing, before the data reaches R. In the case of SQL, that could be as simple as adding conditions, such as:
 
@@ -246,7 +246,7 @@ SELECT Hospital, PatientCount, AvgWaitingTime
 
 ### Get R to make good use of the database
 
-If you aren’t that familiar with writing SQL code, then writing more advanced SQL queries can seem more daunting. The temptation then becomes to load all the data into R where you can perform all data manipulation in a language you’re more familiar with. But this may not be necessary.
+If you aren't that familiar with writing SQL code, then writing more advanced SQL queries can seem more daunting. The temptation then becomes to load all the data into R where you can perform all data manipulation in a language you're more familiar with. But this may not be necessary.
 
 The [{dbplyr}](https://dbplyr.tidyverse.org/) package allows you to create SQL queries by writing the [{dplyr}](https://dplyr.tidyverse.org/) methods you would normally use to perform data manipulation. To use {dbplyr}:
 
@@ -264,7 +264,7 @@ con = DBI::dbConnect(RSQLite::SQLite(), path = ":memory:")
 DBI::dbWriteTable(con, "iris_tbl", iris)
 ```
 
-You would connect to your database in a similar method. Ask your database administrator for support if you don’t know the credentials needed to establish the database connection.
+You would connect to your database in a similar method. Ask your database administrator for support if you don't know the credentials needed to establish the database connection.
 
 We can get a _lazy_ preview of the table by querying the table. At the top, it will display `??` for the number of rows, as it has only asked the database to find the first 10.
 
@@ -319,7 +319,7 @@ iris_tbl %>%
 # ℹ Use `print(n = ...)` to see more rows
 ```
 
-Or we can specify anything that’s not a "setosa" species that also has a sepal length > 5, ordered by petal length in descending order:
+Or we can specify anything that's not a "setosa" species that also has a sepal length > 5, ordered by petal length in descending order:
 
 ```r
 iris_tbl %>% 
@@ -394,7 +394,7 @@ WHERE (`Species` != 'setosa') AND (`Sepal.Length` > 5.0)
 ORDER BY `Petal.Length` DESC
 ```
 
-Of course, don't forget to disconnect your database connection when you’re finished.
+Of course, don't forget to disconnect your database connection when you're finished.
 
 ```r
 DBI::dbDisconnect(con)
@@ -443,7 +443,7 @@ Consider using a column-oriented data storage format, such as [Apache Parquet](h
 
 #### I'll use my data in Excel / SAS / SPSS / Stata
 
-To get data in and out of these formats, you’ll want to look at:
+To get data in and out of these formats, you'll want to look at:
 
 * [{readxl}](https://readxl.tidyverse.org/) for reading data from Excel files.
 * [{openxlsx}](https://cran.r-project.org/web/packages/openxlsx/index.html) for reading and writing .xlsx Excel files.
@@ -464,5 +464,5 @@ Use a CSV file if you need to share data openly so that it is compatible with vi
 * Largest file sizes as all values are stored in plain text.
 * Slowest and most memory-consuming when importing and exporting large CSV files.
 * You need to specify the value separator and any text delimiters on every import:
-  * Using commas (,) is not always appropriate as a value separator, as some countries use this to mark decimal places. Consider using tab (\t) or semi-colon (;) in those situations.
+  * Using commas (,) is not always appropriate as a value separator, as some countries use this to mark decimal places. Consider using tab (\t) or semi-colon (\;) in those situations.
   * Text entries that contain commas and line-breaks can break CSV files if the text is not delimited by quotation marks to mark the start and end of that entry.
