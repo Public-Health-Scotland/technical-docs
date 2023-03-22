@@ -34,7 +34,7 @@ Posit Workbench is hosted in Microsoft Azure, a cloud computing platform.  Micro
 
 Users must take steps to minimise these costs by ensuring that they only request the computing resources they need to carry out their work, and ensuring that their analyses are as efficient as possible at all times.
 
-Guidance on how to request only the computing resources needed, and information on how to request greater computing resources if required, can be found in the [Posit Workbench and Kubernetes](Posit%20Workbench%20an%20Kubernetes.md) document.
+Guidance on how to request only the computing resources needed, and information on how to request greater computing resources if required, can be found in the [Posit Workbench and Kubernetes](Posit%20Workbench%20and%20Kubernetes.md) document.
 
 ### Shared Computing Resources
 
