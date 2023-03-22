@@ -1,3 +1,3 @@
 # Technical Documentation and Guidance for Public Health Scotland (PHS)
 
-An open-source repository of technical documentation for Public Health Scotland (PHS) staff in data and technical roles.
+An open-source repository of technical documentation for Public Health Scotland (PHS) staff in data and technical roles. This provides the back-end for the [PHS Data Science Knowledge Base Documentation Pages](https://public-health-scotland.github.io/knowledge-base/docs). As a core utility for our data and technical teams, we have made this repository public to allow for collaboration and contributions from the wider community. Supporting tools and templates are available to support this, see the [contributing guidance](CONTRIBUTING.md) for more detail.
