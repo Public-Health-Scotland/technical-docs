@@ -41,10 +41,11 @@ All directories need to be on a single level, with no sub-directories. Currently
 * *Python* - content for Python within PHS.
 * *R* - content for R within PHS.
 * *Version Control* - content for version control within PHS.
+* *Glossary* - used to host the Data Science glossary, should not be added to.
 
 ### Files
 
-Files created should be a `.md` file, with the following considerations:
+Files created should be a `.md` file within a directory, with the following considerations:
 
 * *File name* should be human readable, title case, with spaces. The name is directly used in the navigation bar, so should be as descriptive as possible.
   * Where the document is a step-by-step set of instructions that are universal, the file name should start with "How to ".
