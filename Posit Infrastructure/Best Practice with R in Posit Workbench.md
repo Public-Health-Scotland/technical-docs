@@ -404,9 +404,11 @@ DBI::dbDisconnect(con)
 
 If you want to store lots of data in a file, picking the right file format is an important decision that affects software compatibility, file size and how efficiently the file can be imported into R.
 
-#### I'll only use my data in R
+#### Using R
 
-If you know your data will only be used in R, then the obvious choice is the **.rds** format. This stores and compresses data as R would internally store it in system memory. Use the `readRDS()` and `saveRDS()` functions to work with RDS files, for example:
+If your data will be in R, then the obvious choice is the **.rds** format. This stores and compresses data as R would internally store it in system memory. There are other technologies that also work with this file type. This means that it can be useful if you're doing work with data in R and then moving to another tool for another part of the workflow. An example of this would be [statistical files in Tableau](https://help.tableau.com/current/pro/desktop/en-us/examples_statfile.htm).
+
+Use the `readRDS()` and `saveRDS()` functions to work with RDS files, for example:
 
 ```r
 data("mtcars")
