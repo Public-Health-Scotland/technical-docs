@@ -1,4 +1,4 @@
-# Installing and using geospatial R packages
+# Installing and Using Geospatial R Packages
 
 ## Purpose
 
