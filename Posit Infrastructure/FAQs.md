@@ -18,6 +18,12 @@ If you are working remotely, yes: ensure that when you login to Windows that you
 
 ### Installing Packages
 
+#### How do I install the `{gt}` package?
+
+Versions of the [`{gt}`](https://gt.rstudio.com/) package, up to and including v0.5.0, use [PhantomJS](https://phantomjs.org/) (a scriptable headless browser) to take screenshots of tables produced by `{gt}`.  Newer versions ot `{gt}` require a Chromium-based browser which is not yet configured correctly in the Posit Workbench environment.
+
+Instructions and a script for installing and testing v0.5.0 of the `{gt}` package and all of its dependencies can be found in the [posit-workbench-install-gt](https://github.com/Public-Health-Scotland/posit-workbench-install-gt) repo.
+
 #### How do I install the `{hablar}` package?
 
 The `{hablar}` package cannot be installed as a pre-compiled binary; attempting this gives an error.  Therefore, you need to force R to install the source version by specifying the URL for the source version of packages on Package Manager.  However, `{hablar}`'s dependencies can be installed as binaries first.
