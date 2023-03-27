@@ -105,7 +105,7 @@ We first need to define the _configuration arguments_ that we will use to compil
 geo_config_args <- c("--with-gdal-config=/usr/gdal34/bin/gdal-config",
                      "--with-proj-include=/usr/proj81/include",
                      "--with-proj-lib=/usr/proj81/lib",
-                     "--with-geos-config=/usr/geos311/bin/geos-config")
+                     "--with-geos-config=/usr/geos310/bin/geos-config")
 ```
 
 Now we can compile and install the geospatial R packages from source as follows:
@@ -164,7 +164,7 @@ You must also ensure that you loaded the geospatial libraries so that R can see 
 
 ```r
 dyn.load("/usr/gdal34/lib/libgdal.so")
-dyn.load("/usr/geos311/lib64/libgeos_c.so", local = FALSE)
+dyn.load("/usr/geos310/lib64/libgeos_c.so", local = FALSE)
 ```
 
 Again the above R code **must** be run in every session that you open before loading geospatial R packages.
