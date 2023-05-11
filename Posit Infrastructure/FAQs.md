@@ -63,6 +63,22 @@ install.packages("phsmethods")
 
 Some packages, e.g. `{xlsx}`, `{XLconnect}`, depend on an installation of [Java](https://en.wikipedia.org/wiki/Java_(software_platform)) in order to work.  There are no current or future plans to support Java on Posit Workbench.  Alternative packages such as `{openxlsx}` that do not rely on Java should be used instead.
 
+#### How do I install the `{ranger}` package?
+
+The default configurations in R do not allow the `{ranger}` package to compile and install successfully.  The developers of the `{ranger}` package switched the project to using C++14 in version 0.14.2 of the package.  R itself should default to C++14 from version 4.1.0 onwards (we have 4.1.2), unless the package specifies C++11.  It turns out the makevars for `{ranger}` specify C++11, even though it's meant to be compiled with C++14.  The fix is to add the line
+
+```
+CXX = g++ -std=gnu++14
+```
+
+to the file `~/.R/Makevars` which then overrides the C++11 that `{ranger}` specifies.
+
+After amending the file as described above, you can install the `{ranger}` package as you would normally i.e.
+
+```R
+install.packages("ranger")
+```
+
 #### Why does the `{rmapshaper}` package not install?
 
 `{rmapshaper}` has the dependencies `{V8}` and `{geojsonio}`, neither of which can be installed successfully on the CentOS 7 container image that Posit Workbench runs in. As these dependencies cannot be installed, {rmapshaper} also fails to install. As it stands, there is no immediate solution to resolve this.
