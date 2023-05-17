@@ -110,7 +110,7 @@ Please do not attempt to switch to another project using the 'Project' drop down
 
 ![Project dropdown menu in RStudio](https://user-images.githubusercontent.com/45657289/215759371-64028dc2-a02e-4779-91c9-6bacf1369244.png)
 
-nor using the option File  > Recent Projects drop down from the main menu at the top-left of the Posit Workbench interface:
+Simlarily, using the option File  > Recent Projects drop down from the main menu at the top-left of the Posit Workbench interface:
 
 ![File recent projects from main menu in Posit Workbench](https://github.com/Public-Health-Scotland/technical-docs/assets/109799428/c644de6f-0b09-4d07-a53b-b71f714679f5)
 
