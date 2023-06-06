@@ -1,8 +1,14 @@
 # Guidance on R Studio Profiling Tool
 
+## Purpose
+
+This documents aims to offer guidance to users seeking to precisely measure how much memory and time is required for running their code. This is known as profiling. It is particulary useful to help determine how much memory is required when creating an instansce in Posit Workbench where the code will be executed.
+
+It contains a brief description of what profiling is, how to install and use the integrated profiling tool in RStudio and how to interpret its results. 
+
 ## What is Profiling
 
-Profiling is a form of analysing your code that measures, for example, the space (memory) or time usage for particular subsets of it, or the frequency and duration of function calls. The programmer can use profiling to measure how much computational resources are needed (memory / time), or to identify and optimize the slowest code portions.
+Profiling is a form of analysing your code that measures, for example, the space (memory) or time usage for particular subsets of it, or the frequency and duration of function calls. The programmer can use profiling to measure how much computational resources are needed (memory / time), or to identify and optimize the slowest code portions. For further information please refer to this [Wikipedia Page](https://en.wikipedia.org/wiki/Profiling_(computer_programming)).
 
 
 ## Installing `profvis`
@@ -23,7 +29,7 @@ install.packages("profvis")
 
 There are multiple ways to start and stop the profiler:
 
-1. **From the Profile menu**, you can start and stop the profiler. Additionally, you can also run a selected block of code with profiling. The most simple workflow consists in starting the profiler, executing the code you want to analyse (e.g. sourcing a script) and then stopping the profiler.
+1. **From the Profile menu**, you can start and stop the profiler. Additionally, you can also run a selected block of code with profiling. The most simple workflow, consists in starting the profiler, executing the code you want to analyse (e.g. sourcing a script) and then stopping the profiler.
 
 2. **Calling the `profvis()` function**. For example:
 
@@ -45,8 +51,12 @@ The `profvis` report consists of two main parts: the Data view and the Flame Gra
 
 1. The **Data view** can be seen by clicking on the Data tab. It provides a top-down tabular display, reporting how much memory was used during the analysed processes and how much time they took. The information on the first level is of special interest as it allows **specifying the memory of the Posit Workbench instance** required for running the script. As an advice, instances should always be at least 25% \todo{does this seem too high?} higher than the maximum memory used on your script.
 
-![Profvis Data View](https://user-images.githubusercontent.com/46680486/240356070-70f5827e-ce91-43a2-b977-9bef741d9394.png)
+![Profvis Data View Screenshot](https://user-images.githubusercontent.com/46680486/240356070-70f5827e-ce91-43a2-b977-9bef741d9394.png)
 
 2. The **Flame Graph view** horizontal axis represents time in milliseconds, and the vertical direction represents the function calls stack. The bottom-most items on the stack represent the functions that take up the most time. As you travel up the stack, you can see which functions called other functions. This view, is recommended for spotting the subsets of your code that consume the most time, and therefore, it is a valuable input to explore how your code could be optimised.
 
-![Profvis Flame Graph View](https://user-images.githubusercontent.com/46680486/240357493-4ccb9c32-fdcb-41a6-b646-86783766be09.png)
+![Profvis Flame Graph View Screenshot](https://user-images.githubusercontent.com/46680486/240357493-4ccb9c32-fdcb-41a6-b646-86783766be09.png)
+
+## Further Information
+
+For a more indepth undertanding of how to use `profvis` and interpret its results please see [the official documentation](http://rstudio.github.io/profvis/index.html).
