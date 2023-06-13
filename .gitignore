@@ -1,2 +1,5 @@
 # image folder
 img/
+
+# html previews
+*.html

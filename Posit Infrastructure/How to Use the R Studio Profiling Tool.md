@@ -1,14 +1,14 @@
-# Guidance on R Studio Profiling Tool
+# How to Use the R Studio Profiling Tool
 
 ## Purpose
 
-This documents aims to offer guidance to users seeking to precisely measure how much memory and time is required for running their code. This is known as profiling. It is particulary useful to help determine how much memory is required when creating an instansce in Posit Workbench where the code will be executed.
+This document aims to offer guidance to users seeking to precisely measure how much memory and time is required for running their code. This is known as profiling. It is particularly useful to help determine how much memory is required when creating an instance in Posit Workbench where the code will be executed.
 
 It contains a brief description of what profiling is, how to install and use the integrated profiling tool in RStudio and how to interpret its results. 
 
 ## What is Profiling
 
-Profiling is a form of analysing your code that measures, for example, the space (memory) or time usage for particular subsets of it, or the frequency and duration of function calls. The programmer can use profiling to measure how much computational resources are needed (memory / time), or to identify and optimize the slowest code portions. For further information please refer to this [Wikipedia Page](https://en.wikipedia.org/wiki/Profiling_(computer_programming)).
+Profiling is a form of analysing your code that measures, for example, the space (memory) or time usage for particular subsets of it, or the frequency and duration of function calls. The programmer can use profiling to measure how much computational resources are needed (memory / time), or to identify and optimize the slowest code portions. For further information, please refer to this [Wikipedia Page](https://en.wikipedia.org/wiki/Profiling_(computer_programming)).
 
 
 ## Installing `profvis`
@@ -45,11 +45,12 @@ profvis({
 
 At the end of both profiling procedures, you will be shown the `profvis` report, which is explained in the following section.
 
-## Interpreting the results
+## Interpreting the Results
 
 The `profvis` report consists of two main parts: the Data view and the Flame Graph view. 
 
-1. The **Data view** can be seen by clicking on the Data tab. It provides a top-down tabular display, reporting how much memory was used during the analysed processes and how much time they took. The information on the first level is of special interest as it allows **specifying the memory of the Posit Workbench instance** required for running the script. As an advice, instances should always be at least 25% \todo{does this seem too high?} higher than the maximum memory used on your script.
+1. The **Data view** can be seen by clicking on the Data tab. It provides a top-down tabular display, reporting how much memory was used during the analysed processes and how much time they took. The information on the first level is of special interest as it allows **specifying the memory of the Posit Workbench instance** required for running the script. As an advice, instances should always be at least 25% <!-- TODO does this seem too high? --> higher than the maximum memory used on your script. Furthermore, the reported runtime might be 5% higher than the time it would have taken if the script was run without profiling, due to the overhead of recording memory usage. 
+
 
 ![Profvis Data View Screenshot](https://user-images.githubusercontent.com/46680486/240356070-70f5827e-ce91-43a2-b977-9bef741d9394.png)
 
@@ -59,4 +60,4 @@ The `profvis` report consists of two main parts: the Data view and the Flame Gra
 
 ## Further Information
 
-For a more indepth undertanding of how to use `profvis` and interpret its results please see [the official documentation](http://rstudio.github.io/profvis/index.html).
+For a more in-depth understanding of how to use `profvis` and interpret its results, please see [the official documentation](http://rstudio.github.io/profvis/index.html).
