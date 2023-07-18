@@ -12,7 +12,7 @@ Package | Description
 [odbc](https://github.com/r-dbi/odbc) | For connecting to database management systems, such as the SMRA datasets.
 [readr](https://github.com/tidyverse/readr) | For reading and writing flat files, such as CSV files.
 [haven](https://github.com/tidyverse/haven) | For reading and writing SPSS, SAS and Stata files.
-[openxlsx](https://github.com/ycphs/openxlsx) | For reading and writing excel files.
+[openxlsx](https://github.com/ycphs/openxlsx) | For reading and writing Excel files.
 [officer](https://github.com/davidgohel/officer) | For manipulation of Microsoft Word and PowerPoint documents.
 [dbplyr](https://github.com/tidyverse/dbplyr) | A `dplyr` back-end for database interaction.
 [here](https://github.com/r-lib/here) | For defining relative filepaths when using [RStudio Projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects).

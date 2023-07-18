@@ -5,7 +5,7 @@
 **Issue Number**: #
 <!--
 
-Link to the issue describing the bug being fixed or request.
+Link to the issue describing the bug being fixed or feature requested.
 If there is not yet an issue, please open a new issue and then link to that issue in your pull request.
 
 -->
