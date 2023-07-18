@@ -30,7 +30,7 @@ Public Health Scotland's Data Science team will be providing first-line support 
 - **Consult with Peers**: The [PHS R User Group on Teams](https://teams.microsoft.com/l/team/19%3ae9f55a12b7d94ef49877ff455a07f035%40thread.tacv2/conversations?groupId=ec4250f9-b70a-4f32-9372-a232ccb4f713&tenantId=10efe0bd-a030-4bca-809c-b5e6745e499a) has many of your colleagues, some of which may be familiar with the issue you're experiencing, consider reaching out to them when coding issues occur - they're a friendly bunch!
 - **Search Documentation**: Extensive online documentation with troubleshooting guides, tutorials, and user forums where you can ask questions and get answers from other users are available for Posit Workbench and specific coding problems. Some of this is internal, available on the [PHS Data Science Knowledge Base](https://public-health-scotland.github.io/knowledge-base/).
 - **Check Connectivity**: If you're experiencing connectivity issues, check your internet connection or network settings. You might need to check firewalls, VPN settings, or other network configurations. This might be the case if you're having issues connecting to other internal systems, in which case, contact DaS directly through [Service Now](https://nhsnss.service-now.com/phs/).
-- **Check Access Permissions**: Ensure that you have access permissions to the server or specific data sets. Check with someone else in your team, or DaS (via [Service Now](https://nhsnss.service-now.com/phs/)) to confirm your access permissions. _All databases connections that were available on the old server infrastructure have been migrated and made available for testing during UAT._
+- **Check Access Permissions**: Ensure that you have access permissions to the server or specific data sets. Check with someone else in your team, or DaS (via [Service Now](https://nhsnss.service-now.com/phs/)) to confirm your access permissions. _All database connections that were available on the old server infrastructure have been migrated and made available for testing during UAT._
 - **Check Browser**: Sometimes, the issue might be related to the browser you are using. This has been identified in a couple of areas already with Mozilla Firefox. Try using a different browser to see if the issue persists; all Chromium based browsers are tested and work as expected (i.e. Microsoft Edge and Google Chrome).
 
 If you have followed these troubleshooting steps and the issue still persists, please raise a support request by providing the following details (you can also use this form to reach out with questions about the infrastructure).:
@@ -44,10 +44,10 @@ If you have followed these troubleshooting steps and the issue still persists, p
 
 In essence, please provide as much detail as possible in your request.  The more detail, the easier it will be to find the cause of the issue you are experiencing.
 
-Please complete the form at [https://forms.office.com/e/pqmmNMkhT6](https://forms.office.com/e/pqmmNMkhT6). **Any request/query must use this process to ensure that they can be assigned and followed through by someone in the team, but also to ensure wider problems are identfied and resolved.**
+Please complete the form at [https://forms.office.com/e/pqmmNMkhT6](https://forms.office.com/e/pqmmNMkhT6). **Any request/query must use this process to ensure that they can be assigned and followed through by someone in the team, but also to ensure wider problems are identified and resolved.**
 
 The team aim to respond to all queries and requests for support submitted via this form as quickly as possible.
 
 **Queries** and **requests** for support with Posit applications cannot be made directly in Service Now by users, unless explicitly authorised by the Data Science team.
 
-**Please do not raise a request or incident in Service Now related directly to Posit applications unless requested to by a member of the Data Science team.**
+**Please do not raise a request or incident in Service Now related directly to Posit applications unless requested by a member of the Data Science team.**
