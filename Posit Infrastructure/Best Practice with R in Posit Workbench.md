@@ -49,7 +49,7 @@ It can feel counter-intuitive to exit a session without saving the variables in 
 * Good scripts will be portable, meaning they can be run in different sessions, on different computers and even by different people who want to perform your analysis.
 * R scripts have small file sizes, causing minimal impact to your available storage and making them easy to transfer to other computers or users.
 
-In order to write a good script that can run in any session by any computer, you should always assume the script is working in a brand-new, clean and empty environment, and is completely self-sufficient for the tasks it wants to do. If you create a script that uses a variable that only existed in your working environment and pass it onto someone else, they won't be able to run the script since it relies on something only your session contains.
+In order to write a good script that can run in any session by any computer, you should always assume the script is working in a brand-new, clean and empty environment, and is completely self-sufficient for the tasks it wants to do. If you create a script that uses a variable that only existed in your working environment and pass it on to someone else, they won't be able to run the script since it relies on something only your session contains.
 
 To avoid accidentally using an existing variable in your environment, there are some steps we can take which all focus around keeping a clean working environment:
 
@@ -190,7 +190,7 @@ iris %>%
 
 Avoiding the process of saving intermediate stages means your workspace does not get cluttered with unnecessary datasets that use up memory and you may have to remove later.
 
-But this does not mean you should should never save an intermediate stage in a calculation. If a single modified data frame needs to be used in two separate calculations, it's more efficient to store the value to use in both calculations rather than recalculating it twice from scratch. Store only what you _need_ to prevent yourself repeating calculating the same thing twice:
+But this does not mean you should never save an intermediate stage in a calculation. If a single modified data frame needs to be used in two separate calculations, it's more efficient to store the value to use in both calculations rather than recalculating it twice from scratch. Store only what you _need_ to prevent yourself repeating calculating the same thing twice:
 
 ```r
 library("gridExtra")
@@ -429,13 +429,13 @@ mtcars <- readRDS("my_cars_data.rds")
 
 #### I'll use my data with cloud services or other programming languages
 
-Consider using a column-oriented data storage format, such as [Apache Parquet](https://parquet.apache.org/) . This is optimised for fast import/export and compressing the data to small sizes. You can read more about it on the [Jumping Rivers blog](https://www.jumpingrivers.com/blog/parquet-file-format-big-data-r/).
+Consider using a column-oriented data storage format, such as [Apache Parquet](https://parquet.apache.org/). This is optimised for fast import/export and compressing the data to small sizes. You can read more about it on the [Jumping Rivers blog](https://www.jumpingrivers.com/blog/parquet-file-format-big-data-r/).
 
 **Pros:**
 
 * Fast import/export.
 * Small file sizes thanks to intelligent ways of compressing each column of data.
-* Open-source means there is good support for this file type in other programming languages, such as Python, Java, C++.
+* Open-source means there is good support for this file type in other programming languages, such as Python, Java, or C++.
 * Encodes basic data types correctly (e.g. character, integer, double).
 
 **Cons:**
