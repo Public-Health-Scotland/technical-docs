@@ -23,7 +23,7 @@ If you are working remotely, yes: ensure that when you login to Windows that you
 The `{hablar}` package cannot be installed as a pre-compiled binary; attempting this gives an error.  Therefore, you need to force R to install the source version by specifying the URL for the source version of packages on Package Manager.  However, `{hablar}`'s dependencies can be installed as binaries first.
 
 ```{r}
-# Get list of dependencies and imports for {hablar}
+# Get a list of dependencies and imports for {hablar}
 available_pkgs <- available.packages()
 
 deps <- tools::package_dependencies(
@@ -47,7 +47,7 @@ library(hablar)
 
 #### How do I install the `{phsmethods}` package?
 
-The `{phsmethods}` package has a dependency on the the `{gdata}` package.  The `{gdata}` package cannot be installed as a pre-compiled binary; attempting this gives an error.  Therefore, you need to force R to install the source version by specifying the URL for the source version of packages on Package Manager: 
+The `{phsmethods}` package has a dependency on the `{gdata}` package.  The `{gdata}` package cannot be installed as a pre-compiled binary; attempting this gives an error.  Therefore, you need to force R to install the source version by specifying the URL for the source version of packages on Package Manager: 
 
 ```{r}
 install.packages("gdata", repos = c("https://ppm.publichealthscotland.org/phs-cran/latest"))
@@ -110,9 +110,9 @@ Please do not attempt to switch to another project using the 'Project' drop down
 
 ![Project dropdown menu in RStudio](https://user-images.githubusercontent.com/45657289/215759371-64028dc2-a02e-4779-91c9-6bacf1369244.png)
 
-Simlarily, using the option File  > Recent Projects drop down from the main menu at the top-left of the Posit Workbench interface:
+Similarly, using the option File  > Recent Projects drop down from the main menu at the top-left of the Posit Workbench interface:
 
-![File recent projects from main menu in Posit Workbench](https://github.com/Public-Health-Scotland/technical-docs/assets/109799428/c644de6f-0b09-4d07-a53b-b71f714679f5)
+![File recent projects from the main menu in Posit Workbench](https://github.com/Public-Health-Scotland/technical-docs/assets/109799428/c644de6f-0b09-4d07-a53b-b71f714679f5)
 
 Doing so may result in Posit Workbench crashing or certain error messages such as:
 
