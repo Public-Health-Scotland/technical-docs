@@ -75,7 +75,7 @@ Checks, conditional operations and warnings should be built into code in order t
 ```{r}
 x <- 9
 if (x <= 10) {
-  warning ("This analysis is incorrect as sample sizes less than 10 are not allowed") 
+  warning("`x` must be less than 10 to produce a model.")
   result <- NA
 } else {
   result <- coef(glm(rpois(x, lambda = 5) ~ 1))
@@ -105,7 +105,9 @@ We recommend following Hadley Wickham's [tidyverse style guide](http://style.tid
 * curly brackets
 * assignment
 
-To help clean up your code, the `{lintr}` package provides an automated check for compliance with the tidyverse style guide and warns you about potential mistakes or problems.
+To help clean up your code, the `{[lintr](https://lintr.r-lib.org/)}` package provides an automated check for compliance with the tidyverse style guide and warns you about potential mistakes or problems.
+
+Even better the `{[styler](https://styler.r-lib.org/)}` package can automatically reformat code (making only cosmetic changes) so that you can always have consistent well formatted code with minimal effort.
 
 ## 10 - R User Group
 
