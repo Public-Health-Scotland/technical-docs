@@ -11,7 +11,7 @@ assignees: ''
 Infrastructure / Python / R / Version Control / Other (delete as appropriate)
 
 **Question:**
-Provide the high-level question that needs answered.
+Provide the high-level question that needs to be answered.
 
 **Answer:**
 If known, provide as much detail as possible, including external links for additional context.
