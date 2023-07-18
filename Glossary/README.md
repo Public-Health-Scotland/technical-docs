@@ -123,7 +123,7 @@ A collection of terms and definitions used across Data Science in PHS.
 | ---- | ---------- |
 | **Natural Language Processing (NLP)** | A subfield of linguistics, computer science, information engineering, and artificial intelligence concerned with the interactions between computers and human (natural) languages. |
 | **Neural Network** | A network or circuit of neurons, or in a modern sense, an artificial neural network, composed of artificial neurons or nodes. |
-| **NoSQL** | A method for storing and retrieving data that is modeled in means other than the tabular relations used in relational databases. |
+| **NoSQL** | A method for storing and retrieving data that is modelled in means other than the tabular relations used in relational databases. |
 
 ## O
 
