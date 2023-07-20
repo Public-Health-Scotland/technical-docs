@@ -104,7 +104,7 @@ Please follow these steps to have your contribution considered by the maintainer
 1. Follow all instructions in the template, this will auto-populate when you open a Pull Request.
 2. Follow the [style guides](#style-guides)
 3. On the pull request, set the [Data Science Team](https://github.com/orgs/Public-Health-Scotland/teams/data-science) as reviewer.  
-   **Note:** marking the reviewers would only be possible if you are a member of the [All PHS Team](https://github.com/orgs/Public-Health-Scotland/teams/all-phs). If you are not a member of that team, please request to join with the button in the top-right corner of the [team's page](https://github.com/orgs/Public-Health-Scotland/teams/all-phs).
+   **Note:** setting the reviewers would only be possible if you are a member of the [All PHS Team](https://github.com/orgs/Public-Health-Scotland/teams/all-phs). If you are not a member of that team, please request to join with the button in the top-right corner of the [team's page](https://github.com/orgs/Public-Health-Scotland/teams/all-phs).
 
 While the prerequisites above must be satisfied prior to having your pull request reviewed, the reviewer(s) may ask you to complete additional design work, tests, or other changes before your pull request can be ultimately accepted.
 
