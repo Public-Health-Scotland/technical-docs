@@ -103,7 +103,7 @@ Please follow these steps to have your contribution considered by the maintainer
 
 1. Follow all instructions in the template, this will auto-populate when you open a Pull Request.
 2. Follow the [style guides](#style-guides)
-3. Send an email to the [Data Science team](mailto:phs.datascience@phs.scot) to make them aware of your contribution.
+3. Assign the pull request to all the maintainers of the repository: [Clive Greatorex](https://github.com/CliveWG), [Russell McCreath](https://github.com/rmccreath) and [Terry McLaughlin](https://github.com/terrymclaughlin). 
 
 While the prerequisites above must be satisfied prior to having your pull request reviewed, the reviewer(s) may ask you to complete additional design work, tests, or other changes before your pull request can be ultimately accepted.
 
