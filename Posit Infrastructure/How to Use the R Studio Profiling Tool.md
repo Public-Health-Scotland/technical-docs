@@ -1,4 +1,4 @@
-# How to Use the RStudio Profiling Tool for Memory Usage
+# How to Use the R Studio Profiling Tool
 
 ## Purpose
 
