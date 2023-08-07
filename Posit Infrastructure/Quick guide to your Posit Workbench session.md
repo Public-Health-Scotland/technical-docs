@@ -27,17 +27,17 @@ Your session needs to have sufficient memory available to be able to load the re
 
 During your session you can see how much memory you’ve used using the pie chart graphic on the Environment tab. Checking this when you use Posit Workbench will help you learn how much memory your typical sessions are likely to require. 
 
-![Memory usage pie chart](/PHI_conf/PHSci/Liz/mem-use-pie.png)
+![Memory usage pie chart](https://github.com/Public-Health-Scotland/technical-docs/assets/110984847/338dd117-417d-4436-be3a-87347176adbc)
 
-Remember you can also remove unused data frames from memory as suggested in the “Coding with R Section” of the [Best Practice with R in Posit Workbench](https://public-health-scotland.github.io/knowledge-base/docs/Posit Infrastructure?doc=Best%20Practice%20with%20R%20in%20Posit%20Workbench.md) document.  
+Remember you can also remove unused data frames from memory as suggested in the “Coding with R Section” of the [Best Practice with R in Posit Workbench](Best%20Practice%20with%20R%20in%20Posit%20Workbench.md) document.  
 
 More detailed information on Knowledge Base:
 
-*	[Memory usage when processing SMR01](https://public-health-scotland.github.io/knowledge-base/docs/Posit Infrastructure?doc=Memory%20Usage%20in%20SMR01.md)
+*	[Memory usage when processing SMR01](Memory%20Usage%20in%20SMR01.md)
 
-*	[More technical information about Kubernetes profiles, memory, and CPU](https://public-health-scotland.github.io/knowledge-base/docs/Posit Infrastructure?doc=Posit%20Workbench%20and%20Kubernetes.md)
+*	[More technical information about Kubernetes profiles, memory, and CPU](Posit%20Workbench%20and%20Kubernetes.md)
 
-*	[How to Use the R Studio Profiling Tool](https://public-health-scotland.github.io/knowledge-base/docs/Posit%20Infrastructure?doc=How%20to%20Use%20the%20R%20Studio%20Profiling%20Tool.md): for measuring how much time and memory are required for a script. Optimal memory and CPU requirements, plus run time, could then be added to the script’s header. 
+*	[How to Use the R Studio Profiling Tool](How%20to%20Use%20the%20R%20Studio%20Profiling%20Tool.md): for measuring how much time and memory are required for a script. Optimal memory and CPU requirements, plus run time, could then be added to the script’s header. 
 
 ## How many CPUs do I need?  
 The Central Processing Unit (CPU) is the primary component of a computer that executes instructions.
@@ -81,7 +81,7 @@ If your session tries to use more memory than requested the session will close. 
 *	If you find you need more CPU/memory [please complete this form](https://forms.office.com/e/VEutAJ8p9Y)
   
 ## Further general information about Posit Workbench sessions:
-*	[Best Practice with R in Posit Workbench](https://public-health-scotland.github.io/knowledge-base/docs/Posit Infrastructure?doc=Best%20Practice%20with%20R%20in%20Posit%20Workbench.md)
-*	[Recommendations on Global Options in Posit Workbench RStudio](https://public-health-scotland.github.io/knowledge-base/docs/Posit Infrastructure?doc=Recommended%20Global%20Options%20for%20RStudio.md)
+*	[Best Practice with R in Posit Workbench](Best%20Practice%20with%20R%20in%20Posit%20Workbench.md)
+*	[Recommendations on Global Options in Posit Workbench RStudio](Recommended%20Global%20Options%20for%20RStudio.md)
 
 
