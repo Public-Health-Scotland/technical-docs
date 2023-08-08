@@ -30,6 +30,8 @@ A Posit Workbench session that a user would like to continue running past 9pm mu
 
 ## Process to open a "NIGHT" project
 
-1. Follow the steps outlined at [https://github.com/Public-Health-Scotland/technical-docs/blob/43-req-guidance-on-preventing-overnight-sessions-being-automatically-closed/Posit%20Infrastructure/How%20to%20Login%20to%20Posit%20Workbench.md] to login to Posit Workbench and start a new session.
+1. Firstly, ensure that the project's .Rproj file and root directory (i.e. the directory that contains the .Rproj file) both share the same name, and that the name has the word "NIGHT" at the start e.g. "/conf/linkage/output/NIGHT my project/NIGHT my project.Rproj"
 
-2. Next, ensure that the project's root directory (i.e. the directory that contains the project's .Rproj file) 
+2. Follow the steps outlined at [https://github.com/Public-Health-Scotland/technical-docs/blob/main/Posit%20Infrastructure/How%20to%20Login%20to%20Posit%20Workbench.md] to login to Posit Workbench and start a new session.
+
+3. Follow steps outlined at [https://github.com/Public-Health-Scotland/technical-docs/blob/main/Posit%20Infrastructure/FAQs.md#projects] to open the project.
