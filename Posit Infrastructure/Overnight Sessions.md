@@ -8,7 +8,7 @@ This document aims to provide users with information on running Posit Workbench 
 
 An automated process has been put in place to close sessions in Posit Workbench at 9pm every evening.
 
-This automated process can be overridden by including the word "NIGHT" in the name of a Posit Workbench session, **when the session is started**.
+This automated process can be overridden by including the word "NIGHT" at the start of the name of the relevant Posit Workbench session, **when the session is started**.
 
 ## Process to start a "NIGHT" session
 
