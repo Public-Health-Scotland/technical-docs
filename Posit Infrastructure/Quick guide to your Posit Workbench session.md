@@ -47,7 +47,7 @@ The Central Processing Unit (CPU) is the primary component of a computer that ex
 
 ## What if my session needs to run overnight?
 *	Sessions are closed automatically at 9pm every evening.
-*	If you have work that needs to continue beyond 9pm you should add the word NIGHT in the session name when starting that session. If you’re working from a project your project will also need the word NIGHT in its name.
+*	If you have work that needs to continue beyond 9pm you should add the word NIGHT at the start of the session name when starting that session. If you’re working on a project, your project will also need the word NIGHT in its name.
 
 ## How can I use less memory?
 Using the parquet file format from the `{arrow}` package uses less memory and is faster to write. 
