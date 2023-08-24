@@ -8,5 +8,13 @@ When a Workbench Session is requsted by the user, it is assigned a Session ID.  
 
 1. If you have not already done so, log into Posit Workbench and start a session, following the instructions at [https://github.com/Public-Health-Scotland/technical-docs/blob/main/Posit%20Infrastructure/How%20to%20Login%20to%20Posit%20Workbench.md] if necessary.
 2. After the session has started, navigate to the [Posit Workbench homepage](https://pwb.publichealthscotland.org) and identify the session you would like the Session ID of in the list of sessions e.g. circled in red below:
-![Posit Workbench Active Session - ready](https://user-images.githubusercontent.com/45657289/199208971-bf977d57-b042-4e43-9e15-b9b107dc89bc.png)
-3. 
+<img width="434" alt="image" src="https://github.com/Public-Health-Scotland/technical-docs/assets/45657289/9496f0a2-1eb2-4466-bf35-5d56e2088f1f">
+
+3. Click the "Info" button of the session (highlighted in yellow above) to bring up a dialog box containing further information about the session:
+<img width="517" alt="image" src="https://github.com/Public-Health-Scotland/technical-docs/assets/45657289/6fa50075-7552-4cc0-a9e1-3aa8f0eaca2f">
+
+4. Click on "Launcher Diagnostics" (highlighted in yellow above) to view a tab with further details:
+<img width="515" alt="image" src="https://github.com/Public-Health-Scotland/technical-docs/assets/45657289/c4e2839a-ed4d-413b-9a16-204b994a7947">
+
+5. The Session ID of the session is highlighted in yellow above - it is a long string of letters and numbers.
+6. To close the dialog box, click the "Close" button, circled in red above.
