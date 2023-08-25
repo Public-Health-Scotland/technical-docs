@@ -18,3 +18,15 @@ When a Workbench Session is requsted by the user, it is assigned a Session ID.  
 
 5. The Session ID of the session is highlighted in yellow above - it is a long string of letters and numbers.
 6. To close the dialog box, click the "Close" button, circled in red above.
+
+## Alternative method
+
+The Session ID can be found in the URL (i.e. web address) when a session is open.  In the address bar of your web browser you will see a URL such as
+
+```
+https://pwb.publichealthscotland.org/s/bd664cfc78a31605322d7/?launcher=1
+```
+
+The long string of letters and numbers (in this case <code>bd664cfc78a31605322d7</code>) is the Session ID of the session.
+
+This method can be useful to capture the Session ID of a session that has crashed or failed to launch successfully.
