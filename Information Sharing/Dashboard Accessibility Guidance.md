@@ -2,6 +2,16 @@
 
 *Adapted from guidance originally written by the PHS Statistics Publications Team, Public Health Scotland. Also available on [The Spark](https://spark.publichealthscotland.org/corporate-guidance/accessibility-branding-and-style/).*
 
+* [General guidance](#general-guidance)
+* [Automated testing tools](#automated-testing-tools)
+* [Code](#code)
+* [Keyboard navigation](#keyboard-navigation)
+* [Links](#links)
+* [Images used within dashboards](#images-used-within-dashboards)
+* [Chart design and layout](#chart-design-and-layout)
+* [Branding and corporate colours](#branding-and-corporate-colours)
+* [Alternative formats](#alternative-formats)
+
 ## General guidance
 
 Consider the overall layout and usability of the dashboard. Dashboards should ideally not contain commentary and masses of text, they should be used as tools to allow users to interact with your data, alongside web pages that contain any commentary. Consult with the content design team for advice around this via [phs.statspublications@phs.scot](mailto:phs.statspublications@phs.scot).
