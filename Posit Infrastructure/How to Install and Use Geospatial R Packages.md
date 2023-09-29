@@ -79,7 +79,7 @@ remove.packages("parallelly")
 # Install the 'parallelly' package
 install.packages("parallelly")
 
-# Identify number of CPUs available
+# Identify the number of CPUs available
 ncpus <- as.numeric(parallelly::availableCores())
 ```
 
@@ -124,10 +124,11 @@ install.packages("sf",
                  Ncpus = ncpus)
 
 # Install the {terra} package
-install.packages("terra",
+install.packages("https://ppm.publichealthscotland.org/all-r/latest/src/contrib/Archive/terra/terra_1.7-29.tar.gz",
+                 repos = NULL,
+                 type = "source",
                  configure.args = geo_config_args,
                  INSTALL_opts = "--no-test-load",
-                 repos = c("https://ppm.publichealthscotland.org/all-r/latest"),
                  Ncpus = ncpus)
 
 # Install the {sp} package
@@ -161,7 +162,7 @@ install.packages("leaflet",
 
 ## Loading geospatial R packages
 
-Before loading any geospatial R packages, please ensure that you have run the code in [Setting environment variables](#Setting-environment-variables).  You **must** do this in every session that you open before loading geospatial R packages.
+Before you load any geospatial R packages, please make sure you run the code in [Setting environment variables](#Setting-environment-variables).  You **must** do this in every session you open before loading geospatial R packages.
 
 You must also ensure that you loaded the geospatial libraries so that R can see them:
 
@@ -170,9 +171,9 @@ dyn.load("/usr/gdal34/lib/libgdal.so")
 dyn.load("/usr/geos310/lib64/libgeos_c.so", local = FALSE)
 ```
 
-Again the above R code **must** be run in every session that you open before loading geospatial R packages.
+Again the above R code **must** be run in every session you open before loading geospatial R packages.
 
-Then, loading geospatial R packages can be loaded in the same way as normal with calls to the `library()` function e.g.
+Then, geospatial R packages can be loaded in the same way as normal with calls to the `library()` function e.g.
 
 ```r
 library(terra)
