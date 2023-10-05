@@ -20,7 +20,7 @@ Consider the overall layout and usability of the dashboard. Dashboards should id
 
 * Try to minimize large areas of white space.
 * Think about the tabbing/focus order whilst using a keyboard to navigate your dashboard. Make sure you can navigate using a keyboard only, in a logical order.
-* Think about where users expect to find certain information – such as instructions, data sources, contact information.
+* Think about where users expect to find certain information – such as instructions, data sources, and contact information.
 * Try not to repeat content unnecessarily.
 * Perform UX testing with people not familiar with the dashboard or data.
 * Do not use italics or underline text for emphasis.
@@ -31,7 +31,7 @@ There are a number of tools available for testing accessibility. Amongst the mos
 
 * Chrome browser extensions:
   * The [axe browser extension](https://www.deque.com/axe/browser-extensions/) is useful for running automated and guided tests on targeted web pages. Signing up to axe beta allows you to export results and run all automatic tests.
-  * The [WAVE browser extension](https://wave.webaim.org/extension/) can be used to run automated tests in an easy to view format.
+  * The [WAVE browser extension](https://wave.webaim.org/extension/) can be used to run automated tests in an easy-to-view format.
   * [Lighthouse tool](https://developers.google.com/web/tools/lighthouse)
   * [Accessibility Insights](https://accessibilityinsights.io/en/downloads/) tools for a variety of platforms, not just Chrome.
 * Portable [NVDA screen reader](https://www.nvaccess.org/download/)
@@ -41,7 +41,7 @@ There are a number of tools available for testing accessibility. Amongst the mos
 ## Code
 
 * Ensure that the language attribute is set to “en” (see [Language of page WCAG 3.1.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)).
-* Ensure main heading is marked up as such (see [Info and relationships WCAG 1.3.1](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)), this is particularly important for each new “tab” or “page” you build within the dashboard.
+* Ensure the main heading is marked up as such (see [Info and relationships WCAG 1.3.1](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)), this is particularly important for each new “tab” or “page” you build within the dashboard.
 * Headers (H1 to H6) should be used to denote content levels, not as a convenient way to style text.
 * Header levels should start at H1 and proceed in order as appropriate – for example, don’t start at H2, with no H1 or don’t jump from H1 to H3.
 * The visual appearance of headers should match the programmatic level – for example, H1 should appear more prominent than H2.
@@ -76,9 +76,9 @@ There are a number of tools available for testing accessibility. Amongst the mos
   * Good: View more information on good link practice.
 * Do not use the same link text to link to different places.
 * Think about the size of the link users need to select. For users with reduced motor skills, a one-word link could be very difficult to select.
-* Avoid the use of images as links. If unavoidable, ensure that the image has alt text with details of the link. For example, an image of the PHS logo that links to the PHS homepage would fail as it would be announced to a screen reader as “PHS logo, link” without saying where the link goes. This could be improved by providing alt-text to state that this will redirect to the homepage.
-* If staying on embedded dashboard, the link should open in the same window. If leaving site or dashboard, the link should open in new window. This should be made clear to user by text explanation in title tag.
-* Confirm title tag does not overwrite link text and provide example of code.
+* Avoid the use of images as links. If unavoidable, ensure that the image has alt text with details of the link. For example, an image of the PHS logo that links to the PHS homepage would fail accessibility as it would be announced to a screen reader as “PHS logo, link” without saying where the link goes. This could be improved by providing alt-text to state that this will redirect to the homepage.
+* If staying on the embedded dashboard, the link should open in the same window. If leaving the site or dashboard, the link should open in a new window. This should be made clear to the user by text explanation in the title tag. As an example, moving from one tab to another is an internal link, and linking to any other website is external. 
+* Confirm the title tag does not overwrite link text and provide an example of code.
 
 ## Images used within dashboards
 
@@ -120,7 +120,7 @@ There are a number of tools available for testing accessibility. Amongst the mos
 
 ## Branding and corporate colours
 
-Logo must be presented in accordance with PHS branding guidelines and style guide. The Public Health Scotland logo should be used. Logos of legacy organisations should not be used.
+The logo must be presented in accordance with PHS branding guidelines and style guide. The Public Health Scotland logo should be used. Logos of legacy organisations should not be used.
 
 ### Colour palette for digital products
 
