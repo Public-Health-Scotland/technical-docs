@@ -20,7 +20,7 @@ Consider the overall layout and usability of the dashboard. Dashboards should id
 
 * Try to minimize large areas of white space.
 * Think about the tabbing/focus order whilst using a keyboard to navigate your dashboard. Make sure you can navigate using a keyboard only, in a logical order.
-* Think about where users expect to find certain information – such as instructions, data sources, and contact information.
+* Think about where users expect to find certain information - such as instructions, data sources, and contact information.
 * Try not to repeat content unnecessarily.
 * Perform UX testing with people not familiar with the dashboard or data.
 * Do not use italics or underline text for emphasis.
@@ -40,11 +40,11 @@ There are a number of tools available for testing accessibility. Amongst the mos
 
 ## Code
 
-* Ensure that the language attribute is set to “en” (see [Language of page WCAG 3.1.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)).
-* Ensure the main heading is marked up as such (see [Info and relationships WCAG 1.3.1](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)), this is particularly important for each new “tab” or “page” you build within the dashboard.
+* Ensure that the language attribute is set to "en" (see [Language of page WCAG 3.1.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)).
+* Ensure the main heading is marked up as such (see [Info and relationships WCAG 1.3.1](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)), this is particularly important for each new "tab" or "page" you build within the dashboard.
 * Headers (H1 to H6) should be used to denote content levels, not as a convenient way to style text.
-* Header levels should start at H1 and proceed in order as appropriate – for example, don’t start at H2, with no H1 or don’t jump from H1 to H3.
-* The visual appearance of headers should match the programmatic level – for example, H1 should appear more prominent than H2.
+* Header levels should start at H1 and proceed in order as appropriate - for example, don't start at H2, with no H1 or don't jump from H1 to H3.
+* The visual appearance of headers should match the programmatic level - for example, H1 should appear more prominent than H2.
 * Ensure that buttons are correctly labelled and are not empty (see [Link purpose (in context) WCAG 2.4.4](https://webaim.org/standards/wcag/checklist#sc2.4.4)).
 * Be careful with your placement and use of hover tooltips. We have encountered dashboards with tooltips used that are disorientating for the user (see [Content on hover or focus WCAG 1.4.13](https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html) for more guidance on creating tooltips or popups).
 * Ensure that you have complete start and end tags, and these are nested according to specification. This helps ensure that assistive technologies can parse the content accurately and without crashing. It is also important to ensure IDs are unique not duplicated (see [Parsing WCAG 4.1.1](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html)).
@@ -56,14 +56,14 @@ There are a number of tools available for testing accessibility. Amongst the mos
 * Users must be able to interact with the dashboard using only a keyboard (see [Keyboard WCAG 2.1.1](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html))
 * Any function that can be performed using a mouse must also be available to a keyboard-only user. For example:
   * interacting with a plot to download as an image or to zoom in (see [Reflow WCAG 1.4.10](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) for more information on the importance of being able to enlarge content displayed on the page)
-  * dismissing content – hover text, closing pop-ups
+  * dismissing content - hover text, closing pop-ups
 * Navigation should be possible using only standard keys on a keyboard:
   * tab
   * enter
   * arrows
   * shift
   * escape
-* There should be a logical order to the tabbing sequence – this can be tested using tab (forwards) and shift-tab (backwards). You want to ensure that elements within the dashboard are focussed on in a logical order (see [Focus order WCAG 2.4.3](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html)).
+* There should be a logical order to the tabbing sequence - this can be tested using tab (forwards) and shift-tab (backwards). You want to ensure that elements within the dashboard are focussed on in a logical order (see [Focus order WCAG 2.4.3](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html)).
 * Check that any drop-down menus or pop-outs can also be navigated using this method.
 * There should be a means to navigate back to the original page.
 * Guidance for using inputs should be added. This guidance should be placed before the input object to be read by screen readers before the user encounters the object.
@@ -71,12 +71,12 @@ There are a number of tools available for testing accessibility. Amongst the mos
 ## Links
 
 * All links should be encoded correctly as links (see [Name, role, value WCAG 4.1.2](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)).
-* When writing a link, make it descriptive and front-load it with relevant terms instead of using something generic like ‘click here’ or ‘more’. Generic links do not make sense out of context or tell users where a link will take them. They also do not work for people using screen readers, who often scan through lists of links to navigate a page. It’s important the links are descriptive so they make sense in isolation.
+* When writing a link, make it descriptive and front-load it with relevant terms instead of using something generic like 'click here' or 'more'. Generic links do not make sense out of context or tell users where a link will take them. They also do not work for people using screen readers, who often scan through lists of links to navigate a page. It's important the links are descriptive so they make sense in isolation.
   * Bad: For further information click here.
   * Good: View more information on good link practice.
 * Do not use the same link text to link to different places.
 * Think about the size of the link users need to select. For users with reduced motor skills, a one-word link could be very difficult to select.
-* Avoid the use of images as links. If unavoidable, ensure that the image has alt text with details of the link. For example, an image of the PHS logo that links to the PHS homepage would fail accessibility as it would be announced to a screen reader as “PHS logo, link” without saying where the link goes. This could be improved by providing alt-text to state that this will redirect to the homepage.
+* Avoid the use of images as links. If unavoidable, ensure that the image has alt text with details of the link. For example, an image of the PHS logo that links to the PHS homepage would fail accessibility as it would be announced to a screen reader as "PHS logo, link" without saying where the link goes. This could be improved by providing alt-text to state that this will redirect to the homepage.
 * If staying on the embedded dashboard, the link should open in the same window. If leaving the site or dashboard, the link should open in a new window. This should be made clear to the user by text explanation in the title tag. As an example, moving from one tab to another is an internal link, and linking to any other website is external. 
 * Confirm the title tag does not overwrite link text and provide an example of code.
 
@@ -90,7 +90,7 @@ There are a number of tools available for testing accessibility. Amongst the mos
   * Be accurate and equivalent in presenting the same content and function as presented by the image.
   * Be succinct. This means the correct content and function of the image should be presented as succinctly as is appropriate. Typically no more than a few words are necessary, though rarely a short sentence or two may be appropriate.
   * NOT be redundant or provide the exact same information as text within the context of the image.
-  * NOT use the phrases "image of ..." or "graphic of ..." to describe the image. It’s usually apparent to the user that it is an image. And if the image is conveying content, it is typically not necessary that the user knows that it is an image that is conveying the content, as opposed to text.
+  * NOT use the phrases "image of ..." or "graphic of ..." to describe the image. It's usually apparent to the user that it is an image. And if the image is conveying content, it is typically not necessary that the user knows that it is an image that is conveying the content, as opposed to text.
 
 ## Chart design and layout
 
@@ -105,7 +105,7 @@ There are a number of tools available for testing accessibility. Amongst the mos
 * Include instructions for interacting with charts.
 * Chart titles should be coded as text, not as images. Include a title above the chart to ensure that this is read by a screen reader prior to the chart.
 * Output resolution should be set to take account of intended destination. If a chart is pasted from Excel into Word and resized, the image can become pixelated and font size can fall below required size.
-* Ensure that chart elements will not be clipped or hidden when users change display options – for example, text spacing, resolution, resizing, contrast (see [Reflow WCAG 1.4.10](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) for more guidance, particularly around avoiding losing functionality beyond 400% zoom).
+* Ensure that chart elements will not be clipped or hidden when users change display options - for example, text spacing, resolution, resizing, contrast (see [Reflow WCAG 1.4.10](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) for more guidance, particularly around avoiding losing functionality beyond 400% zoom).
 * Do not do the following:
   * use colour alone to convey information (see [Use of colour WCAG 1.4.1](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)). Alternative options include:
     * adding labels
