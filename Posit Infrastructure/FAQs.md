@@ -100,7 +100,7 @@ Posit Workbench provides several ways to open or switch to another project, but 
 2. After agreeing to the Usage Policy, click on the open new session icon ![](https://user-images.githubusercontent.com/46680486/279127331-4967eda2-f52a-4acd-a04b-5adf6e1e6b92.png) in the top right corner:  
    ![](https://user-images.githubusercontent.com/46680486/279127337-94f82693-97d0-492d-b4ca-12c4bf4a44a5.png)
 
-3. In the pop-up window, select "Start within: ⦿ Project", click on the "Browse..." button:  
+3. In the pop-up window, select "Start within: ⦿ Project", and click on the "Browse..." button:  
    ![](https://user-images.githubusercontent.com/46680486/279127346-705fc95b-1f32-4b5c-84ce-bcc2fe9073ab.png)
 
 4. Navigate to your project folder and double-click on the `.Rproj` file:  
