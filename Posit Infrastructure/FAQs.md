@@ -97,7 +97,7 @@ Posit Workbench provides several ways to open or switch to another project, but 
    ![](https://user-images.githubusercontent.com/46680486/279127344-10a70bdc-963c-48f2-b83f-e10e95fe9a13.png)
    These sessions are small because no data processing is supposed to be done on them. Having a small session helps to save resources as Posit Workbench works on a pay-as-you-go policy.
 
-2. After ageeing to the Usage Policy, click on the open new session icon ![](https://user-images.githubusercontent.com/46680486/279127331-4967eda2-f52a-4acd-a04b-5adf6e1e6b92.png) in the top right corner:  
+2. After agreeing to the Usage Policy, click on the open new session icon ![](https://user-images.githubusercontent.com/46680486/279127331-4967eda2-f52a-4acd-a04b-5adf6e1e6b92.png) in the top right corner:  
    ![](https://user-images.githubusercontent.com/46680486/279127337-94f82693-97d0-492d-b4ca-12c4bf4a44a5.png)
 
 3. In the pop-up window, select "Start within: ⦿ Project", click on the "Browse..." button:  
