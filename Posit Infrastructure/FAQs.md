@@ -91,7 +91,7 @@ Projects in Posit Workbench allow you to divide your work into different working
 
 #### How do I open or switch to another project?
 
-Posit Workbench provides several ways to open or switch to another project, but there is one way tends to produce less errors.  Please ensure that you always follow these steps to open a project:
+Posit Workbench provides several ways to open or switch to another project, but there is one way that tends to produce fewer errors.  Please ensure that you always follow these steps to open a project:
 
 1. Open a "project opener" session — 0.2 CPU and 200 MB:  
    ![](https://user-images.githubusercontent.com/46680486/279127344-10a70bdc-963c-48f2-b83f-e10e95fe9a13.png)
