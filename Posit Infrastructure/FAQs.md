@@ -113,7 +113,7 @@ Posit Workbench provides several ways to open or switch to another project, but 
 
 6. The new session will be open in a new tab. Wait until the new session has successfully opened your project. Then **do not forget** to come back to the previous tab to close the "project opener" session if you do not intend to use it anymore.
 
-This procedure for opening projects should save time in case errors are raised when opening projects, because your "project opener" session does not close automatically when opening the new project. Although, if you forget to close that session, once the project was successfully open, we will be spending money on idle sessions.  
+This procedure for opening projects should save time in case errors are raised when opening projects because your "project opener" session does not close automatically when opening the new project. However, if you forget to close that session, once the project is successfully open, we will be spending money on idle sessions.
 
 !!! IMPORTANT !!!
 
