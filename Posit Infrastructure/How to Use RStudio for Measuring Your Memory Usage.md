@@ -1,10 +1,10 @@
-# How to Use the RStudio Profiling Tool for Memory Usage
+# How to Use RStudio for Measuring Your Memory Usage and Runtime
 
 ## Purpose
 
-This document aims to offer guidance to users seeking to precisely measure how much memory and time is required for running their code. This is known as profiling. It is particularly useful to help determine how much memory is required when creating an instance in Posit Workbench where the code will be executed.
+This document aims to offer guidance to users seeking to precisely measure how much memory and time is required for running their code. This is known as profiling. It is particularly useful to help determine how much memory is required when creating an instance in Posit Workbench where the code will be executed. In RStudio, there is an integrated profiling tool that uses the `profvis` package.
 
-It contains a brief description of what profiling is, how to install and use the integrated profiling tool in RStudio and how to interpret its results. 
+It contains a [brief description of what profiling is](#what-is-profiling), [how to install the packages for using the profiling tool](#installing-profvis), [how use it](#using-profvis) and [how to interpret its results](#interpreting-the-results). 
 
 ## What is Profiling
 

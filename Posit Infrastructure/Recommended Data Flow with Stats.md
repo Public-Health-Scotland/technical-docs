@@ -61,7 +61,7 @@ Writing an extract of 1 million rows from the SMR01 dataset to the Stats server.
 |---|---|---|---|---|
 |{arrow}|parquet|ZStandard|39.57|39.77|
 |{arrow}|parquet|Snappy|46.53|46.59|
-|{qs}|qs|ZStandard|4.69|46.92|
+|{qs}|qs|ZStandard|46.9|46.92|
 |{vroom}|csv|ZStandard|72|73.2|
 |{vroom}|csv|Gzip|150|150|
 |{readr}|csv|Uncompressed|174|174|
