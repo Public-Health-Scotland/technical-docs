@@ -108,18 +108,30 @@ Projects in Posit Workbench allow you to divide your work into different working
 
 #### How do I open or switch to another project?
 
-Posit Workbench provides several ways to open or switch to another project, but only one way works consistently without producing an error.  Please ensure that you always follow these steps to open a project:
+Posit Workbench provides several ways to open or switch to another project, but there is one way that tends to produce fewer errors.  Please ensure that you always follow these steps to open a project:
 
-1. If you do not already have a Posit Workbench session open, or you want to open the project in a new Posit Workbench session, please first of all open a new Posit Workbench session.
-2. Once the session has started, navigate to the 'File' menu and select "Open Project..."
-3. Use the file browser to navigate to the directory that contains your project.
-4. Select the .Rproj file in the project directory.
-5. Click the "Open Project" button.
+1. Open a "project opener" session — 0.2 CPU and 200 MB:  
+   ![](https://user-images.githubusercontent.com/46680486/279127344-10a70bdc-963c-48f2-b83f-e10e95fe9a13.png)
+   
+   These sessions are small because no data processing is supposed to be done on them. Having a small session helps to save resources as Posit Workbench works on a pay-as-you-go policy.
 
-Posit Workbench will then
+2. After agreeing to the Usage Policy, click on the open new session icon ![](https://user-images.githubusercontent.com/46680486/279127331-4967eda2-f52a-4acd-a04b-5adf6e1e6b92.png) in the top right corner:  
+   ![](https://user-images.githubusercontent.com/46680486/279127337-94f82693-97d0-492d-b4ca-12c4bf4a44a5.png)
 
-* Restart the current session on the Kubernetes cluster, configured with the same number of CPUs and memory requested when the session was first started.
-* Set the current working directory to the project directory.
+3. In the pop-up window, select "Start within: ⦿ Project", and click on the "Browse..." button:  
+   ![](https://user-images.githubusercontent.com/46680486/279127346-705fc95b-1f32-4b5c-84ce-bcc2fe9073ab.png)
+
+4. Navigate to your project folder and double-click on the `.Rproj` file:  
+   ![](https://user-images.githubusercontent.com/46680486/279127342-b78bf898-5950-419c-834d-3b02799e6c2e.png)
+
+5. Input the CPU and Memory according to your [project requirements]([PHS Data Science - Knowledge Base (public-health-scotland.github.io)](https://public-health-scotland.github.io/knowledge-base/docs/Posit%20Infrastructure?doc=How%20to%20Use%20RStudio%20for%20Measuring%20Your%20Memory%20Usage.md)), and click on "Start":  
+   ![](https://user-images.githubusercontent.com/46680486/279127341-8212b1ce-b297-44d9-ab33-fa2bd838b09c.png)
+   
+   To use the default CPU and memory resources, you can erase the text on these input boxes.
+
+6. The new session will be open in a new tab. Wait until the new session has successfully opened your project. Then **do not forget** to come back to the previous tab to close the "project opener" session if you do not intend to use it anymore.
+
+This procedure for opening projects should save time in case errors are raised when opening projects because your "project opener" session does not close automatically when opening the new project. However, if you forget to close that session, once the project is successfully open, we will be spending money on idle sessions.
 
 !!! IMPORTANT !!!
 
