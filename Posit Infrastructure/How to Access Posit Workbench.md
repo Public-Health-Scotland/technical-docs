@@ -10,7 +10,7 @@
 If you're new to Posit Workbench and require that for your role, a user account and relevant access is set up by DaS (which includes access to Posit Package Manager). This follows a similar process to 'Access to Data', and requires line manager approval and is subject to the [Acceptable Usage Policy](Acceptable%20Usage%20Policy%20for%20Posit%20Workbench.md). This includes the deactivation of inactive accounts, if this affects you, see [Deactived User](#deactivated-user).
 
 1. Go to [ServiceNow](https://nhsnss.service-now.com/phs/) > Digital & Security > Service Catalog > Make a Request
-2. Select ‘Corporate Applications’ as the Product or Service
+2. Select 'Corporate Applications' as the Product or Service
 3. Another dropdown will appear where you can select the appropriate Posit application. In this case, Workbench.
 4. Complete the rest of the form, and attach authorisation from your line manager (similar to Access to Data process).
 5. Submit the request!
