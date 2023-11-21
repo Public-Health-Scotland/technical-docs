@@ -12,7 +12,7 @@ This document aims to provide users of R in Posit Workbench guidance on how to c
 - [{raster}](https://rspatial.github.io/raster/reference/raster-package.html)
 - [{leaflet}](https://rstudio.github.io/leaflet/)
 
-Please note: {rgdal} now been retired from CRAN and has therefore been removed from this documentation. However, versions of {leaflet} >= 2.2.0 do not depend on this package. To avoid dependency on obsolete packges, older versions should only be installed if strictly necessary. Please try to use the most up-to-date versions wherever possible.
+Please note: {rgdal} has now been retired from CRAN and has therefore been removed from this documentation. However, versions of {leaflet} >= 2.2.0 do not depend on this package. To avoid dependency on obsolete packages, older versions should only be installed if strictly necessary. Please try to use the most up-to-date versions wherever possible.
 
 ## Setting environment variables
 
