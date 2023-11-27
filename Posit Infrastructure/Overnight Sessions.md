@@ -27,11 +27,3 @@ A Posit Workbench session that a user would like to continue running past 9pm mu
 4. Amend any other settings as required in the "New Session" dialog box, and click the blue "Start Session" button.  The session will start as normal.
 
 **Important Note:** If you open a project from within a session started by following the steps above, the process of opening that project will start another session and close your "NIGHT" session.  As such, the session that the project opens in will no longer have "NIGHT" at the start of its name, and it will be closed at 9pm by the automated process.
-
-## Process to open a "NIGHT" project
-
-1. Firstly, ensure that the project's .Rproj file and root directory (i.e. the directory that contains the .Rproj file) both share the same name, and that the name has the word "NIGHT" at the start, e.g. "/conf/linkage/output/NIGHT my project/NIGHT my project.Rproj"
-
-2. Follow the steps outlined at [How to Login to Posit Workbench](How%20to%20Login%20to%20Posit%20Workbench.md) to log in to Posit Workbench and start a new session.
-
-3. Follow steps outlined in [FAQs - Projects](FAQs.md#projects) to open the project.
