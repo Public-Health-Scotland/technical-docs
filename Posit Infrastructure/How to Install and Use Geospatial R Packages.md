@@ -10,8 +10,9 @@ This document aims to provide users of R in Posit Workbench guidance on how to c
 - [{terra}](https://rspatial.github.io/terra/)
 - [{sp}](https://github.com/edzer/sp)
 - [{raster}](https://rspatial.github.io/raster/reference/raster-package.html)
-- [{rgdal}](https://cran.r-project.org/web/packages/rgdal/index.html)
 - [{leaflet}](https://rstudio.github.io/leaflet/)
+
+Please note: {rgdal} has now been retired from CRAN and has therefore been removed from this documentation. However, versions of {leaflet} >= 2.2.0 do not depend on this package. To avoid dependency on obsolete packages, older versions should only be installed if strictly necessary. Please try to use the most up-to-date versions wherever possible.
 
 ## Setting environment variables
 
@@ -54,7 +55,7 @@ Geospatial R packages must be compiled and installed from source, rather than as
 
 ```r
 # List of geospatial packages that will be installed
-geo_pkgs <- c("leaflet", "rgdal", "raster", "sp", "terra", "sf")
+geo_pkgs <- c("leaflet", "raster", "sp", "terra", "sf")
 
 # List of geospatial package dependencies
 geo_deps <- unique(
@@ -146,17 +147,13 @@ install.packages("https://ppm.publichealthscotland.org/all-r/latest/src/contrib/
                  INSTALL_opts = "--no-test-load",
                  Ncpus = ncpus)
 
-# Install the {rgdal} package
-install.packages("https://ppm.publichealthscotland.org/all-r/latest/src/contrib/Archive/rgdal/rgdal_1.5-25.tar.gz",
-                 repos = NULL,
-                 type = "source",
-                 configure.args = geo_config_args,
-                 INSTALL_opts = "--no-test-load",
-                 Ncpus = ncpus)
-
 # Install the {leaflet} package
 install.packages("leaflet",
                  repos = c("https://ppm.publichealthscotland.org/all-r/__linux__/centos7/latest"),
+                 type = "source",
+                 dependencies = FALSE,
+                 configure.args = geo_config_args,
+                 INSTALL_opts = "--no-test-load",
                  Ncpus = ncpus)
 ```
 
