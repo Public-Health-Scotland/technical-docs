@@ -6,7 +6,7 @@ This document aims to provide users with information on running Posit Workbench 
 
 ## Background
 
-An automated process has been put in place to close sessions in Posit Workbench at 8pm every evening.
+An automated process has been put in place to close sessions in Posit Workbench every evening. During **Daylight Saving Time**, sessions will close at **8pm**.
 
 This automated process can be overridden by including the word "NIGHT" at the start of the name of the relevant Posit Workbench session, **when the session is started**.
 
