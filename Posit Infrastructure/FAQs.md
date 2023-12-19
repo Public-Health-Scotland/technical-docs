@@ -21,6 +21,8 @@ This document aims to answer frequently asked questions from users in relation t
 * [Projects](#projects)
   * [What is a project (in Posit Workbench)?](#what-is-a-project-in-posit-workbench)
   * [How do I open or switch to another project?](#how-do-i-open-or-switch-to-another-project)
+* [Troubleshooting packages](#troubleshooting-packages)
+  * [How do I stop `{shiny}` apps timing out so quickly?](#how-do-i-stop-shiny-apps-timing-out-so-quickly)
 
 ### Accessing Posit Workbench
 
@@ -170,3 +172,16 @@ Microsoft Edge is the recommended, and supported, web browser for accessing Posi
 #### What web browser should I use for Posit Connect?
 
 Microsoft Edge is the recommended, and supported, web browser for accessing Posit Connect.
+
+### Troubleshooting packages
+
+#### How do I stop `{shiny}` apps timing out so quickly?
+
+If your `{shiny}` apps are timing out after just a few seconds when run locally, you can add the workaround code below to the app's server.R script to prevent this:
+
+```{r}{auto_invalidate <- reactiveTimer(10000)
+  observe({
+    auto_invalidate()
+    cat(".")
+  })
+}```
