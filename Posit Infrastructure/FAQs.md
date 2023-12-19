@@ -151,6 +151,19 @@ Doing so may result in Posit Workbench crashing or certain error messages such a
 
 This is a [known issue](https://github.com/rstudio/rstudio/issues/11914) in older versions of Posit Workbench which will likely be fixed when the Posit Workbench environment is next updated.
 
+### Troubleshooting packages
+
+#### How do I stop `{shiny}` apps timing out so quickly?
+
+If your `{shiny}` apps are timing out after just a few seconds when run locally, you can add the workaround code below to the app's server.R script to prevent this:
+
+```{r}
+auto_invalidate <- reactiveTimer(10000)
+
+observe({
+    auto_invalidate()
+    cat(".")})
+```
 ## Posit Package Manager
 
 * [Accessing Posit Package Manager](#accessing-posit-package-manager)
@@ -172,17 +185,3 @@ Microsoft Edge is the recommended, and supported, web browser for accessing Posi
 #### What web browser should I use for Posit Connect?
 
 Microsoft Edge is the recommended, and supported, web browser for accessing Posit Connect.
-
-### Troubleshooting packages
-
-#### How do I stop `{shiny}` apps timing out so quickly?
-
-If your `{shiny}` apps are timing out after just a few seconds when run locally, you can add the workaround code below to the app's server.R script to prevent this:
-
-```{r}
-auto_invalidate <- reactiveTimer(10000)
-
-observe({
-    auto_invalidate()
-    cat(".")})
-```
