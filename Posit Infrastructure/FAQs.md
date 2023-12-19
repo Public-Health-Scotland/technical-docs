@@ -179,9 +179,10 @@ Microsoft Edge is the recommended, and supported, web browser for accessing Posi
 
 If your `{shiny}` apps are timing out after just a few seconds when run locally, you can add the workaround code below to the app's server.R script to prevent this:
 
-```{r}{auto_invalidate <- reactiveTimer(10000)
-  observe({
+```{r}
+auto_invalidate <- reactiveTimer(10000)
+
+observe({
     auto_invalidate()
-    cat(".")
-  })
-}```
+    cat(".")})
+```
