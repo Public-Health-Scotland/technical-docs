@@ -18,14 +18,14 @@ Setting up [{renv}](https://rstudio.github.io/renv/) for the first time in a pro
 
 Adding (/removing) packages to the project:
 1.	Install (or remove) the required packages as usual. 
-2.	Change the code, by adding (or removing) calls to library() or require().
+2.	Change the code, by adding (or removing) calls to `library()` or `require()`.
 3.	Calling `renv::status()` will tell you there are changes that aren’t recorded in the lockfile.
 4.	Calling `renv::snapshot()` will record any changes into the lockfile.
 5.	Calling `renv::status()` should now confirm everything's synced. 
 6.	Commit the changes to version control.
 
 Using a project that has already had [{renv}](https://rstudio.github.io/renv/) initialised (e.g., when collaborating on a colleague's project):
-1.	Ensure the project is synced with the latest version-controlled repository (e.g., git pull from github).
+1.	Ensure the project is synced with the latest version-controlled repository (e.g., `git pull` from github).
 2.	Call `renv::restore()` to make sure your local version of the project has all the required packages.
 3.	Calling `renv::status()` should now confirm everything's synced. 
 
@@ -44,4 +44,4 @@ Caution: the packages stored in renv/library and detailed in the lockfile are fr
 
 * [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html)
 * [Posit workshop for PHS on renv](https://positpbc.zoom.us/rec/play/n8-spO05R8p9vp8dqJ9GxH_Zr8mk7IMvsiX3menvnbXEXmJOXK5mOA-HPMxEFQPJvh6bTkvhaK6_oHWT.e--Z8hkQVR5coU-F?continueMode=true&pwd=MjxDT7xc_SQJM8HkKz4ffvPvm0mU4s74&_x_zm_rtaid=7GmfdwjkRvidhayMImvvYQ.1680787485091.7d8be92495688fceb3b55c4b0f603018&_x_zm_rhtaid=747)
-* [PHS Reproducible Environments channel on MS Teams](https://teams.microsoft.com/l/channel/19%3Aa786ffd4a70d4941b87f023942d21b6a%40thread.tacv2/Reproducible Environments?groupId=ec4250f9-b70a-4f32-9372-a232ccb4f713&tenantId=10efe0bd-a030-4bca-809c-b5e6745e499a)
+* [PHS Reproducible Environments channel on MS Teams](https://teams.microsoft.com/l/channel/19%3Aa786ffd4a70d4941b87f023942d21b6a%40thread.tacv2/Reproducible%20Environments?groupId=ec4250f9-b70a-4f32-9372-a232ccb4f713&tenantId=)
