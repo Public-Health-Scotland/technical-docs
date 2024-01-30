@@ -10,13 +10,13 @@ This guide provides basic step-by-step instructions for using [{renv}](https://r
 
 Pre-requisite: a project (preferably version-controlled using git).
 
-Setting up [{renv}](https://rstudio.github.io/renv/) for the first time in a project:
+#### Setting up [{renv}](https://rstudio.github.io/renv/) for the first time in a project:
 1.	Open the project.
 2.	Call `renv::init()` to initialise renv within that project. This can take a while depending on the size of the project.
 3.	Calling `renv::status()` should confirm the new 'lockfile' is synced with the project (i.e., contains details of all the required packages).
 4.	Commit the changes (additional files and folders) to version control.
 
-Adding (/removing) packages to the project:
+#### Adding (/removing) packages to the project:
 1.	Install (or remove) the required packages as usual. 
 2.	Change the code, by adding (or removing) calls to `library()` or `require()`.
 3.	Calling `renv::status()` will tell you there are changes that aren’t recorded in the lockfile.
@@ -24,7 +24,7 @@ Adding (/removing) packages to the project:
 5.	Calling `renv::status()` should now confirm everything's synced. 
 6.	Commit the changes to version control.
 
-Using a project that has already had [{renv}](https://rstudio.github.io/renv/) initialised (e.g., when collaborating on a colleague's project):
+#### Using a project that has already had [{renv}](https://rstudio.github.io/renv/) initialised (e.g., when collaborating on a colleague's project):
 1.	Ensure the project is synced with the latest version-controlled repository (e.g., `git pull` from github).
 2.	Call `renv::restore()` to make sure your local version of the project has all the required packages.
 3.	Calling `renv::status()` should now confirm everything's synced. 
@@ -34,9 +34,9 @@ Using a project that has already had [{renv}](https://rstudio.github.io/renv/) i
 [{renv}](https://rstudio.github.io/renv/) works by storing the exact versions of each package used within each project. This helps to isolate the project from any external changes that might have caused problems (e.g., updating/removing packages when working on a different project). Once [{renv}](https://rstudio.github.io/renv/) is initialised in a project it stays on unless deliberately turned off (see [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html)). 
 
 When you initialise [{renv}](https://rstudio.github.io/renv/) in a project (renv::init()) it searches the scripts for any calls to `library()` or `require()` and identifies which versions of each package are in use. The following files/folders are then added to the project:
-* The folder renv/library: this is used for storing the packages. If the project is version-controlled using git a .gitignore file will be written to renv/, so that this library is ignored when changes to the project are committed.  
-* The lockfile renv.lock: this stores the details of the packages (including the versions used). 
-* The profile file .Rprofile: this is run automatically when the project is opened, to ensure it uses the packages stored in renv/library.
+* The folder `renv/library`: this is used for storing the packages. If the project is version-controlled using git a `.gitignore` file will be written to `renv/`, so that this library is ignored when changes to the project are committed.  
+* The lockfile `renv.lock`: this stores the details of the packages (including the versions used). 
+* The profile file `.Rprofile`: this is run automatically when the project is opened, to ensure it uses the packages stored in renv/library.
 
 Caution: the packages stored in renv/library and detailed in the lockfile are frozen in time and won't benefit from bug fixes. To update to the latest versions of packages call `renv::update()` periodically, and make sure the code still works before recording the new versions in the lockfile using `renv::snapshot()`. If the code doesn’t work with the new versions you can roll back to the versions in the lockfile using `renv::restore()` (for more info see [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html)). 
 
