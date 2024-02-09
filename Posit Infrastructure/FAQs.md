@@ -12,6 +12,8 @@ This document aims to answer frequently asked questions from users in relation t
 * [Accessing Posit Workbench](#accessing-posit-workbench)
   * [What web browser should I use?](#what-web-browser-should-i-use-for-posit-workbench)
   * [Do I need to be connected to the VPN?](#do-i-need-to-be-connected-to-the-vpn)
+* [Sessions](#sessions)
+  * [Why do I get Status code 502/504 errors when starting a session and what can I do about it?](#sessions-502-504)
 * [Installing Packages](#installing-packages)
   * [How do I install the `{hablar}` package?](#how-do-i-install-the-hablar-package)
   * [How do I install the `{phsmethods}` package?](#how-do-i-install-the-phsmethods-package)
@@ -31,6 +33,20 @@ Microsoft Edge is the recommended, and supported, web browser for accessing Posi
 #### Do I need to be connected to the VPN?
 
 If you are working remotely, yes: ensure that when you login to Windows that you first connect to the VPN by selecting "vpn1.nss.scot" or "vpn2.nss.scot".  If these VPN servers are not available to you, please raise a call to have this rectified in [ServiceNow](https://nhsnss.service-now.com/phs/).
+
+### Sessions
+
+#### <a name="sessions-502-504">Why do I get _Status code 502/504_ errors when starting a session and what can I do about it?</a>
+
+_Status code 502/504_ errors are produced when the Posit Workbench application is unable to connect to your RStudio IDE session.  This will most often happen when you are starting a session, especially when you have requested a large session as these take longer to start.
+
+Posit Workbench will report a _Status code 502/504_ error after 2 minutes of not being able to connect to your session:
+
+![Dialog box containing the text Status code 504 returned by RStudio Server when executing 'client_init'](https://github.com/Public-Health-Scotland/technical-docs/assets/45657289/91e22863-31eb-4920-8c2d-f398ea2dcc67)
+
+After you click the "OK" button in the dialog box, the page in your web browser will likely turn grey, rather than connect to your session.  To resolve this, click the refresh button in your web browser.  This will reload the Posit Workbench application in your web browser.  If your session has successfully started, you should at this point be presented with the RStudio IDE as normal.  If your session is still starting, you will be presented with messages saying that the session is starting up.
+
+If clicking the refresh button in your web browser had no effect, return to the Posit Workbench homepage by navigating to the URL [https://pwb.publichealthscotland.org/](https://pwb.publichealthscotland.org/).
 
 ### Installing Packages
 
