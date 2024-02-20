@@ -33,7 +33,7 @@ Pre-requisite: a project (preferably version-controlled using git).
 
 [{renv}](https://rstudio.github.io/renv/) works by storing the exact versions of each package used within each project. This helps to isolate the project from any external changes that might have caused problems (e.g., updating/removing packages when working on a different project). Once [{renv}](https://rstudio.github.io/renv/) is initialised in a project it stays on unless deliberately turned off (see [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html)). 
 
-When you initialise [{renv}](https://rstudio.github.io/renv/) in a project (renv::init()) it searches the scripts for any calls to `library()` or `require()` and identifies which versions of each package are in use. The following files/folders are then added to the project:
+When you initialise [{renv}](https://rstudio.github.io/renv/) in a project (renv::init()) it searches the scripts for any calls to `library()`, `require()` or package function calls and identifies which versions of each package are in use from the versions installed in the user's package library.. The following files/folders are then added to the project:
 * The folder `renv/library`: this is used for storing the packages. If the project is version-controlled using git a `.gitignore` file will be written to `renv/`, so that this library is ignored when changes to the project are committed.  
 * The lockfile `renv.lock`: this stores the details of the packages (including the versions used). 
 * The profile file `.Rprofile`: this is run automatically when the project is opened, to ensure it uses the packages stored in renv/library.
