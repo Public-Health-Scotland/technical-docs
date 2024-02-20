@@ -18,7 +18,7 @@ Pre-requisite: a project (preferably version-controlled using git).
 
 #### Adding (/removing) packages to the project:
 1.	Install (or remove) the required packages as usual. 
-2.	Change the code, by adding (or removing) calls to `library()` or `require()`.
+2.	Change the code, by adding (or removing) calls to `library()` or `require()`, or the package function calls themselves e.g. `dplyr::group_by()`.
 3.	Calling `renv::status()` will tell you there are changes that aren’t recorded in the lockfile.
 4.	Calling `renv::snapshot()` will record any changes into the lockfile.
 5.	Calling `renv::status()` should now confirm everything's synced. 
