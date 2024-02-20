@@ -22,7 +22,7 @@ Pre-requisite: a project (preferably version-controlled using git).
 3.	Calling `renv::status()` will tell you there are changes that aren’t recorded in the lockfile.
 4.	Calling `renv::snapshot()` will record any changes into the lockfile.
 5.	Calling `renv::status()` should now confirm everything's synced. 
-6.	Commit the changes to version control.
+6.	Commit the changes in the renv.lock file using version control.
 
 #### Using a project that has already had [{renv}](https://rstudio.github.io/renv/) initialised (e.g., when collaborating on a colleague's project):
 1.	Ensure the project is synced with the latest version-controlled repository (e.g., `git pull` from github).
