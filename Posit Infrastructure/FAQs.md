@@ -12,6 +12,7 @@ This document aims to answer frequently asked questions from users in relation t
 * [Accessing Posit Workbench](#accessing-posit-workbench)
   * [What web browser should I use?](#what-web-browser-should-i-use-for-posit-workbench)
   * [Do I need to be connected to the VPN?](#do-i-need-to-be-connected-to-the-vpn)
+  * [How do I prevent my browser from causing my session to pause / go to sleep?](#how-do-I-prevent-sessions-from-going-to-sleep)
 * [Installing Packages](#installing-packages)
   * [How do I install the `{hablar}` package?](#how-do-i-install-the-hablar-package)
   * [How do I install the `{phsmethods}` package?](#how-do-i-install-the-phsmethods-package)
@@ -31,6 +32,19 @@ Microsoft Edge is the recommended, and supported, web browser for accessing Posi
 #### Do I need to be connected to the VPN?
 
 If you are working remotely, yes: ensure that when you login to Windows that you first connect to the VPN by selecting "vpn1.nss.scot" or "vpn2.nss.scot".  If these VPN servers are not available to you, please raise a call to have this rectified in [ServiceNow](https://nhsnss.service-now.com/phs/).
+
+Microsoft Edge is the recommended, and supported, web browser for accessing Posit Workbench.
+
+### How to prevent my browser from putting my session to sleep?
+
+Microsoft Edge puts your tabs to sleep when you’re not using them. Tabs are put to sleep after 1 hour of inactivity by default. This can cause your session to pause / go to sleep.
+
+Follow these steps to change your browser preferences to prevent this:
+
+1.  Open Microsoft Edge.
+2.  Click/tap on the Settings and more (3 dots) button, and click/tap on Settings.
+3.  Click/tap on System and performance in the left pane.
+4.  Click/tap on the ‘Add’ button under Never put these sites to sleep. Add the Posit Workbench homepage URL (https://pwb.publichealthscotland.org/) to the dialogue box that appears then click the ‘Add’ button.
 
 ### Installing Packages
 
