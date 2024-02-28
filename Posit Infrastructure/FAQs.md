@@ -24,6 +24,8 @@ This document aims to answer frequently asked questions from users in relation t
 * [Projects](#projects)
   * [What is a project (in Posit Workbench)?](#what-is-a-project-in-posit-workbench)
   * [How do I open or switch to another project?](#how-do-i-open-or-switch-to-another-project)
+* [Troubleshooting packages](#troubleshooting-packages)
+  * [How do I stop `{shiny}` apps timing out so quickly?](#how-do-i-stop-shiny-apps-timing-out-so-quickly)
 
 ### Accessing Posit Workbench
 
@@ -172,6 +174,19 @@ Doing so may result in Posit Workbench crashing or certain error messages such a
 
 This is a [known issue](https://github.com/rstudio/rstudio/issues/11914) in older versions of Posit Workbench which will likely be fixed when the Posit Workbench environment is next updated.
 
+### Troubleshooting packages
+
+#### How do I stop `{shiny}` apps timing out so quickly?
+
+If your `{shiny}` apps are timing out after just a few seconds when run locally, you can add the workaround code below to the app's server.R script to prevent this:
+
+```{r}
+auto_invalidate <- reactiveTimer(10000)
+
+observe({
+    auto_invalidate()
+    cat(".")})
+```
 ## Posit Package Manager
 
 * [Accessing Posit Package Manager](#accessing-posit-package-manager)
