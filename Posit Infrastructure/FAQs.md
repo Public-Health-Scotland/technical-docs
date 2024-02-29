@@ -17,7 +17,7 @@ This document aims to answer frequently asked questions from users in relation t
 * [Sessions](#sessions)
   * [Why do I get Status code 502/504 errors when starting a session and what can I do about it?](#sessions-502-504)
 * [Installing Packages](#installing-packages)
-  * [What do I do if I cannot install any packages?](#what-do-I-do-if-I-cannot-install-any-packages)
+  * [What do I do if I cannot install any packages?](#what-do-i-do-if-i-cannot-install-any-packages)
   * [How do I install the `{hablar}` package?](#how-do-i-install-the-hablar-package)
   * [How do I install the `{phsmethods}` package?](#how-do-i-install-the-phsmethods-package)
   * [How do I install the `{ranger}` package?](#how-do-i-install-the-ranger-package)
@@ -72,7 +72,7 @@ If clicking the refresh button in your web browser had no effect, return to the 
 
 #### What do I do if I cannot install any packages?
 
-If you cannot install any packages raise a call in [Service Now](https://nhsnss.service-now.com/phs/) and ask to have your cache cleared.
+If you cannot install any packages **and** have an error message saying your home directory is not writeable or the directory is not correctly mounted then you should raise a call in [Service Now](https://nhsnss.service-now.com/phs/) and ask to have your cache cleared. Only raise a service call if you are getting these error messages.
 
 #### How do I install the `{hablar}` package?
 
