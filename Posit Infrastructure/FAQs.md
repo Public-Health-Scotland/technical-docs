@@ -22,6 +22,7 @@ This document aims to answer frequently asked questions from users in relation t
   * [How do I install the `{ranger}` package?](#how-do-i-install-the-ranger-package)
   * [What do I do if a package requires `{rJava}`?](#what-do-i-do-if-a-package-requires-rjava)
   * [What should I do if I encounter a 'failed to lock directory' error?](#what-should-i-do-if-i-encounter-a-failed-to-lock-directory-error)
+  * [Why can't I install the `{xlsx}` package in Posit Workbench?](#why-cant-i-install-the-xlsx-package-in-posit-workbench)
   * [Why does the `{rmapshaper}` package not install?](#why-does-the-rmapshaper-package-not-install)
 * [Projects](#projects)
   * [What is a project (in Posit Workbench)?](#what-is-a-project-in-posit-workbench)
@@ -130,11 +131,16 @@ install.packages("ranger")
 Some packages, e.g. `{xlsx}`, `{XLconnect}`, depend on an installation of [Java](https://en.wikipedia.org/wiki/Java_(software_platform)) in order to work.  There are no current or future plans to support Java on Posit Workbench.  Alternative packages such as `{openxlsx}` that do not rely on Java should be used instead.
 
 #### What should I do if I encounter a 'failed to lock directory' error?
+
 If you are trying to install an R package and see an error message in the console regarding locked directories (e.g. something like `00LOCK` or `failed to lock directory`), try using the `--no-lock` option with `install.packages()` as follows:
 
 ```R
 install.packages("<pkg>", INSTALL_opts = "--no-lock")
 ```
+
+#### Why can't I install the `{xlsx}` package in Posit Workbench?
+
+This package relies on Java, which is not supported in Posit Workbench (please see [the FAQ above](https://github.com/Public-Health-Scotland/technical-docs/blob/main/Posit%20Infrastructure/FAQs.md#what-do-i-do-if-a-package-requires-rjava)). The `{openxlsx}` package is an excellent alternative. 
 
 #### Why does the `{rmapshaper}` package not install?
 
