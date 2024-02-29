@@ -13,6 +13,7 @@ This document aims to answer frequently asked questions from users in relation t
   * [What web browser should I use?](#what-web-browser-should-i-use-for-posit-workbench)
   * [Do I need to be connected to the VPN?](#do-i-need-to-be-connected-to-the-vpn)
   * [How do I prevent my browser from causing my session to go to sleep?](#how-do-I-prevent-my-browser-from-causing-my-session-to-go-to-sleep)
+  * [Can a folder on the stats area be accessed from the server?](#can-a-folder-on-the-stats-area-be-accessed-from-the-server) 
 * [Sessions](#sessions)
   * [Why do I get Status code 502/504 errors when starting a session and what can I do about it?](#sessions-502-504)
 * [Installing Packages](#installing-packages)
@@ -46,6 +47,10 @@ Microsoft Edge puts your tabs to sleep when you’re not using them. Tabs are pu
 2.  Click/tap on the Settings and more (3 dots) button, and click/tap on Settings.
 3.  Click/tap on System and performance in the left pane.
 4.  Click/tap on the ‘Add’ button under Never put these sites to sleep. Add the Posit Workbench homepage URL  (https://pwb.publichealthscotland.org/) to the dialogue box that appears then click the ‘Add’ button.
+
+#### Can a folder on the stats area be accessed from the server?
+
+All folders on the "stats" or "confidential" area can potentially be mapped so the server can see them. If you cannot see the particular folder that you want, raise a call in [Service Now](https://nhsnss.service-now.com/phs/) to have this done.
 
 ### Sessions
 
