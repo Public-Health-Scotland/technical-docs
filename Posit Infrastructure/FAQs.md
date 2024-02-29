@@ -27,6 +27,8 @@ This document aims to answer frequently asked questions from users in relation t
 * [Projects](#projects)
   * [What is a project (in Posit Workbench)?](#what-is-a-project-in-posit-workbench)
   * [How do I open or switch to another project?](#how-do-i-open-or-switch-to-another-project)
+* [Scheduling tasks](#scheduling-tasks)
+  * [How can I schedule R scripts with cron in Posit Workbench?](#how-can-i-schedule-r-scripts-with-cron-in-posit-workbench)
 * [Troubleshooting packages](#troubleshooting-packages)
   * [How do I stop `{shiny}` apps timing out so quickly?](#how-do-i-stop-shiny-apps-timing-out-so-quickly)
 
@@ -194,6 +196,12 @@ Doing so may result in Posit Workbench crashing or certain error messages such a
 ![Launch session error](https://user-images.githubusercontent.com/45657289/215759609-fa3ecbd3-36fc-4985-8abe-bd05af07bba4.png)
 
 This is a [known issue](https://github.com/rstudio/rstudio/issues/11914) in older versions of Posit Workbench which will likely be fixed when the Posit Workbench environment is next updated.
+
+### Scheduling tasks
+
+#### How can I schedule R scripts with cron in Posit Workbench?
+
+Cron is not supported in the Posit Workbench environment. The Data Science team are currently testing an alternative scheduling solution, and in the future, Posit Connect will also provide scheduling functionality.
 
 ### Troubleshooting packages
 
