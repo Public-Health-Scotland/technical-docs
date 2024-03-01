@@ -13,7 +13,6 @@ This document aims to answer frequently asked questions from users in relation t
   * [What web browser should I use?](#what-web-browser-should-i-use-for-posit-workbench)
   * [Do I need to be connected to the VPN?](#do-i-need-to-be-connected-to-the-vpn)
   * [How do I prevent my browser from causing my session to go to sleep?](#how-do-I-prevent-my-browser-from-causing-my-session-to-go-to-sleep)
-  * [Can a folder on the stats area be accessed from the server?](#can-a-folder-on-the-stats-area-be-accessed-from-the-server) 
 * [Sessions](#sessions)
   * [Why do I get Status code 502/504 errors when starting a session and what can I do about it?](#sessions-502-504)
 * [Installing Packages](#installing-packages)
@@ -28,6 +27,9 @@ This document aims to answer frequently asked questions from users in relation t
 * [Projects](#projects)
   * [What is a project (in Posit Workbench)?](#what-is-a-project-in-posit-workbench)
   * [How do I open or switch to another project?](#how-do-i-open-or-switch-to-another-project)
+* [Accessing files and databases](#accessing-files-and-databases)
+  * [Can a folder on the stats area be accessed from the server?](#can-a-folder-on-the-stats-area-be-accessed-from-the-server)
+  * [Why can't I access any databases?](#why-cant-i-access-any-databases) 
 * [Scheduling tasks](#scheduling-tasks)
   * [How can I schedule R scripts with cron in Posit Workbench?](#how-can-i-schedule-r-scripts-with-cron-in-posit-workbench)
 * [Troubleshooting packages](#troubleshooting-packages)
@@ -51,10 +53,6 @@ Microsoft Edge puts your tabs to sleep when you’re not using them. Tabs are pu
 2.  Click/tap on the Settings and more (3 dots) button, and click/tap on Settings.
 3.  Click/tap on System and performance in the left pane.
 4.  Click/tap on the ‘Add’ button under Never put these sites to sleep. Add the Posit Workbench homepage URL  (https://pwb.publichealthscotland.org/) to the dialogue box that appears then click the ‘Add’ button.
-
-#### Can a folder on the stats area be accessed from the server?
-
-All folders on the "stats" or "confidential" area can potentially be mapped so the server can see them. If you cannot see the particular folder that you want, raise a call in [Service Now](https://nhsnss.service-now.com/phs/) to have this done.
 
 ### Sessions
 
@@ -201,6 +199,25 @@ Doing so may result in Posit Workbench crashing or certain error messages such a
 ![Launch session error](https://user-images.githubusercontent.com/45657289/215759609-fa3ecbd3-36fc-4985-8abe-bd05af07bba4.png)
 
 This is a [known issue](https://github.com/rstudio/rstudio/issues/11914) in older versions of Posit Workbench which will likely be fixed when the Posit Workbench environment is next updated.
+
+### Accessing files and databases
+
+#### Can a folder on the stats area be accessed from the server?
+
+All folders on the "stats" or "confidential" area can potentially be mapped so the server can see them. If you cannot see the particular folder that you want, raise a call in [Service Now](https://nhsnss.service-now.com/phs/) to have this done.
+
+#### Why can't I access any databases?
+
+If you can't access any databases from Posit Workbench, you should work through the following troubleshooting steps in the first instance:
+
+1. **Ensure that you have the appropriate access to the databases you require:** For new access to SMRA analysis views, please e-mail [phs.dmt@phs.scot](mailto:phs.dmt@phs.scot) specifying the required dataset(s).
+   Please copy in your line manager to the e-mail to show that they have authorised your request. You will receive an auto-generated e-mail 30 days prior to the expiry date of any SMRA access. Upon receipt of this
+   e-mail, please agree with your line manager that access should be renewed, then forward the notification e-mail to one of the PHS administrators named; copy in your line manager to show the request is authorised.
+
+2. **Check your version of the `{odbc}` package:** A bug was previously reported in v1.4.0 of the `{odbc}` package that prevented users from accessing databases. If you have this package version installed, please
+   upgrade to v1.4.1. If you do not yet have the `{odbc}` package installed, you will need this to access SMRA views from Posit Workbench.
+
+If you have all appropriate access permissions in place and have worked through the steps above, please raise a call in [Service Now](https://nhsnss.service-now.com/phs/) to have this investigated further. 
 
 ### Scheduling tasks
 
