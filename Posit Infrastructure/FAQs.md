@@ -61,7 +61,7 @@ Microsoft Edge puts your tabs to sleep when you're not using them. Tabs are put 
 
 ##### Background
 
-When a Posit Workbench session is requsted by the user, it is assigned a session ID.  This is a long string of letters and numbers that uniquely identifies the session. The session ID corresponds to metrics and logs that are produced by the Posit Workbench application and collected for onward analysis and debugging of issues.
+When a Posit Workbench session is requested by the user, it is assigned a session ID. This is a long string of letters and numbers that uniquely identifies the session. The session ID corresponds to metrics and logs that are produced by the Posit Workbench application and collected for onward analysis and debugging of issues.
 
 ##### Steps to find out the session ID of your Posit Workbench session
 
