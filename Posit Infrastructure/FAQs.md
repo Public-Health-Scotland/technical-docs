@@ -14,6 +14,7 @@ This document aims to answer frequently asked questions from users in relation t
   * [Do I need to be connected to the VPN?](#do-i-need-to-be-connected-to-the-vpn)
   * [How do I prevent my browser from causing my session to go to sleep?](#how-do-I-prevent-my-browser-from-causing-my-session-to-go-to-sleep)
 * [Sessions](#sessions)
+  * [How do I find my session ID?](#how-do-i-find-my-session-id)
   * [Why do I get Status code 502/504 errors when starting a session and what can I do about it?](#sessions-502-504)
 * [Installing Packages](#installing-packages)
   * [What do I do if I cannot install any packages?](#what-do-i-do-if-i-cannot-install-any-packages)
@@ -55,6 +56,39 @@ Microsoft Edge puts your tabs to sleep when you're not using them. Tabs are put 
 4.  Click/tap on the "Add" button under Never put these sites to sleep. Add the Posit Workbench homepage URL  (https://pwb.publichealthscotland.org/) to the dialogue box that appears then click the "Add" button.
 
 ### Sessions
+
+#### How do I find my session ID?
+
+##### Background
+
+When a Posit Workbench session is requested by the user, it is assigned a session ID. This is a long string of letters and numbers that uniquely identifies the session. The session ID corresponds to metrics and logs that are produced by the Posit Workbench application and collected for onward analysis and debugging of issues.
+
+##### Steps to find out the session ID of your Posit Workbench session
+
+1. If you have not already done so, log into Posit Workbench and start a session (refer to the [guidance on the Knowledge base here](https://public-health-scotland.github.io/knowledge-base/docs/Posit%20Infrastructure?doc=How%20to%20Access%20Posit%20Workbench.md#logging-in) if necessary).
+
+2. After the session has started, navigate to the [Posit Workbench homepage](https://pwb.publichealthscotland.org) and identify the session for which you would like to obtain the session ID in the list of sessions, as circled in red below:
+<img width="434" alt="image" src="https://github.com/Public-Health-Scotland/technical-docs/assets/45657289/9496f0a2-1eb2-4466-bf35-5d56e2088f1f">
+
+3. Click the "Info" button of the session (highlighted in yellow above) to bring up a dialog box containing further information about the session:
+<img width="517" alt="image" src="https://github.com/Public-Health-Scotland/technical-docs/assets/45657289/6fa50075-7552-4cc0-a9e1-3aa8f0eaca2f">
+
+4. Click on "Launcher Diagnostics" (highlighted in yellow above) to view a tab with further details:
+<img width="515" alt="image" src="https://github.com/Public-Health-Scotland/technical-docs/assets/45657289/c4e2839a-ed4d-413b-9a16-204b994a7947">
+
+5. The session ID of the session is highlighted in yellow above - it is a long string of letters and numbers.
+
+6. To close the dialog box, click the "Close" button, circled in red above.
+
+##### Alternative method
+
+The session ID can also be found in the URL (i.e. web address) when a session is open. This method can be useful to capture the session ID of a session that has crashed or failed to launch successfully. In the address bar of your web browser, you will see a URL like the one below:
+
+```
+https://pwb.publichealthscotland.org/s/bd664cfc78a31605322d7/?launcher=1
+```
+
+The long string of letters and numbers (in this case <code>bd664cfc78a31605322d7</code>) is the session ID.
 
 #### <a name="sessions-502-504">Why do I get _Status code 502/504_ errors when starting a session and what can I do about it?</a>
 
