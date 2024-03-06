@@ -82,7 +82,7 @@ When a Posit Workbench session is requsted by the user, it is assigned a session
 
 ##### Alternative method
 
-The Session ID can be found in the URL (i.e. web address) when a session is open. This method can be useful to capture the session ID of a session that has crashed or failed to launch successfully. In the address bar of your web browser, you will see a URL like the one below:
+The session ID can also be found in the URL (i.e. web address) when a session is open. This method can be useful to capture the session ID of a session that has crashed or failed to launch successfully. In the address bar of your web browser, you will see a URL like the one below:
 
 ```
 https://pwb.publichealthscotland.org/s/bd664cfc78a31605322d7/?launcher=1
