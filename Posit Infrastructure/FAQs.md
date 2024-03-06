@@ -67,7 +67,7 @@ When a Posit Workbench session is requested by the user, it is assigned a sessio
 
 1. If you have not already done so, log into Posit Workbench and start a session (refer to the [guidance on the Knowledge base here](https://public-health-scotland.github.io/knowledge-base/docs/Posit%20Infrastructure?doc=How%20to%20Access%20Posit%20Workbench.md#logging-in) if necessary).
 
-2. After the session has started, navigate to the [Posit Workbench homepage](https://pwb.publichealthscotland.org) and identify the session you would like the session ID of in the list of sessions, as circled in red below:
+2. After the session has started, navigate to the [Posit Workbench homepage](https://pwb.publichealthscotland.org) and identify the session for which you would like to obtain the session ID in the list of sessions, as circled in red below:
 <img width="434" alt="image" src="https://github.com/Public-Health-Scotland/technical-docs/assets/45657289/9496f0a2-1eb2-4466-bf35-5d56e2088f1f">
 
 3. Click the "Info" button of the session (highlighted in yellow above) to bring up a dialog box containing further information about the session:
