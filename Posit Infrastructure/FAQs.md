@@ -220,6 +220,10 @@ This procedure for opening projects should save time in case errors are raised w
 
 !!! IMPORTANT !!!
 
+**If you get a 502 or 504 error**, do not close that window. Please refer to [Why do I get Status code 502/504 errors when starting a session and what can I do about it?](#sessions-502-504)
+
+!!! FURTHERMORE !!!
+
 Please do not attempt to switch to another project using the 'Project' drop down menu at the top-right of the Posit Workbench interface:
 
 ![Project dropdown menu in RStudio](https://user-images.githubusercontent.com/45657289/215759371-64028dc2-a02e-4779-91c9-6bacf1369244.png)
