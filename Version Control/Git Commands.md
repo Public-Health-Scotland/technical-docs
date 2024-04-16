@@ -6,12 +6,10 @@ Some commands don't require additional arguments and can be used standalone to a
 
 ## Table of Contents
 
-- [Setup and Config](#setup-and-config)
-- [Creating Repositories](#creating-repositories)
-- [Staging and Committing](#staging-and-committing)
-- [Branching](#branching)
-- [Remote Repositories](#remote-repositories)
-- [History and Changes](#history-and-changes)
+- [Git Commands Reference Guide](#git-commands-reference-guide)
+  - [Table of Contents](#table-of-contents)
+  - [Setup and Config](#setup-and-config)
+  - [Repositories](#repositories)
 
 ## Setup and Config
 
@@ -19,3 +17,13 @@ Some commands don't require additional arguments and can be used standalone to a
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | `git config --global user.name "[Your Name]"`   | Set your name for Git to use, for simplicity this should match your GitHub username.            |
 | `git config --global user.email "[Your Email]"` | Set your email address for Git to use, for simplicity this should match your PHS email address. |
+
+## Repositories
+
+| Command           | Description                                               |
+| ----------------- | --------------------------------------------------------- |
+| `ls`              | List the contents of the current directory.               |
+| `cd [Directory]`  | Change directory to the specified directory.              |
+| `git init`        | Initialize a new Git repository in the current directory. |
+| `git clone [URL]` | Clone a repository from a URL.                            |
+| `git status`      | Show the status of the current repository.                |
