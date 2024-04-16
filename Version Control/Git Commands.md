@@ -6,12 +6,14 @@ Some commands don't require additional arguments and can be used standalone to a
 
 ## Table of Contents
 
-- [Setup and Config](#setup-and-config)
-- [Repositories](#repositories)
-- [Staging and Committing](#staging-and-committing)
-- [Branching](#branching)
-- [Remote Repositories](#remote-repositories)
-- [History and Changes](#history-and-changes)
+- [Git Commands Reference Guide](#git-commands-reference-guide)
+  - [Table of Contents](#table-of-contents)
+  - [Setup and Config](#setup-and-config)
+  - [Repositories](#repositories)
+  - [Staging and Committing](#staging-and-committing)
+  - [Branching](#branching)
+  - [Remote Repositories](#remote-repositories)
+  - [History and Changes](#history-and-changes)
 
 ## Setup and Config
 
@@ -52,3 +54,33 @@ Some commands don't require additional arguments and can be used standalone to a
 | `git merge [Branch]`       | Merge the specified branch into the current branch. |
 | `git branch -d [Branch]`   | Delete the specified branch.                        |
 | `git branch -D [Branch]`   | Force delete the specified branch.                  |
+
+## Remote Repositories
+
+| Command                         | Description                                             |
+| ------------------------------- | ------------------------------------------------------- |
+| `git remote -v`                 | List all remote repositories.                           |
+| `git remote add [Name] [URL]`   | Add a new remote repository.                            |
+| `git push [Remote] [Branch]`    | Push the specified branch to the remote repository.     |
+| `git pull [Remote] [Branch]`    | Pull the specified branch from the remote repository.   |
+| `git fetch [Remote] [Branch]`   | Fetch the specified branch from the remote repository.  |
+| `git remote show [Remote]`      | Show information about the specified remote repository. |
+| `git remote rename [Old] [New]` | Rename a remote repository.                             |
+| `git remote remove [Remote]`    | Remove the specified remote repository.                 |
+
+## History and Changes
+
+| Command                      | Description                                                              |
+| ---------------------------- | ------------------------------------------------------------------------ |
+| `git log`                    | Show the commit history.                                                 |
+| `git log --oneline`          | Show the commit history in a condensed format.                           |
+| `git log --graph`            | Show the commit history in a graph format.                               |
+| `git diff`                   | Show the changes between the working directory and the staging area.     |
+| `git diff --staged`          | Show the changes between the staging area and the last commit.           |
+| `git diff [Commit]`          | Show the changes between the working directory and the specified commit. |
+| `git reset --hard [Commit]`  | Reset the repository to the specified commit.                            |
+| `git reset --hard HEAD`      | Reset the repository to the last commit.                                 |
+| `git reset --soft [Commit]`  | Reset the repository to the specified commit, keeping changes staged.    |
+| `git reset --soft HEAD`      | Reset the repository to the last commit, keeping changes staged.         |
+| `git reset --mixed [Commit]` | Reset the repository to the specified commit, keeping changes unstaged.  |
+| `git reset --mixed HEAD`     | Reset the repository to the last commit, keeping changes unstaged.       |
