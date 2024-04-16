@@ -40,3 +40,15 @@ Some commands don't require additional arguments and can be used standalone to a
 | `git commit -m "[Message]"`         | Commit the staged changes with a message.                                                                                                                            |
 | `git commit --amend`                | Amend the last commit with any staged changes.                                                                                                                       |
 | `git commit --amend -m "[Message]"` | Amend the last commit with a new message.                                                                                                                            |
+
+## Branching
+
+| Command                    | Description                                         |
+| -------------------------- | --------------------------------------------------- |
+| `git branch`               | List all branches in the repository.                |
+| `git branch [Branch]`      | Create a new branch.                                |
+| `git checkout [Branch]`    | Switch to the specified branch.                     |
+| `git checkout -b [Branch]` | Create a new branch and switch to it.               |
+| `git merge [Branch]`       | Merge the specified branch into the current branch. |
+| `git branch -d [Branch]`   | Delete the specified branch.                        |
+| `git branch -D [Branch]`   | Force delete the specified branch.                  |
