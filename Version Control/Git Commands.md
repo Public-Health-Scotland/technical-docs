@@ -6,10 +6,12 @@ Some commands don't require additional arguments and can be used standalone to a
 
 ## Table of Contents
 
-- [Git Commands Reference Guide](#git-commands-reference-guide)
-  - [Table of Contents](#table-of-contents)
-  - [Setup and Config](#setup-and-config)
-  - [Repositories](#repositories)
+- [Setup and Config](#setup-and-config)
+- [Repositories](#repositories)
+- [Staging and Committing](#staging-and-committing)
+- [Branching](#branching)
+- [Remote Repositories](#remote-repositories)
+- [History and Changes](#history-and-changes)
 
 ## Setup and Config
 
@@ -27,3 +29,14 @@ Some commands don't require additional arguments and can be used standalone to a
 | `git init`        | Initialize a new Git repository in the current directory. |
 | `git clone [URL]` | Clone a repository from a URL.                            |
 | `git status`      | Show the status of the current repository.                |
+
+## Staging and Committing
+
+| Command                             | Description                                                                                                                                                          |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `git add [File]`                    | Add a file to the staging area.                                                                                                                                      |
+| `git add . -n`                      | Show what would be added to the staging area without actually adding it.                                                                                             |
+| `git add .`                         | Add all files in the current directory to the staging area. This should be used with care (consider the `-n` flag first) and with a fully implement .gitignore file. |
+| `git commit -m "[Message]"`         | Commit the staged changes with a message.                                                                                                                            |
+| `git commit --amend`                | Amend the last commit with any staged changes.                                                                                                                       |
+| `git commit --amend -m "[Message]"` | Amend the last commit with a new message.                                                                                                                            |
