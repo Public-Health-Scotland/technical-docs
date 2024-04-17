@@ -1,4 +1,4 @@
-# Posit Workbench - Frequently Asked Questions
+# Posit Infrastructure - Frequently Asked Questions
 
 ## Purpose
 
