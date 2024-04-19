@@ -6,14 +6,12 @@ Some commands don't require additional arguments and can be used standalone to a
 
 ## Table of Contents
 
-- [Git Commands Reference Guide](#git-commands-reference-guide)
-  - [Table of Contents](#table-of-contents)
-  - [Setup and Config](#setup-and-config)
-  - [Repositories](#repositories)
-  - [Staging and Committing](#staging-and-committing)
-  - [Branching](#branching)
-  - [Remote Repositories](#remote-repositories)
-  - [History and Changes](#history-and-changes)
+- [Setup and Config](#setup-and-config)
+- [Repositories](#repositories)
+- [Staging and Committing](#staging-and-committing)
+- [Branching](#branching)
+- [Remote Repositories](#remote-repositories)
+- [History and Changes](#history-and-changes)
 
 ## Setup and Config
 
