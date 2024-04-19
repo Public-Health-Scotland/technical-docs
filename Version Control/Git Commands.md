@@ -2,7 +2,7 @@
 
 When working with Git, it's inevitable you'll have to work with the command line. This guide will help you with the most common commands you'll need to know. For more information on a specific command, you can use the `git help` command followed by the command you want to learn more about. For example, `git help commit`. There is also the [Git Guide](https://public-health-scotland.github.io/git-guide), which is a more in-depth guide to using Git in PHS, including a more complete list of commands.
 
-Note that Git commands work on the system-level so need to be entered on a terminal, not the language console. For example, in RStudio, the terminal is likely open as a tab beside the console (`Alt` + `Shift` + `M`), or a new one can be opened in Tools > Terminal > New Terminal (`Alt` + `Shift` + `R`). Console's usually have `>` as the line starter, where the terminal will use a `$`. This will look like:
+Note that Git commands work on the system-level so need to be entered on a terminal, not the language console. For example, in RStudio, the terminal is likely open as a tab beside the console (`Alt` + `Shift` + `M`), or a new one can be opened in Tools > Terminal > New Terminal (`Alt` + `Shift` + `R`). Consoles usually have `>` as the line starter, where the terminal will use a `$`. This will look like:
 
 ![rstudio-terminal](https://github.com/Public-Health-Scotland/technical-docs/assets/33964310/a73697af-84a5-4937-ac08-10ba9c85eba1)
 
