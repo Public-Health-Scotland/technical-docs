@@ -32,14 +32,14 @@ Some commands don't require additional arguments and can be used standalone to a
 
 ## Staging and Committing
 
-| Command                             | Description                                                                                                                                                          |
-| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `git add [File]`                    | Add a file to the staging area.                                                                                                                                      |
-| `git add . -n`                      | Show what would be added to the staging area without actually adding it.                                                                                             |
-| `git add .`                         | Add all files in the current directory to the staging area. This should be used with care (consider the `-n` flag first) and with a fully implement .gitignore file. |
-| `git commit -m "[Message]"`         | Commit the staged changes with a message.                                                                                                                            |
-| `git commit --amend`                | Amend the last commit with any staged changes.                                                                                                                       |
-| `git commit --amend -m "[Message]"` | Amend the last commit with a new message.                                                                                                                            |
+| Command                             | Description                                                                                                                                                            |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `git add [File]`                    | Add a file to the staging area.                                                                                                                                        |
+| `git add . -n`                      | Show what would be added to the staging area without actually adding it.                                                                                               |
+| `git add .`                         | Add all files in the current directory to the staging area. This should be used with care (consider the `-n` flag first) and with a fully implemented .gitignore file. |
+| `git commit -m "[Message]"`         | Commit the staged changes with a message.                                                                                                                              |
+| `git commit --amend`                | Amend the last commit with any staged changes.                                                                                                                         |
+| `git commit --amend -m "[Message]"` | Amend the last commit with a new message.                                                                                                                              |
 
 ## Branching
 
