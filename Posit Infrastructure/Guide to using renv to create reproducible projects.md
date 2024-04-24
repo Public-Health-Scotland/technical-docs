@@ -4,7 +4,7 @@
 
 Our code should be reproducible and shareable. But sometimes things fail to run properly when we return to them, or on a colleague's machine. The R package [{renv}](https://rstudio.github.io/renv/) ensures that the exact set of packages (and their versions) required to run the code in a specific project are recorded and kept available to current and future users. 
 
-This guide provides basic step-by-step instructions for using [{renv}](https://rstudio.github.io/renv/), as well as more detailed information. 
+This guide provides basic step-by-step instructions for using [{renv}](https://rstudio.github.io/renv/), as well as more detailed information. This is complemented by the complete [PHS Reproducible Environments in R course](https://public-health-scotland.github.io/knowledge-base/develop/reproducible-environments-in-r).
 
 ## Step-by-step instructions
 
@@ -62,5 +62,6 @@ Caution: the packages stored in renv/library and detailed in the lockfile are fr
 ## Resources
 
 * [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html)
+* [PHS Reproducible Environments in R course](https://public-health-scotland.github.io/knowledge-base/develop/reproducible-environments-in-r).
 * [Posit workshop for PHS on renv](https://positpbc.zoom.us/rec/play/n8-spO05R8p9vp8dqJ9GxH_Zr8mk7IMvsiX3menvnbXEXmJOXK5mOA-HPMxEFQPJvh6bTkvhaK6_oHWT.e--Z8hkQVR5coU-F?continueMode=true&pwd=MjxDT7xc_SQJM8HkKz4ffvPvm0mU4s74&_x_zm_rtaid=7GmfdwjkRvidhayMImvvYQ.1680787485091.7d8be92495688fceb3b55c4b0f603018&_x_zm_rhtaid=747)
 * [PHS Reproducible Environments channel on MS Teams](https://teams.microsoft.com/l/channel/19%3Aa786ffd4a70d4941b87f023942d21b6a%40thread.tacv2/Reproducible%20Environments?groupId=ec4250f9-b70a-4f32-9372-a232ccb4f713&tenantId=)
