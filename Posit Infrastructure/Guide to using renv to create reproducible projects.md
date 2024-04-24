@@ -48,6 +48,8 @@ Pre-requisite: a project (preferably version-controlled using git).
 
 ## More detail about what [{renv}](https://rstudio.github.io/renv/) does
 
+![renv-complete-workflow](https://github.com/Public-Health-Scotland/technical-docs/assets/33964310/391de4ef-c7d3-4a09-8eed-95c0f48b50eb)
+
 [{renv}](https://rstudio.github.io/renv/) works by storing the exact versions of each package used within each project. This helps to isolate the project from any external changes that might have caused problems (e.g., updating/removing packages when working on a different project). Once [{renv}](https://rstudio.github.io/renv/) is initialised in a project it stays on unless deliberately turned off (see [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html)). 
 
 When you initialise [{renv}](https://rstudio.github.io/renv/) in a project (renv::init()) it searches the scripts for any calls to `library()`, `require()` or package function calls and identifies which versions of each package are in use from the versions installed in the user's package library.. The following files/folders are then added to the project:
