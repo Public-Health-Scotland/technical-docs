@@ -10,11 +10,22 @@ This guide provides basic step-by-step instructions for using [{renv}](https://r
 
 Pre-requisite: a project (preferably version-controlled using git).
 
-#### Setting up [{renv}](https://rstudio.github.io/renv/) for the first time in a project:
+### Setup [{renv}](https://rstudio.github.io/renv/)
+
+#### New project:
+
+1. Go to File > New Project in RStudio
+2. Follow the process as normal and select 'User renv with this project' (available with [{phstemplates}](https://github.com/Public-Health-Scotland/phstemplates) too).
+
+![renv-new-project-gui](https://github.com/Public-Health-Scotland/technical-docs/assets/33964310/8442d13f-da12-4b3b-91d7-925faae615f9)
+
+#### Existing project:
 1.	Open the project.
 2.	Call `renv::init()` to initialise renv within that project. This can take a while depending on the size of the project.
 3.	Calling `renv::status()` should confirm the new 'lockfile' is synced with the project (i.e., contains details of all the required packages).
 4.	Commit the changes (additional files and folders) to version control.
+
+### Managing packages
 
 #### Adding (/removing) packages to the project:
 1.	Install (or remove) the required packages as usual. 
@@ -23,6 +34,8 @@ Pre-requisite: a project (preferably version-controlled using git).
 4.	Calling `renv::snapshot()` will record any changes into the lockfile.
 5.	Calling `renv::status()` should now confirm everything's synced. 
 6.	Commit the changes in the renv.lock file using version control.
+
+### Restoring the environment
 
 #### Using a project that has already had [{renv}](https://rstudio.github.io/renv/) initialised (e.g., when collaborating on a colleague's project):
 1.	Ensure the project is synced with the latest version-controlled repository (e.g., `git pull` from github).
