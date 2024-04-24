@@ -28,12 +28,16 @@ Pre-requisite: a project (preferably version-controlled using git).
 ### Managing packages
 
 #### Adding (/removing) packages to the project:
-1.	Install (or remove) the required packages as usual. 
+1.	Install (or remove) the required packages, preferably with `renv::install()`. 
 2.	Change the code, by adding (or removing) calls to `library()` or `require()`, or the package function calls themselves e.g. `dplyr::group_by()`.
 3.	Calling `renv::status()` will tell you there are changes that aren’t recorded in the lockfile.
 4.	Calling `renv::snapshot()` will record any changes into the lockfile.
 5.	Calling `renv::status()` should now confirm everything's synced. 
 6.	Commit the changes in the renv.lock file using version control.
+    * The `.gitignore` should have been updated to exclude files/directories that shouldn't be tracked but the `.gitignore` itself may need to be committed here.
+    * `.Rprofile` - A project level file that gets things running by calling the `activate.R` script.
+    * `renv/activate.R` - The code that gets the environment set up and does all the necessary background work.
+    * `renv.lock` - The description of the project's dependencies to be reproduced. 
 
 ### Restoring the environment
 
