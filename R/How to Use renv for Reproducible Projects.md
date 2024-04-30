@@ -32,7 +32,7 @@ Pre-requisite: a project (preferably version-controlled using git).
 
 1. Install (or remove) the required packages, preferably with `renv::install()`.
 2. Change the code, by adding (or removing) calls to `library()` or `require()`, or the package function calls themselves e.g. `dplyr::group_by()`.
-3. Calling `renv::status()` will tell you there are changes that aren’t recorded in the lockfile.
+3. Calling `renv::status()` will tell you there are changes that aren't recorded in the lockfile.
 4. Calling `renv::snapshot()` will record any changes into the lockfile.
 5. Calling `renv::status()` should now confirm everything's synced.
 6. Commit the changes in the renv.lock file using version control.
@@ -61,7 +61,7 @@ When you initialise [{renv}](https://rstudio.github.io/renv/) in a project (renv
 - The lockfile `renv.lock`: this stores the details of the packages (including the versions used).
 - The profile file `.Rprofile`: this is run automatically when the project is opened, to ensure it uses the packages stored in renv/library.
 
-Caution: the packages stored in renv/library and detailed in the lockfile are frozen in time and won't benefit from bug fixes. To update to the latest versions of packages call `renv::update()` periodically, and make sure the code still works before recording the new versions in the lockfile using `renv::snapshot()`. If the code doesn’t work with the new versions you can roll back to the versions in the lockfile using `renv::restore()` (for more info see [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html)).
+Caution: the packages stored in renv/library and detailed in the lockfile are frozen in time and won't benefit from bug fixes. To update to the latest versions of packages call `renv::update()` periodically, and make sure the code still works before recording the new versions in the lockfile using `renv::snapshot()`. If the code doesn't work with the new versions you can roll back to the versions in the lockfile using `renv::restore()` (for more info see [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html)).
 
 ## Resources
 
