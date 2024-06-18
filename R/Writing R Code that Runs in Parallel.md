@@ -36,9 +36,28 @@ R is a single-threaded language by default, meaning it processes tasks sequentia
 - **Complexity**: Writing and debugging parallel code can be more complex than writing sequential code.
 - **Memory Usage**: Parallel processing can increase memory usage, as each core may require its own copy of the data.
 
-## Example
+### Inherently (or Embarrasingly) Parallel Data Manipulation Tasks
 
-### Creating a Large Dataset with 256 Numeric Columns
+Inherently (or Embarrassingly) parallel tasks are those that can be easily divided into independent subtasks, each of which can be processed simultaneously without requiring communication between the subtasks. This type of parallelism is particularly efficient because it minimises the overhead associated with inter-process communication.
+
+#### Examples of Inherently Parallel Tasks
+
+1. Summarising data by groups (e.g., calculating the mean or sum for each group) can be done independently for each group.
+2. Running the same computation with different sets of parameters; each parameter set can be processed independently.
+
+## The `{multidplyr}` R package
+
+The `{multidplyr}` R package is a backend for `{dplyr}` that facilitates parallel processing by partitioning data frames across multiple cores.  The package is part of the [Tidyverse](https://www.tidyverse.org/)
+
+To use `{multidplyr}`, users first need to create a cluster of worker processes. Each worker is an independent R process that the operating system allocates to different cores.
+
+The `partition()` function divides the data frame into chunks that are processed independently by each worker, ensuring that all observations within a group are assigned to the same worker, thus maintaining the integrity of grouped operations. Once the data is partitioned, users can perform various dplyr operations such as `mutate()`, `summarise()`, and `filter()` in parallel, and then collect the results using the `collect()` function.
+
+For simpler operations or smaller datasets (less than ~10 million observations), the overhead of communication between nodes may outweigh the benefits of parallel processing.
+
+### Example
+
+#### Creating a Large Dataset with 256 Numeric Columns
 
 First, we will create a large dataset with 10 million rows and 256 numeric columns.
 
