@@ -57,7 +57,7 @@ For simpler operations or smaller datasets (less than ~10 million observations),
 
 ### Example
 
-#### Creating a Large Dataset with 256 Numeric Columns
+#### Step 1: Creating a Large Dataset with 256 Numeric Columns
 
 First, we will create a large dataset with 10 million rows and 256 numeric columns.
 
@@ -96,3 +96,64 @@ head(data)
 | 3  | 2010-11-25 | 1.5587083 | 8.164371 | 98.16437 | 0.575781 | 0.694611 | ... | 0.368781 |
 | 4  | 2004-01-01 | 0.0705084 | 9.595281 | 99.59528 | 0.694611 | 0.511781 | ... | 0.638325 |
 | 5  | 2012-05-20 | 0.1292877 | 9.329508 | 99.32951 | 0.511781 | 0.738325 | ... | 0.498611 |
+
+#### Step 2: Perform Data Manipulation with `{dplyr}`
+
+We'll group the data by `dt` and calculate the mean of all 256 numeric columns.
+
+```r
+# Measure the time taken by dplyr
+dplyr_time <- microbenchmark(
+  dplyr = {
+    result_dplyr <- data %>%
+      group_by(dt) %>%
+      summarise(across(starts_with("num"), \(x) mean(x, na.rm = TRUE)))
+  },
+  times = 3
+)
+
+# Print the summary of the benchmark
+print(dplyr_time)
+```
+
+#### Step 3: Perform the same Data Manipulation in Parallel with `{multidplyr}`
+
+We'll use `{multidplyr}` to parallelise the same operation across multiple cores.
+
+```r
+# Create a cluster with the desired number of workers
+cluster <- new_cluster(parallelly::availableCores() - 1)
+cluster_library(cluster, "dplyr")
+
+# Partition the data across the cluster
+data_partitioned <- data %>%
+  group_by(dt) %>%
+  partition(cluster)
+
+# Measure the time taken by multidplyr
+multidplyr_time <- microbenchmark(
+  multidplyr = {
+    result_multidplyr <- data_partitioned %>%
+      summarise(across(starts_with("num"), \(x) mean(x, na.rm = TRUE))) %>%
+      collect()
+  },
+  times = 3
+)
+
+# Print the summary of the benchmark
+print(multidplyr_time)
+```
+
+#### Benchmarking Results
+
+The results of running the example detailed above in a Posit Workbench session with 16 CPUs are summarised below.
+
+The results show the minimum, lower quartile (lq), mean, median, upper quartile (uq), and maximum times taken for each method over 3 iterations.
+
+| Method      | Min (s) | LQ (s) | Mean (s) | Median (s) | UQ (s) | Max (s) | Evaluations |
+|-------------|---------|--------|----------|------------|--------|---------|-------------|
+| dplyr       | 61.229  | 61.335 | 61.720   | 61.442     | 61.966 | 62.490  | 3           |
+| multidplyr  | 6.849   | 6.976  | 7.962    | 7.104      | 8.519  | 9.934   | 3           |
+
+The results clearly indicate that `{multidplyr}` significantly outperforms `{dplyr}` in terms of execution time for the given data manipulation task. The mean execution time for `{multidplyr}` is approximately 7.96 seconds, compared to 61.72 seconds for dplyr. This demonstrates the potential performance benefits of using parallel processing with `{multidplyr}` for large datasets.
+
