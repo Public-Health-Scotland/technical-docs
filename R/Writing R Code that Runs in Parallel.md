@@ -8,7 +8,7 @@ This document aims to provide R users in Public Health Scotland with an introduc
 
 Parallel processing involves dividing a large computational task into smaller, more manageable tasks that can be executed simultaneously across multiple processors or cores. This approach can significantly speed up the execution time of complex computations, especially for data-intensive applications.
 
-`{dplyr}` is a powerful package for data manipulation in R, but it operates on a single core (or CPU). `{multidplyr}` extends `{dplyr}` by allowing operations to be performed in parallel across multiple cores, potentially reducing computation time.
+`{dplyr}` is a powerful package for data manipulation in R, but it operates on a single core (i.e. a central processing unit, or CPU for short). `{multidplyr}` extends `{dplyr}` by allowing operations to be performed in parallel across multiple cores, potentially reducing computation time.
 
 We will create a large dataset with 10 million rows and 256 numeric columns, then measure the time it takes to perform a data manipulation task using both `{dplyr}` and `{multidplyr}`.
 
