@@ -20,7 +20,7 @@ Please note: {rgdal} has now been retired from CRAN and has therefore been remov
 
 Geospatial R packages rely on geospatial libraries installed in the underlying Linux operating system.  We need to tell R where to find these geospatial libraries.  We do this by setting _environment variables_.
 
-The following R code **must** be run _prior_ to compiling, installing and loading geospatial R packages.  You can do this by including this R code at the start of your R script.  Alternatively, you can include the R code in your project's [.Rprofile](https://support.posit.co/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf#:~:text=Rprofile-,.,directory%2C%20and%20project%2Dlevel%20.) file, and the R code will be run automatically every time you open the project.
+The following R code **must** be run _prior_ to compiling, installing and loading geospatial R packages.  You can do this by including this R code at the start of your R script.
 
 ```r
 # Set environment variables to point to installations of geospatial libraries ----
@@ -46,6 +46,7 @@ Sys.setenv("PKG_CONFIG_PATH" = "/usr/proj81/lib/pkgconfig")
 
 Sys.setenv("GDAL_DATA" = "/usr/gdal34/share/gdal")
 ```
+Alternatively, you can include this code in your personal or the project's [.Rprofile](https://support.posit.co/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf#:~:text=Rprofile-,.,directory%2C%20and%20project%2Dlevel%20.) file, and the R code will be run automatically every time you open a session or the project. See [Adding code to your .Rprofile]()
 
 ## Installing geospatial R packages
 
@@ -175,3 +176,74 @@ Then, geospatial R packages can be loaded in the same way as normal with calls t
 ```r
 library(terra)
 ```
+
+## Adding code to your .Rprofile
+
+You can add code to your personal `.Rprofile` or create and add code to a project's file. Adding code to your personal `.Rprofile` will work *for you* but no one else, adding it to a project's `.Rprofile` will work *for anyone* loading the project but this will need to be done for every project (that uses geospatial packages).
+
+You can use the [`{usethis}`](https://usethis.r-lib.org/) package to easily open the correct file.
+-  `usethis::edit_r_profile("user")` will open your personal `.Rprofile` for editing.
+-  `usethis::edit_r_profile("project")` will open the current project's  `.Rprofile` for editing (and will error if you're not in a project).
+
+You should add all of the below code (comments are optional).
+
+```r
+# Set environment variables to point to installations of geospatial libraries ----
+
+# Append paths to GDAL and PROJ to 'LD_LIBRARY_PATH'
+Sys.setenv(
+  LD_LIBRARY_PATH = paste(
+    Sys.getenv("LD_LIBRARY_PATH"),
+    "/usr/gdal34/lib",
+    "/usr/proj81/lib",
+    sep = ":"
+  )
+)
+
+# Specify additional proj path in which pkg-config should look for .pc files ----
+
+Sys.setenv("PKG_CONFIG_PATH" = "/usr/proj81/lib/pkgconfig")
+
+# Specify the path to GDAL data ----
+
+Sys.setenv("GDAL_DATA" = "/usr/gdal34/share/gdal")
+
+# Load geospatial libraries
+dyn.load("/usr/gdal34/lib/libgdal.so")
+dyn.load("/usr/geos310/lib64/libgeos_c.so", local = FALSE)
+```
+
+<details>
+
+<summary>This code will automatically add the required code</summary>
+
+You will need to change `"~/.Rprofile"` to `"<path to project>/.Rprofile"` to make it work on a project.
+
+```r
+# Content to append
+profile_content <- c(
+  "# Set environment variables to point to installations of geospatial libraries ----",
+  "# Append paths to GDAL and PROJ to 'LD_LIBRARY_PATH'",
+  "Sys.setenv(LD_LIBRARY_PATH = paste(Sys.getenv(\"LD_LIBRARY_PATH\"), \"/usr/gdal34/lib\", \"/usr/proj81/lib\", sep = ':'))",
+  "",
+  "# Specify additional proj path in which pkg-config should look for .pc files ----",
+  "Sys.setenv(\"PKG_CONFIG_PATH\" = \"/usr/proj81/lib/pkgconfig\")",
+  "",
+  "# Specify the path to GDAL data ----",
+  "Sys.setenv(\"GDAL_DATA\" = \"/usr/gdal34/share/gdal\")",
+  "",
+  "# Load geospatial libraries",
+  "dyn.load(\"/usr/gdal34/lib/libgdal.so\")",
+  "dyn.load(\"/usr/geos310/lib64/libgeos_c.so\", local = FALSE)",
+  ""
+)
+
+# Write to the .Rprofile - append if it already exists.
+readr::write_lines(
+  x = profile_content,
+  file = "~/.Rprofile",
+  append = TRUE
+)
+```
+
+</details>
