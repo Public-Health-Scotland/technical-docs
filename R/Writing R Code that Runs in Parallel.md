@@ -158,3 +158,14 @@ The results show the minimum, lower quartile (lq), mean, median, upper quartile 
 
 The results clearly indicate that `{multidplyr}` significantly outperforms `{dplyr}` in terms of execution time for the given data manipulation task. The mean execution time for `{multidplyr}` is approximately 7.96 seconds, compared to 61.72 seconds for dplyr. This demonstrates the potential performance benefits of using parallel processing with `{multidplyr}` for large datasets.
 
+## The `{furrr}` R package
+
+The [`{furrr}`]{https://furrr.futureverse.org/} R package is an extension of the [`{purrr}`]{https://purrr.tidyverse.org/} package that enables parallel processing across multiple cores with minimal changes to existing purrr-based code.  The package is part of the [Futureverse](https://www.futureverse.org/).
+
+To use `{furrr}`, users first need to set up a parallel processing plan using the [`{future}`]{https://future.futureverse.org/} package. Then, `{purrr}` functions like `map()` can be replaced with their `{furrr}` equivalents e.g. `future_map()`.  The `{furrr}` functions will automatically distribute the iterations across the number of cores defined in the processing plan.
+
+The `partition()` function divides the data frame into chunks that are processed independently by each worker, ensuring that all observations within a group are assigned to the same worker, thus maintaining the integrity of grouped operations. Once the data is partitioned, users can perform various dplyr operations such as `mutate()`, `summarise()`, and `filter()` in parallel, and then collect the results using the `collect()` function.
+
+For simpler operations or smaller datasets (less than ~10 million observations), the overhead of communication between nodes may outweigh the benefits of parallel processing.
+
+### Example
