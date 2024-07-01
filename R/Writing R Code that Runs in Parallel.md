@@ -47,7 +47,7 @@ Inherently (or embarrassingly) parallel tasks are those that can be easily divid
 
 ## The `{multidplyr}` R package
 
-The `{multidplyr}` R package is a backend for `{dplyr}` that facilitates parallel processing by partitioning data frames across multiple cores.  The package is part of the [Tidyverse](https://www.tidyverse.org/)
+The `{multidplyr}` R package is a backend for `{dplyr}` that facilitates parallel processing by partitioning data frames across multiple cores.  The package is part of the [Tidyverse](https://www.tidyverse.org/).
 
 To use `{multidplyr}`, users first need to create a cluster of worker processes. Each worker is an independent R process that the operating system allocates to different cores.
 
