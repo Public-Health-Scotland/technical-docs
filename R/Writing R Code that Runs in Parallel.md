@@ -38,7 +38,7 @@ R is a single-threaded language by default, meaning it processes tasks sequentia
 
 ### Inherently (or Embarrasingly) Parallel Data Manipulation Tasks
 
-Inherently (or Embarrassingly) parallel tasks are those that can be easily divided into independent subtasks, each of which can be processed simultaneously without requiring communication between the subtasks. This type of parallelism is particularly efficient because it minimises the overhead associated with inter-process communication.
+Inherently (or embarrassingly) parallel tasks are those that can be easily divided into independent subtasks, each of which can be processed simultaneously without requiring communication between the subtasks. This type of parallelism is particularly efficient because it minimises the overhead associated with inter-process communication.
 
 #### Examples of Inherently Parallel Tasks
 
