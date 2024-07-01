@@ -102,6 +102,7 @@ head(data)
 We'll group the data by `dt` and calculate the mean of all 256 numeric columns.
 
 ```r
+library(microbenchmark)
 # Measure the time taken by dplyr
 dplyr_time <- microbenchmark(
   dplyr = {
