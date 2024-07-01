@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document aims to provide R users in Public Health Scotland with an introduction to the concepts of Parallel Processing, describe how to run `{dplyr}` code in parallel using the `{multidplyr}` package, explain the benefits of doing so, along with some of the downsides.
+This document aims to provide R users in Public Health Scotland with an introduction to the concepts of parallel processing, describe how to run `{dplyr}` code in parallel using the `{multidplyr}` package, explain the benefits of doing so, along with some of the downsides.
 
 ## Summary and Key Points
 
