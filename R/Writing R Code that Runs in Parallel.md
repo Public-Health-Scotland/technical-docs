@@ -169,3 +169,8 @@ The `partition()` function divides the data frame into chunks that are processed
 For simpler operations or smaller datasets (less than ~10 million observations), the overhead of communication between nodes may outweigh the benefits of parallel processing.
 
 ### Example
+
+Timing Comparison:
+Sequential: 150.0840 seconds
+Parallel:   30.8370 seconds
+Speedup:    4.87x
