@@ -46,7 +46,7 @@ Sys.setenv("PKG_CONFIG_PATH" = "/usr/proj81/lib/pkgconfig")
 
 Sys.setenv("GDAL_DATA" = "/usr/gdal34/share/gdal")
 ```
-Alternatively, you can include this code in your personal or the project's [.Rprofile](https://support.posit.co/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf#:~:text=Rprofile-,.,directory%2C%20and%20project%2Dlevel%20.) file, and the R code will be run automatically every time you open a session or the project. See [Adding code to your .Rprofile]()
+Alternatively, you can include this code in your personal or the project's [.Rprofile](https://support.posit.co/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf#:~:text=Rprofile-,.,directory%2C%20and%20project%2Dlevel%20.) file, and the R code will be run automatically every time you open a session or the project. See [Adding code to your .Rprofile](#adding-code-to-your-rprofile)
 
 ## Installing geospatial R packages
 
