@@ -19,7 +19,6 @@ This document aims to answer frequently asked questions from users in relation t
 * [Installing Packages](#installing-packages)
   * [What do I do if I cannot install any packages?](#what-do-i-do-if-i-cannot-install-any-packages)
   * [How do I install the `{hablar}` package?](#how-do-i-install-the-hablar-package)
-  * [How do I install the `{phsmethods}` package?](#how-do-i-install-the-phsmethods-package)
   * [How do I install the `{ranger}` package?](#how-do-i-install-the-ranger-package)
   * [What do I do if a package requires `{rJava}`?](#what-do-i-do-if-a-package-requires-rjava)
   * [What should I do if I encounter a 'failed to lock directory' error?](#what-should-i-do-if-i-encounter-a-failed-to-lock-directory-error)
@@ -133,20 +132,6 @@ install.packages(
 
 # Test if {hablar} can be loaded
 library(hablar)
-```
-
-#### How do I install the `{phsmethods}` package?
-
-The `{phsmethods}` package has a dependency on the `{gdata}` package.  The `{gdata}` package cannot be installed as a pre-compiled binary; attempting this gives an error.  Therefore, you need to force R to install the source version by specifying the URL for the source version of packages on Package Manager: 
-
-```{r}
-install.packages("gdata", repos = c("https://ppm.publichealthscotland.org/phs-cran/latest"))
-```
-
-You can then install the `{phsmethods}` package and all of its other dependencies as follows:
-
-```{r}
-install.packages("phsmethods")
 ```
 
 #### How do I install the `{ranger}` package?
