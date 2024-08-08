@@ -93,7 +93,6 @@ First, we will create a large dataset with 10 million rows and 256 numeric colum
 library(dplyr)
 library(multidplyr)
 library(lubridate)
-library(microbenchmark)
 
 # Set seed for reproducibility
 set.seed(123)
