@@ -45,6 +45,33 @@ Inherently (or embarrassingly) parallel tasks are those that can be easily divid
 1. Summarising data by groups (e.g., calculating the mean or sum for each group) can be done independently for each group.
 2. Running the same computation with different sets of parameters; each parameter set can be processed independently.
 
+## Multithreading
+
+### What is multithreading?
+
+Multithreading is a method of executing code in parallel, rather than sequentially, making better use of computer resources, and potentially reducing the amount of time it takes to execute the code.  The tasks carried out using multithreading do not necessarily need to be related to one another and do not need to wait for each to complete.
+
+### How does multithreading relate to R?
+
+As stated previously, R is a single-threaded language by default, meaning it processes tasks sequentially.  It is not possible to implement multithreading in R without calling on additional R packages, such as the [`{data.table}`](https://rdatatable.gitlab.io/data.table/) package in which many common operations will execute using multiple CPU threads.
+
+### Multithreading inside a Kubernetes container in Azure
+
+Your R session on Posit Workbench runs inside a Kubernetes container.  That container is allocated a certain amount of CPU resource.  This resource is provided by the Azure Kubernetes Service (AKS), where 1 CPU corresponds to 1 vCPU (virtual CPU). 1 vCPU is the equivalent of a single hyper-thread on a physical CPU core.
+
+If you attempt to run multithreaded code in a session with just 1 CPU in Posit Workbench, the multiple threads will be executed by taking turns on the single thread.  This will give the illusion of multithreading, but all that is happening is that each thread is using a slice of CPU time, running sequentially.
+
+In order to run multithreaded code in Posit Workbench, you must open a session with more than 1 CPU.  To demonstrate this, below are the results of running a computationally expensive operation on a large `{data.table}` of 600 million rows in Posit Workbench sessions with 1, 2, 4 and 8 CPUs, and using 1, 2, 4 and 8 threads:
+
+| Threads | 1 vCPU | 2 vCPUs | 4 vCPUs | 8 vCPUs |
+|---------|--------|---------|---------|---------|
+| 1       | 72.285 | 72.612  | 67.869  | 67.244  |
+| 2       | 75.373 | 48.828  | 44.957  | 45.019  |
+| 4       | 87.979 | 52.276  | 34.109  | 34.641  |
+| 8       | 100.207| 60.684  | 37.004  | 29.259  |
+
+The results are the execution times in seconds for each combination of number of CPUs and threads.  As you can see, running code with multiple threads on 1 vCPU takes longer than running the same code in a single thread of execution.  A reduction in execution time is only seen if the number of CPUs is increased, and the most optimal combination is where the number of CPUs matches the number of threads of execution.
+
 ## The `{multidplyr}` R package
 
 The `{multidplyr}` R package is a backend for `{dplyr}` that facilitates parallel processing by partitioning data frames across multiple cores.  The package is part of the [Tidyverse](https://www.tidyverse.org/).
@@ -158,3 +185,19 @@ The results show the minimum, lower quartile (lq), mean, median, upper quartile 
 
 The results clearly indicate that `{multidplyr}` significantly outperforms `{dplyr}` in terms of execution time for the given data manipulation task. The mean execution time for `{multidplyr}` is approximately 7.96 seconds, compared to 61.72 seconds for dplyr. This demonstrates the potential performance benefits of using parallel processing with `{multidplyr}` for large datasets.
 
+## The `{furrr}` R package
+
+The [`{furrr}`]{https://furrr.futureverse.org/} R package is an extension of the [`{purrr}`]{https://purrr.tidyverse.org/} package that enables parallel processing across multiple cores with minimal changes to existing purrr-based code.  The package is part of the [Futureverse](https://www.futureverse.org/).
+
+To use `{furrr}`, users first need to set up a parallel processing plan using the [`{future}`]{https://future.futureverse.org/} package. Then, `{purrr}` functions like `map()` can be replaced with their `{furrr}` equivalents e.g. `future_map()`.  The `{furrr}` functions will automatically distribute the iterations across the number of cores defined in the processing plan.
+
+The `partition()` function divides the data frame into chunks that are processed independently by each worker, ensuring that all observations within a group are assigned to the same worker, thus maintaining the integrity of grouped operations. Once the data is partitioned, users can perform various dplyr operations such as `mutate()`, `summarise()`, and `filter()` in parallel, and then collect the results using the `collect()` function.
+
+For simpler operations or smaller datasets (less than ~10 million observations), the overhead of communication between nodes may outweigh the benefits of parallel processing.
+
+### Example
+
+Timing Comparison:
+Sequential: 150.0840 seconds
+Parallel:   30.8370 seconds
+Speedup:    4.87x
