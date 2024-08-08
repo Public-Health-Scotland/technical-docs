@@ -80,7 +80,7 @@ To use `{multidplyr}`, users first need to create a cluster of worker processes.
 
 The `partition()` function divides the data frame into chunks that are processed independently by each worker, ensuring that all observations within a group are assigned to the same worker, thus maintaining the integrity of grouped operations. Once the data is partitioned, users can perform various dplyr operations such as `mutate()`, `summarise()`, and `filter()` in parallel, and then collect the results using the `collect()` function.
 
-For simpler operations or smaller datasets (less than ~10 million observations), the overhead of communication between nodes may outweigh the benefits of parallel processing.
+For simpler operations or smaller datasets (fewer than ~10 million observations), the overhead of communication between nodes may outweigh the benefits of parallel processing.
 
 ### Example
 
