@@ -102,7 +102,7 @@ n <- 10000000
 num_cols <- 256
 data <- data.frame(
   id = 1:n,
-  dt = sample(seq(as.Date('2000/01/01'), as.Date('2024/01/01'), by="day"), n, replace = TRUE)
+  dt = sample(seq(as.Date("2000/01/01"), as.Date("2024/01/01"), by = "day"), n, replace = TRUE)
 )
 
 # Add 256 numeric columns
