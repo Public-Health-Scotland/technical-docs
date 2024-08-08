@@ -16,7 +16,7 @@ You can close your session in a number of ways, and may be prompted to save any 
 
 ![RStudio toolbar with quit session icon in top left](https://user-images.githubusercontent.com/45657289/213184555-0ef6290d-c381-4cec-9ee4-4c992bf4735a.png)
 
-2. By navigating the menus to _Session → ![RStudio quit session icon](https://user-images.githubusercontent.com/45657289/213184464-3a7b5e72-ff03-4dac-b99b-bec0c79167fe.png) Quit Session..._
+2. By navigating the menus to _Session > ![RStudio quit session icon](https://user-images.githubusercontent.com/45657289/213184464-3a7b5e72-ff03-4dac-b99b-bec0c79167fe.png) Quit Session..._
 
 ![RStudio session menu showing quit session](https://user-images.githubusercontent.com/45657289/213184913-ab491f74-c6a3-48ff-bce1-1195a0ae0d68.png)
 
@@ -29,11 +29,11 @@ If you want to know if you've accidentally left sessions running, your home page
 ![Posit Workbench session list](https://user-images.githubusercontent.com/45657289/213185308-ee5eed27-8622-478a-a80f-ae2edf63fa54.png)
 
 You will usually see this page when you log in to Posit Workbench, but if you are currently in an active session and want to view the home page, click on the home icon ![RStudio home icon](https://user-images.githubusercontent.com/45657289/213185415-f8ed533f-a3f2-49c5-be4b-e8bf5528eca8.png) in the
-top-right of the workspace window, or navigate in the menus to _File → ![RStudio home icon](https://user-images.githubusercontent.com/45657289/213185415-f8ed533f-a3f2-49c5-be4b-e8bf5528eca8.png) RStudio Server Home_.
+top-right of the workspace window, or navigate in the menus to _File > ![RStudio home icon](https://user-images.githubusercontent.com/45657289/213185415-f8ed533f-a3f2-49c5-be4b-e8bf5528eca8.png) RStudio Server Home_.
 
 ![RStudio File many showing RStudio Server Home link](https://user-images.githubusercontent.com/45657289/213185696-5b562c9a-c957-4de4-9043-5d61d1e81d3a.png)
 
-It is recommended that the server home page be displayed when you log in, to list any active sessions. You can configure this to happen for your account by accessing the settings inside a session: In the menus, visit Tools → Global Options…, then under the "General" menu, click on the "Advanced" tab. Set the option for "Show server home page" to be "Always":
+It is recommended that the server home page be displayed when you log in, to list any active sessions. You can configure this to happen for your account by accessing the settings inside a session: In the menus, visit Tools > Global Options…, then under the "General" menu, click on the "Advanced" tab. Set the option for "Show server home page" to be "Always":
 
 ![RStudio Globsl Options - General - Advanced tab](https://user-images.githubusercontent.com/45657289/213186007-16746c3d-bab0-45fe-81b7-fed363d94dfa.png)
 
@@ -54,7 +54,7 @@ In order to write a good script that can run in any session by any computer, you
 To avoid accidentally using an existing variable in your environment, there are some steps we can take which all focus around keeping a clean working environment:
 
 * Set Posit Workbench to _never_ save your environment to an .RData file when exiting a session.
-  * Access the RStudio Global Options menu by going to _Tools → Global Options..._
+  * Access the RStudio Global Options menu by going to _Tools > Global Options..._
   * In the "General" menu, open the "Basic" tab.
   * Untick the "Restore .RData into workspace at startup" tab.
   * Set "Save workspace to .RData on exit" to "Never".
@@ -288,8 +288,8 @@ iris_tbl
  8          5           3.4          1.5         0.2 setosa 
  9          4.4         2.9          1.4         0.2 setosa 
 10          4.9         3.1          1.5         0.1 setosa 
-# … with more rows
-# ℹ Use `print(n = ...)` to see more rows
+# ... with more rows
+# i Use `print(n = ...)` to see more rows
 ```
 
 We can ask it to only show results for the "versicolor" species using {dplyr} functions:
@@ -315,8 +315,8 @@ iris_tbl %>%
  8          4.9         2.4          3.3         1   versicolor
  9          6.6         2.9          4.6         1.3 versicolor
 10          5.2         2.7          3.9         1.4 versicolor
-# … with more rows
-# ℹ Use `print(n = ...)` to see more rows
+# ... with more rows
+# i Use `print(n = ...)` to see more rows
 ```
 
 Or we can specify anything that's not a "setosa" species that also has a sepal length > 5, ordered by petal length in descending order:
@@ -344,8 +344,8 @@ iris_tbl %>%
  8          7.4         2.8          6.1         1.9 virginica
  9          7.7         3            6.1         2.3 virginica
 10          6.3         3.3          6           2.5 virginica
-# … with more rows
-# ℹ Use `print(n = ...)` to see more rows
+# ... with more rows
+# i Use `print(n = ...)` to see more rows
 ```
 
 When we are happy with the preview provided, we collect all the results from our query using `collect()` and we'll notice the table knows how many rows it has since it will have all the data.
@@ -372,8 +372,8 @@ iris_tbl %>%
  8          7.4         2.8          6.1         1.9 virginica
  9          7.7         3            6.1         2.3 virginica
 10          6.3         3.3          6           2.5 virginica
-# … with 86 more rows
-# ℹ Use `print(n = ...)` to see more rows
+# ... with 86 more rows
+# i Use `print(n = ...)` to see more rows
 ```
 
 Instead of collecting the values, we can ask it to print the SQL query it is making using `show_query()`, should we want to check what the query looks like behind-the-scenes:
@@ -466,5 +466,5 @@ Use a CSV file if you need to share data openly so that it is compatible with vi
 * Largest file sizes as all values are stored in plain text.
 * Slowest and most memory-consuming when importing and exporting large CSV files.
 * You need to specify the value separator and any text delimiters on every import:
-  * Using commas (,) is not always appropriate as a value separator, as some countries use this to mark decimal places. Consider using tab (\t) or semi-colon (\;) in those situations.
+  * Using commas (,) is not always appropriate as a value separator, as some countries use this to mark decimal places. Consider using tab (\t) or semi-colon (;) in those situations.
   * Text entries that contain commas and line-breaks can break CSV files if the text is not delimited by quotation marks to mark the start and end of that entry.

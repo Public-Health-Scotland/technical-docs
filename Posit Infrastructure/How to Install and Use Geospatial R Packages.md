@@ -148,8 +148,8 @@ install.packages("https://ppm.publichealthscotland.org/all-r/latest/src/contrib/
                  Ncpus = ncpus)
 
 # Install the {leaflet} package
-install.packages("leaflet",
-                 repos = c("https://ppm.publichealthscotland.org/all-r/__linux__/centos7/latest"),
+install.packages("https://ppm.publichealthscotland.org/all-r/latest/src/contrib/Archive/leaflet/leaflet_2.1.0.tar.gz",
+                 repos = NULL,
                  type = "source",
                  dependencies = FALSE,
                  configure.args = geo_config_args,
