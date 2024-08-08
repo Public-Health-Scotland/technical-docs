@@ -1,3 +1,7 @@
+PHS analysts have developed and maintain several R packages to help with common tasks and to ensure that methodologies can be as consistent and efficient as possible. The R Packages Oversight and Development group (R-POD) is responsible for coordinating package development but each package has a single named maintainer and (usually) a group of analysts who help with development. Any analyst is welcome to contribute to the packages, as well as make suggestions for new functions or even additional packages. Please use the usual Teams channels or the links to the GitHub issues pages.
+
+These packages are currently recommended for use.
+
 | Package documentation  | Latest Version | Description | Issues and suggestions |
 |-	|- |- |- |
 | [phsmethods](https://public-health-scotland.github.io/phsmethods/) | [![CRAN status](https://www.r-pkg.org/badges/version/phsmethods)](https://CRAN.R-project.org/package=phsmethods)  |  A collection of methods for commonly undertaken analytical tasks, primarily developed for Public Health Scotland (PHS) analysts, but the package is also generally useful to others working in the healthcare space, particularly since it has functions for working with Community Health Index (CHI) numbers. The package can help to make data manipulation and analysis more efficient and reproducible. |  https://github.com/Public-Health-Scotland/phsmethods/issues |
