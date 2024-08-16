@@ -215,7 +215,7 @@ dyn.load("/usr/geos310/lib64/libgeos_c.so", local = FALSE)
 
 <details>
 
-<summary>This code will automatically add the required code</summary>
+<summary>This code will automatically add the required code (click to expand)</summary>
 
 You will need to change `"~/.Rprofile"` to `"<path to project>/.Rprofile"` to make it work on a project.
 
