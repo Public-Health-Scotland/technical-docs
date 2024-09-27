@@ -5,9 +5,20 @@
 
 This document aims to set out key considerations throughout the development of dashboards, including the design, development, and deployment phases. Further research and guidance should be sought for specific areas as it would not be possible to cover all aspects in this document.
 
-The term 'dashboard' is used to refer to any visualisation tool that presents data in an interactive graphical format, such as R Shiny or Tableau but relevance will apply to other formats, such as R Markdown or Excel.
+The term 'dashboard' is used to refer to any visualisation tool that presents data in an interactive graphical format, such as R Shiny or Tableau but relevance will apply to other formats, such as R Markdown or Excel. When considering development of a new dashboard, there are some initial considerations of the format in general:
 
-## Table of Contents
+| Pros                                                                                      |     | Cons                                                                                               |
+| ----------------------------------------------------------------------------------------- | --- | -------------------------------------------------------------------------------------------------- |
+| High-level indicators are well-suited to dashboards                                       |     | Specific insights or complex data are not well suited                                              |
+| High priority topics can be easily accessed                                               |     | Existing knowledge and context is required to interpret                                            |
+| Data can be updated frequently                                                            |     | There is a high degree of maintenance                                                              |
+| Data can be updated automatically                                                         |     | Development requires technical expertise                                                           |
+| Multiple breakdowns or filters can be applied that would overwise be difficult to present |     | Prevents the charts being used in other formats, such as social media                              |
+| Interactivity gives users autonomy to explore insights                                    |     | Interactivity puts the burden of interpretation on the user, potentially hiding important insights |
+| The focus is on the data                                                                  |     | Explanation and storytelling is missed                                                             |
+| Shared online                                                                             |     | Limitations for security and ensuring accessibility                                                |
+
+## Contents
 
 - [Design](#design) - before any development work begins, it is important to consider the design of the dashboard and project, ensuring objectives are clear and the right resource is in place.
   - [User Needs](#user-needs)
@@ -190,6 +201,7 @@ Other metrics such as page views, user interactions, and load times can be signi
 
 - [Dashboard Accessibility Guidance](https://public-health-scotland.github.io/knowledge-base/docs/Information%20Sharing?doc=Dashboard%20Accessibility%20Guidance.md)
 - [Deploying a Shiny app guidance](https://public-health-scotland.github.io/knowledge-base/docs/Information%20Sharing?doc=Deploying%20a%20Shiny%20app.md)
+- [ONS Service Manual - Data visualisation](https://service-manual.ons.gov.uk/data-visualisation)
 - [Open Data Strategy for Scotland](https://www.gov.scot/publications/open-data-strategy/)
 - [PHS Chart & Dashboard Accessibility Guidance](http://spark.publichealthscotland.org/media/2176/chart-and-dashboard-accessibility-guidance-version-12.pdf)
 - [PHS Content & Accessibility Guidance](https://spark.publichealthscotland.org/downloads/content-and-accessibility-guidance/)
