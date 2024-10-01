@@ -1,4 +1,4 @@
-# How to Publish (Deploy) a Shiny App
+# Deploying (Publishing) a Shiny App
 
 At PHS, we currently use a server hosted on [shinyapps.io](http://shinyapps.io) to host Shiny apps. The server is located outside of the UK and hosted by Posit, which means that we can only host public-facing apps with no confidential data. If you have doubts about this for your app, you should contact the PHS Stats Gov (phs.statsgov@phs.scot) team to assess. 
 
