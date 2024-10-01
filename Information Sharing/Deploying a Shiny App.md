@@ -85,6 +85,8 @@ It is possible to password-protect Shiny apps. To align with governance and data
    ``` 
 5. On publication day you then need to deploy the live app version, without the password protection.
 
+### Troubleshooting
+
 > [!NOTE]
 > Before deploying an app, check that it works locally and all data and other files are stored with the app or accessible to the general internet. Once deployed the app will be a stand-alone website and won't have access to PHS' systems and file structure.
 > Similarly, all file paths need to be relative rather than absolute as well, as the app in the server won't have access to PHS' file structure.
