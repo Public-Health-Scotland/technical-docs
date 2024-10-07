@@ -15,6 +15,7 @@ This document aims to answer frequently asked questions from users in relation t
   * [How do I prevent my browser from causing my session to go to sleep?](#how-do-I-prevent-my-browser-from-causing-my-session-to-go-to-sleep)
 * [Sessions](#sessions)
   * [How do I find my session ID?](#how-do-i-find-my-session-id)
+  * [How can I see how much memory my RStudio session is using in Posit Workbench?](#how-can-i-see-how-much-memory-my-rstudio-session-is-using-in-posit-workbench)
   * [Why do I get Status code 502/504 errors when starting a session and what can I do about it?](#sessions-502-504)
 * [Installing Packages](#installing-packages)
   * [What do I do if I cannot install any packages?](#what-do-i-do-if-i-cannot-install-any-packages)
@@ -88,6 +89,30 @@ https://pwb.publichealthscotland.org/s/bd664cfc78a31605322d7/?launcher=1
 ```
 
 The long string of letters and numbers (in this case <code>bd664cfc78a31605322d7</code>) is the session ID.
+
+
+#### How can I see how much memory my RStudio session is using in Posit Workbench?
+##### 1. Using code
+For the most accurate results, you can run the line of code below. This will return the amount of memory (in megabytes) currently used by your session to the environment as an object called 'memory_used_in_mb':
+
+```{r}
+memory_used_in_mb <- as.numeric(system2("cat", "/sys/fs/cgroup/memory.current", stdout = TRUE)) / (1024^2)
+```
+
+##### 2. Memory usage report
+At a glance, you can see how much memory your RStudio session is currently using by clicking on the disc icon in the 'Environment' pane, then selecting 'Memory Usage Report' from the dropdown menu:
+
+![image](https://github.com/user-attachments/assets/46089799-4a63-4648-af18-78f7d85eb487)
+
+As shown on the image below, the amount of memory (in megabytes) used by your session will be displayed alongside 'Used by session' on the report:
+
+![image](https://github.com/user-attachments/assets/e3fead38-1f29-4a45-b3b0-6c34fb04a9c4)
+
+**Please note:** Any percentage values in this report should be interpreted with caution because they refer to memory usage on the current node (which can accommodate multiple sessions at once) rather than in the user's current session alone. The same applies to the doughnut chart shown in this report.
+
+##### 3. Profiling
+For more detailed information on memory profiling, please refer to the [existing Knowledge Base documentation here](https://public-health-scotland.github.io/knowledge-base/docs/Posit%20Infrastructure?doc=How%20to%20Use%20RStudio%20for%20Measuring%20Your%20Memory%20Usage.md).
+
 
 #### <a name="sessions-502-504">Why do I get _Status code 502/504_ errors when starting a session and what can I do about it?</a>
 
