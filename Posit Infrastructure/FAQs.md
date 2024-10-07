@@ -96,7 +96,7 @@ The long string of letters and numbers (in this case <code>bd664cfc78a31605322d7
 For the most accurate results, you can run the line of code below. This will return the amount of memory (in megabytes) currently used by your session to the environment as an object called 'memory_used_in_mb':
 
 ```{r}
-memory_used_in_mb <- as.numeric(system2("/usr/bin/cat", "/sys/fs/cgroup/memory.current", stdout = TRUE)) / (1024^2)
+memory_used_in_mb <- as.numeric(system2("cat", "/sys/fs/cgroup/memory.current", stdout = TRUE)) / (1024^2)
 ```
 
 ##### 2. Memory usage report
