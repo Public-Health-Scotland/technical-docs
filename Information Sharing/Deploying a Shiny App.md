@@ -45,7 +45,7 @@ The process to deploy an app uses the `{rsconnect}` package, with the process ou
       secret = "REDACTED"
       )
    ```
-3. Deploy the app:
+3. Deploy the app (this function bundles the application and sends to the shinyapps.io service, it should be ran for deployment only and not added to the application codebase):
    ```
    rsconnect::deployApp(
       appDir = "path/to/app",
