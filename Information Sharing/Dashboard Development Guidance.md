@@ -60,7 +60,7 @@ If related to a specific health topic or publication, Open Data should be consid
 
 There are several elements to consider as part of the interface design of a dashboard. While each project will bring varying expertise on the data, users, context, and even technical expertise, a strong foundation in interface design is vital to ensure that the dashboard is fit for purpose, including accessibility, usability, and user experience.
 
-Key areas are explored in more detail below but should be considered in context by creating wireframes or prototypes to explore information hierarchy and layout, and test different design ideas and gather feedback from users. Brand guidelines, accessibility, and consistency across all PHS products should be considered throughout the design process. To support this, a template for Shiny apps exists within the [{phstemplates} package](https://public-health-scotland.github.io/phstemplates/), and further guidance available on the [PHS Data Science Knowledge Base](https://public-health-scotland.github.io/knowledge-base/).
+Key areas are explored in more detail below but should be considered in context by creating wireframes or prototypes to explore information hierarchy and layout, and test different design ideas and gather feedback from users. Brand guidelines, accessibility, and consistency across all PHS products should be considered throughout the design process. To support this, a template for Shiny apps exists within the [{phstemplates} package](https://public-health-scotland.github.io/phstemplates/) with further guidance available on the [PHS Data Science Knowledge Base](https://public-health-scotland.github.io/knowledge-base/). The [UK Government Service Manual](https://www.gov.uk/service-manual) and [The Interaction Design Founction - User Research article](https://www.interaction-design.org/literature/topics/user-research) contains excellent resources for this too.
 
 #### Visualisation
 
@@ -203,6 +203,7 @@ Other metrics such as page views, user interactions, and load times can be signi
 
 - [Dashboard Accessibility Guidance](https://public-health-scotland.github.io/knowledge-base/docs/Information%20Sharing?doc=Dashboard%20Accessibility%20Guidance.md)
 - [Deploying a Shiny app guidance](https://public-health-scotland.github.io/knowledge-base/docs/Information%20Sharing?doc=Deploying%20a%20Shiny%20app.md)
+- [Interaction Design Foundation - User Research](https://www.interaction-design.org/literature/topics/user-research)
 - [ONS Service Manual - Data visualisation](https://service-manual.ons.gov.uk/data-visualisation)
 - [Open Data Strategy for Scotland](https://www.gov.scot/publications/open-data-strategy/)
 - [PHS Chart & Dashboard Accessibility Guidance](http://spark.publichealthscotland.org/media/2176/chart-and-dashboard-accessibility-guidance-version-12.pdf)
@@ -213,4 +214,5 @@ Other metrics such as page views, user interactions, and load times can be signi
 - [PHS Statistical Disclosure Control (SDC) Overview](https://spark.publichealthscotland.org/corporate-guidance/statistical-governance/statistical-disclosure-control/overview-of-disclosure-control-protocol/)
 - [PHS Statistical Disclosure Control (SDC) Protocol](https://spark.publichealthscotland.org/downloads/statistical-disclosure-control-protocol/)
 - [PHS Statistical Publications Timetable](https://spark.publichealthscotland.org/corporate-guidance/statistical-governance/releasing-statistics/)
+- [UK Government Service Manual](https://www.gov.uk/service-manual)
 - [UKSA Code of Practice for Statistics](https://code.statisticsauthority.gov.uk/)
