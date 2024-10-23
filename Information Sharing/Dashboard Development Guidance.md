@@ -99,7 +99,9 @@ Ensuring the pre-development phase is followed will support a smooth transition 
 
 ### Code Quality
 
-Code quality is relevant to the development from the start and can impact maintainability and performance. This involves writing clean, well-documented codebases that are easy to read, navigate and maintain. Designing a dashboard pulls on skills outside of the data and analytics domain, such as web development, user experience, and design. As such, considering how interfaces are designed and built is important. Similarly, using loading bars and skeleton components while content is loading can improve the user experience and perception of performance.
+Code quality is relevant to the development from the start and can impact maintainability and performance. This involves writing clean, well-documented codebases that are easy to read, navigate and maintain. Certain dashboard technologies are more supportive of this than others, such as R Shiny or Dash by Plotly, even R Markdown and Quarto. This is because these are code/plain-text structured and open source, which in itself offers another set of advantages, such as support, expandability, and transparency. 
+
+Designing a dashboard pulls on skills outside of the data and analytics domain, such as web development, user experience, and design. As such, considering how interfaces are designed and built is important. Similarly, using loading bars and skeleton components while content is loading can improve the user experience and perception of performance.
 
 It is important to follow best practices for coding, such as using consistent naming conventions, commenting code, and using appropriate functions. This will help to ensure that the code is robust, reliable, and easy to understand. The [{phstemplates} package](https://public-health-scotland.github.io/phstemplates/) provides a template for getting started, and other guidance is available on the [PHS Data Science Knowledge Base](https://public-health-scotland.github.io/knowledge-base/).
 
