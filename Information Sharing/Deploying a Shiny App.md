@@ -95,6 +95,8 @@ If something doesn’t work when your app is already on the server (but works lo
 
 `rsconnect::showLogs(appName = "<app name>")`
 
+If performance is a concern, this should be notable during development but can become more of a problem after deployment with limited resources and sessions covering multiple users. The [`{profvis}`](https://profvis.r-lib.org/index.html) is an interactive tool for visualising code profiling data and can be useful for identifying where bottlenecks or performance issues are within an application.
+
 It is sometimes tricky to spot the issue but other Shiny users across are very supportive, and there are a couple of Shiny Server Administrators who can check the server side for more details. To get help, you can post a message on the R Shiny channel on the Data & Intelligence Forum, tagging `@shinyadmin` to get the attention of the Shiny admins.
 
 When you have uploaded an app to the server you will have a stand-alone website, but if you want to embed it in the PHS site then you will need to speak with the publications team (phs.statspublications@phs.scot) to arrange it.  
