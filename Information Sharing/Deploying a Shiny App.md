@@ -19,7 +19,7 @@ At PHS, we currently use [shinyapps.io](http://shinyapps.io) to host Shiny apps.
 
 There are some key points to consider before deploying an app:
 
-- **Data**: Ensure that the data used in the app is not confidential and can be shared publicly. If you are unsure, contact the [PHS Stats Gov team](mailto:phs.statsgov@phs.scot).
+- **Data**: Ensure that the data used in the app is not confidential and can be shared publicly. This is a requirement for all data within the app, including the data files stored alongside the codebase (backend), anything used or created as part of in-app processing, and all output on tables, visualisations, or downloadable content. If you are unsure, contact the [PHS Stats Gov team](mailto:phs.statsgov@phs.scot).
 - **Accessibility**: Ensure that the app is accessible to all users.
 - **Testing**: Test the app locally before deploying it to the server, considering user experience and functionality, performance, and security.
 
