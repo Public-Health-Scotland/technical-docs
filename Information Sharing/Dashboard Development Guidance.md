@@ -91,7 +91,7 @@ At this stage, other project requirements should be considered such as the timel
 - [Customer Focus team](mailto:phs.cfteamrequest@phs.scot) - for user research and engagement, and technical resource support through a demand management process.
 - [Data Science team](mailto:phs.datascience@phs.scot) - for technical support and guidance on data workflows, visualisation, and dashboard development.
 - [Statistics Governance team](mailto:phs.statsgov@phs.scot) - for guidance on statistical releases, data governance, and compliance with the Code of Practice for Statistics.
-- [Web & Publications team](phs.statspublications@phs.scot) - for guidance on integration to the PHS website, accessibility, and publication standards.
+- [Web & Publications team](mailto:phs.statspublications@phs.scot) - for guidance on integration to the PHS website, accessibility, and publication standards.
 
 ## Development
 
