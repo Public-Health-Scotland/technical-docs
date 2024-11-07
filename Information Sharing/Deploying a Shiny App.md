@@ -100,3 +100,19 @@ If performance is a concern, this should be notable during development but can b
 It is sometimes tricky to spot the issue but other Shiny users across are very supportive, and there are a couple of Shiny Server Administrators who can check the server side for more details. To get help, you can post a message on the R Shiny channel on the Data & Intelligence Forum, tagging `@ShinyAdmins` to get the attention of the Shiny admins.
 
 When you have uploaded an app to the server you will have a stand-alone website, but if you want to embed it in the PHS site then you will need to speak with the publications team (phs.statspublications@phs.scot) to arrange it.  
+
+## Deleting a Shiny App
+
+There are a few reasons why you might want to delete a Shiny app from the server, such as if it is no longer needed or if it is being replaced by a new version. To remove an app from shinyapps.io, there is a 2-step process:
+
+1. The application must first be archived, this stops any currently running sessions and prevents new sessions from starting. This is done using the following command:
+   ```
+   rsconnect::terminateApp(appName = "phs-descriptive-name")
+   ```
+2. The application can then be deleted using the following command:
+   ```
+   rsconnect::purgeApp(appName = "phs-descriptive-name")
+   ```
+
+> [!NOTE]
+> Archiving an app is an essential part of the process that cannot be skipped. Where an app has been archived and not deleted, the shinyapps.io admins will periodically delete these apps as part of normal server maintenance.
