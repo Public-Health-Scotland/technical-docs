@@ -197,7 +197,7 @@ On publication day, the Stats publications team will publish your dashboard to T
 
 Once the dashboard has been deployed, it is useful to monitor its performance and usage. Mostly statistics available are related to the server performance and usage, such as sessions and memory utilisation. With R Shiny apps, these statistics are available using the [{rsconnect} pacakge](https://rstudio.github.io/rsconnect/).
 
-Other metrics such as page views, user interactions, and load times can be significantly useful but require other tools. Google Analytics can be useful for this, however, it is important to consider the data protection and legal implications of tracking user data and cookie usage. The [Web & Publications team](phs.statspublications@phs.scot) may be able to provide some high level usage statistics from the PHS website, or provide further guidance on using Google Analytics.
+Other metrics such as page views, user interactions, and load times can be significantly useful but require other tools. Google Analytics can be useful for this, however, it is important to consider the data protection and legal implications of tracking user data and cookie usage. The [Web & Publications team](mailto:phs.statspublications@phs.scot) may be able to provide some high level usage statistics from the PHS website, or provide further guidance on using Google Analytics.
 
 ## Reference
 
