@@ -19,6 +19,7 @@ This document aims to answer frequently asked questions from users in relation t
   * [Why do I get Status code 502/504 errors when starting a session and what can I do about it?](#sessions-502-504)
 * [Installing Packages](#installing-packages)
   * [What do I do if I cannot install any packages?](#what-do-i-do-if-i-cannot-install-any-packages)
+  * [How do I install the `{curl}` package?](#how-do-i-install-the-curl-package)
   * [How do I install the `{hablar}` package?](#how-do-i-install-the-hablar-package)
   * [How do I install the `{ranger}` package?](#how-do-i-install-the-ranger-package)
   * [What do I do if a package requires `{rJava}`?](#what-do-i-do-if-a-package-requires-rjava)
