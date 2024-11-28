@@ -133,6 +133,20 @@ If clicking the refresh button in your web browser had no effect, return to the 
 
 If you cannot install any packages **and** have an error message saying your home directory is not writeable or the directory is not correctly mounted then you should raise a call in [Service Now](https://nhsnss.service-now.com/phs/) and ask to have your cache cleared. Only raise a service call if you are getting these error messages.
 
+#### How do I install the `{curl}` package?
+
+The `{curl}` package from v6.0.0 onwards requires a C++17 compiler which the existing Posit Workbench environment does not provide. The solution is to install v5.2.3 of the `{curl}` package:
+
+```{r}
+# Install {curl} v5.2.3 from the last Posit Package Manager snapshot that contained this version
+install.packages("curl", repos = "https://ppm.publichealthscotland.org/all-r/__linux__/centos7/2024-11-04+Y3JhbiwzOjIyNzUsNDoyMjQ5LDU6MjM4OCw2Ojg2Myw3OjIzNjksODoyMzE0OzI4MkU4MzFE")
+
+# -- or --
+
+# Install {curl} v5.2.3 from the source code in Posit Package Manager
+install.packages("https://ppm.publichealthscotland.org/all-r/latest/src/contrib/Archive/curl/curl_5.2.3.tar.gz", repos = NULL, type="source")
+```
+
 #### How do I install the `{hablar}` package?
 
 The `{hablar}` package cannot be installed as a pre-compiled binary; attempting this gives an error.  Therefore, you need to force R to install the source version by specifying the URL for the source version of packages on Package Manager.  However, `{hablar}`'s dependencies can be installed as binaries first.
