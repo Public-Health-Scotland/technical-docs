@@ -20,7 +20,7 @@ If you are working remotely, yes: ensure that when you login to Windows that you
 
 #### How do I install the `{gt}` package?
 
-Versions of the [`{gt}`](https://gt.rstudio.com/) package, up to and including v0.5.0, use [PhantomJS](https://phantomjs.org/) (a scriptable headless browser) to take screenshots of tables produced by `{gt}`.  Newer versions ot `{gt}` require a Chromium-based browser which is not yet configured correctly in the Posit Workbench environment.
+Versions of the [`{gt}`](https://gt.rstudio.com/) package, up to and including v0.5.0, use [PhantomJS](https://phantomjs.org/) (a scriptable headless browser) to take screenshots of tables produced by `{gt}`.  Newer versions of `{gt}` require a Chromium-based browser which is not yet configured correctly in the Posit Workbench environment.
 
 Instructions and a script for installing and testing v0.5.0 of the `{gt}` package and all of its dependencies can be found in the [posit-workbench-install-gt](https://github.com/Public-Health-Scotland/posit-workbench-install-gt) repo.
 
