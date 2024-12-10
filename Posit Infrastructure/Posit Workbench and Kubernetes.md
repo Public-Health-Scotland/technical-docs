@@ -21,7 +21,7 @@ A Docker *container* is a running instance of that image, in our case a running 
 
 ### Kubernetes
 
-Now that's out of the way, Kubernetes is simply a technology to automatically manage Docker containers based on a set of rules, so it doesn't need to be done manually.  The name is derived from the Greek word κυβερνήτης (kubernḗtēs) which means pilot or helmsman, hence the Kubernetes logo being a ship's steering wheel:
+Now that's out of the way, Kubernetes is simply a technology to automatically manage Docker containers based on a set of rules, so it doesn't need to be done manually.  The name is derived from the Greek word &kappa;&upsilon;&beta;&epsilon;&rho;&upsilon;&eta;&tau;&eta;&zeta; which means pilot or helmsman, hence the Kubernetes logo being a ship's steering wheel:
 
 <img src="https://user-images.githubusercontent.com/45657289/205086608-d563dde1-7cc2-416a-9c99-10d57a252940.png" width="100">
 
@@ -61,11 +61,11 @@ Containerising (yes, that's a word!) Posit Workbench has the added advantage of 
 
 Microsoft Azure is a pay-as-you-go service.  There is a minimum cost to making Post Workbench available, which includes running the sessions in pods on the first node in the cluster, but anything beyond this is extra cost.  Each new node added to the cluster increases the costs for the period of time that the node is running for, so the more concurrent Posit Workbench sessions running concurrently, the greater the cost.  Storage in Azure is chargeable (e.g. installing R packages), as is outbound network traffic from Azure back to our on-premise servers (e.g. writing a CSV file to an area on the Stats server).
 
-In addition to the cost implications, we must be mindful at all times that the Posit Workbench environment is a shared resource with finite capacity, and as such, we each have a responsibility to ensure our code is as optimsed and efficient as possible, using the environment correctly and appropriately, and thus ensuring that we all benefit from this resource equally.
+In addition to the cost implications, we must be mindful at all times that the Posit Workbench environment is a shared resource with finite capacity, and as such, we each have a responsibility to ensure our code is as optimised and efficient as possible, using the environment correctly and appropriately, and thus ensuring that we all benefit from this resource equally.
 
 ## Best practice
 
-The best practice described here focusses solely on the aspects of Posit Workbench functionality that are made available by or are impacted by the deployment on Kubernetes.
+The best practice described here focuses solely on the aspects of Posit Workbench functionality that are made available by or are impacted by the deployment on Kubernetes.
 
 ### Requesting a session of a certain size
 
@@ -91,13 +91,13 @@ In Posit Workbench you can request a number of CPUs that your session will be ab
 - For running substantial codebases, 2 CPUs are recommended with per-project consideration for increasing that further.
 - If you are running code that relies on parallel processing, please request 4 or more CPUs.
 
-The less CPUs you request, the greater number of pods running Posit Workbench sessions can be squeezed onto a single node, thus minimising cost to PHS.
+The fewer CPUs you request, the greater number of pods running Posit Workbench sessions can be squeezed onto a single node, thus minimising cost to PHS.
 
 #### Memory
 
 Computer random access memory (RAM) gives applications a place to store and access data that are being actively used, and to do so quickly.
 
-In both R and Python, reading a CSV file or the results from a database SQL query will result in that data being read into your session's memory in it's entirety, and all subsequent operations on that data are performed *in-memory*. You therefore need to ensure that your session has access to sufficient free memory to hold the size of data you intend to work with in your analysis.
+In both R and Python, reading a CSV file or the results from a database SQL query will result in that data being read into your session's memory in its entirety, and all subsequent operations on that data are performed *in-memory*. You therefore need to ensure that your session has access to sufficient free memory to hold the size of data you intend to work within your analysis.
 
 Estimating how much memory is required is not a simple task, but suggested starting points are as follows:
 

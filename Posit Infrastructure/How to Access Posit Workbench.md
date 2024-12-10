@@ -1,6 +1,27 @@
-# Log in to Posit Workbench
+# Access Posit Workbench
 
-## Logging in to Posit Workbench
+* [New User](#new-user)
+* [Deactivated User](#deactivated-user)
+* [Logging in](#logging-in)
+  * [Starting a session](#starting-a-session)
+
+## New user
+
+If you're new to Posit Workbench and require that for your role, a user account and relevant access is set up by DaS (which includes access to Posit Package Manager). This follows a similar process to 'Access to Data', and requires line manager approval and is subject to the [Acceptable Usage Policy](Acceptable%20Usage%20Policy%20for%20Posit%20Workbench.md). This includes the deactivation of inactive accounts, if this affects you, see [Deactived User](#deactivated-user).
+
+1. Go to [ServiceNow](https://nhsnss.service-now.com/phs/) > Digital & Security > Service Catalog > Make a Request
+2. Select 'Corporate Applications' as the Product or Service
+3. Another dropdown will appear where you can select the appropriate Posit application. In this case, Workbench.
+4. Complete the rest of the form, and attach authorisation from your line manager (similar to Access to Data process).
+5. Submit the request!
+
+## Deactivated user
+
+As part of the standard licence management processes for Posit, to keep us compliant with our licence agreement, we regularly review activity across the platform. Where accounts are found to be inactive, you will receive communication about the deactivation of your account. This process maintains user settings and data, with reactivation prioritised to be expected within 48 hours. 
+
+To request reactivation email the Data Science team ([phs.datascience@phs.scot](mailto:phs.datascience@phs.scot)) **with your LDAP username** and this will be actioned. 
+
+## Logging in
 
 The Posit Workbench server is accessed via a web browser. To log in, follow the steps below:
 
@@ -22,7 +43,7 @@ The Posit Workbench server is accessed via a web browser. To log in, follow the 
 
     ![Posit Workbench landing page](https://user-images.githubusercontent.com/45657289/199207826-9fb88d1c-88e6-4418-9cec-1ec8a0f02875.png)
 
-## Starting a new session
+### Starting a session
 
 1. From the screen shown above, click the "+ New Session" button (circled in red above)
 

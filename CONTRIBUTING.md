@@ -21,7 +21,7 @@ The following is a set of guidelines for contributing to PHS technical documenta
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [phs.datascience@phs.scot](mailto:phs.datascience@phs.scot).
+This project and everyone participating in it are governed by the [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behaviour to [phs.datascience@phs.scot](mailto:phs.datascience@phs.scot).
 
 ## I just have a question!
 
@@ -31,7 +31,7 @@ Whether your question is about the resources available or something about new co
 
 ## Documentation Structure
 
-This repo forms the back-end for the [PHS Data Science Knowledge Base documentation page](https://public-health-scotland.github.io/knowledge-base/docs/). This requires a specfic structure, which is outlined below, see also the [Markdown Style Guide](#markdown-style-guide) below.
+This repo forms the back-end for the [PHS Data Science Knowledge Base documentation page](https://public-health-scotland.github.io/knowledge-base/docs/). This requires a specific structure, which is outlined below, see also the [Markdown Style Guide](#markdown-style-guide) below.
 
 ### Folders / Directories
 
@@ -47,12 +47,12 @@ All directories need to be on a single level, with no sub-directories. Currently
 
 Files created should be a `.md` file within a directory, with the following considerations:
 
-* *File name* should be human readable, title case, with spaces. The name is directly used in the navigation bar, so should be as descriptive as possible.
+* *File name* should be human readable, in title case, with spaces. The name is directly used in the navigation bar, so should be as descriptive as possible.
   * Where the document is a step-by-step set of instructions that are universal, the file name should start with "How to ".
   * Where the document is a recommended practice, the file name should start with "Recommended ".
 * *File structure* should follow standard markdown linting rules.
 * *The purpose* of the document should be set out first, identifying what the document is for and what it covers.
-* *Content of the document* should be written in a way that is accessible to all users, with no jargon or technical terms. Where possible, links to other documents should be used to explain concepts. If suitable, documentation to learn about concepts can be developed seperately from instructions to perform a task.
+* *Content of the document* should be written in a way that is accessible to all users, with no jargon or technical terms. Where possible, links to other documents should be used to explain concepts. If suitable, documentation to learn about concepts can be developed separately from instructions to perform a task.
 * *Within-repo links* should be relative to the root of the repo. For example, a link to the `Posit Infrastructure` directory would be `[Posit Infrastructure](/Posit%20Infrastructure)`.
 * *External links* should be absolute links, with the full URL. For example, a link to the Public Health Scotland website would be `[Public Health Scotland](https://publichealthscotland.scot)`.
 
@@ -99,10 +99,12 @@ The process described here has several goals:
 * Engage the community in working toward the best possible documentation
 * Enable a sustainable system for maintainers to review contributions
 
-Please follow these steps to have your contribution considered by the maintainers:
+Please follow these steps to have your contribution considered by the maintainers / reviewers (the [Data Science team](mailto:phs.datascience@phs.scot)):
 
 1. Follow all instructions in the template, this will auto-populate when you open a Pull Request.
 2. Follow the [style guides](#style-guides)
+3. On the pull request, set the [Data Science Team](https://github.com/orgs/Public-Health-Scotland/teams/data-science) as reviewer.  
+   **Note:** setting the reviewers would only be possible if you are a member of the [All PHS Team](https://github.com/orgs/Public-Health-Scotland/teams/all-phs). If you are not a member of that team, please request to join with the button in the top-right corner of the [team's page](https://github.com/orgs/Public-Health-Scotland/teams/all-phs).
 
 While the prerequisites above must be satisfied prior to having your pull request reviewed, the reviewer(s) may ask you to complete additional design work, tests, or other changes before your pull request can be ultimately accepted.
 
@@ -120,7 +122,7 @@ See the [PHS GitHub Guidance](Version%20Control/GitHub%20Guidance.md) for the fu
 
 #### Branches
 
-* are named in lowercase, with hyphens between words, referencing the issue they are targetting
+* are named in lowercase, with hyphens between words, referencing the issue they are targeting
 * short-lived for specific issues, and deleted once merged
 
 ### Markdown Style Guide

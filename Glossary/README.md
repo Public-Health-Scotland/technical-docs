@@ -123,7 +123,7 @@ A collection of terms and definitions used across Data Science in PHS.
 | ---- | ---------- |
 | **Natural Language Processing (NLP)** | A subfield of linguistics, computer science, information engineering, and artificial intelligence concerned with the interactions between computers and human (natural) languages. |
 | **Neural Network** | A network or circuit of neurons, or in a modern sense, an artificial neural network, composed of artificial neurons or nodes. |
-| **NoSQL** | A method for storing and retrieving data that is modeled in means other than the tabular relations used in relational databases. |
+| **NoSQL** | A method for storing and retrieving data that is modelled in means other than the tabular relations used in relational databases. |
 
 ## O
 
@@ -157,6 +157,7 @@ A collection of terms and definitions used across Data Science in PHS.
 | **R** | A programming language and software environment for statistical computing and graphics. |
 | **Reproducible Analytical Pipelines (RAP)** | A set of tools and processes that enable the creation of a pipeline that can be used to reproduce the results of an analysis. |
 | **Regression** | A statistical process for estimating the relationships among variables. |
+| **R Markdown** | A document format that combines the capabilities of the R programming language with the simplicity of Markdown syntax. |
 | **RStudio** | An integrated development environment (IDE) for R. |
 
 ## S
