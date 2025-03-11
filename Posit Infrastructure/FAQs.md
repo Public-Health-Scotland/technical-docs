@@ -19,12 +19,9 @@ This document aims to answer frequently asked questions from users in relation t
   * [Why do I get Status code 502/504 errors when starting a session and what can I do about it?](#sessions-502-504)
 * [Installing Packages](#installing-packages)
   * [What do I do if I cannot install any packages?](#what-do-i-do-if-i-cannot-install-any-packages)
-  * [How do I install the `{hablar}` package?](#how-do-i-install-the-hablar-package)
-  * [How do I install the `{ranger}` package?](#how-do-i-install-the-ranger-package)
   * [What do I do if a package requires `{rJava}`?](#what-do-i-do-if-a-package-requires-rjava)
   * [What should I do if I encounter a 'failed to lock directory' error?](#what-should-i-do-if-i-encounter-a-failed-to-lock-directory-error)
   * [Why can't I install the `{xlsx}` package in Posit Workbench?](#why-cant-i-install-the-xlsx-package-in-posit-workbench)
-  * [Why does the `{rmapshaper}` package not install?](#why-does-the-rmapshaper-package-not-install)
 * [Projects](#projects)
   * [What is a project (in Posit Workbench)?](#what-is-a-project-in-posit-workbench)
   * [How do I open or switch to another project?](#how-do-i-open-or-switch-to-another-project)
@@ -132,49 +129,6 @@ If clicking the refresh button in your web browser had no effect, return to the 
 
 If you cannot install any packages **and** have an error message saying your home directory is not writeable or the directory is not correctly mounted then you should raise a call in [Service Now](https://nhsnss.service-now.com/phs/) and ask to have your cache cleared. Only raise a service call if you are getting these error messages.
 
-#### How do I install the `{hablar}` package?
-
-The `{hablar}` package cannot be installed as a pre-compiled binary; attempting this gives an error.  Therefore, you need to force R to install the source version by specifying the URL for the source version of packages on Package Manager.  However, `{hablar}`'s dependencies can be installed as binaries first.
-
-```{r}
-# Get a list of dependencies and imports for {hablar}
-available_pkgs <- available.packages()
-
-deps <- tools::package_dependencies(
-  packages = available_pkgs["hablar", "Package"],
-  recursive = TRUE)[[1]]
-
-# Install these dependencies as binaries
-install.packages(
-  pkgs = deps,
-  repos = c(
-    "https://ppm.publichealthscotland.org/all-r/__linux__/centos7/latest"))
-
-# Compile and install the {hablar} package from source
-install.packages(
-  pkgs = "hablar",
-  repos = c("https://ppm.publichealthscotland.org/all-r/latest"))
-
-# Test if {hablar} can be loaded
-library(hablar)
-```
-
-#### How do I install the `{ranger}` package?
-
-The default configurations in R do not allow the `{ranger}` package to compile and install successfully.  The developers of the `{ranger}` package switched the project to using C++14 in version 0.14.2 of the package.  R itself should default to C++14 from version 4.1.0 onwards (we have 4.1.2), unless the package specifies C++11.  It turns out the makevars for `{ranger}` specify C++11, even though it's meant to be compiled with C++14.  The fix is to add the line
-
-```
-CXX = g++ -std=gnu++14
-```
-
-to the file `~/.R/Makevars` which then overrides the C++11 that `{ranger}` specifies.
-
-After amending the file as described above, you can install the `{ranger}` package as you would normally i.e.
-
-```R
-install.packages("ranger")
-```
-
 #### What do I do if a package requires `{rJava}`?
 
 Some packages, e.g. `{xlsx}`, `{XLconnect}`, depend on an installation of [Java](https://en.wikipedia.org/wiki/Java_(software_platform)) in order to work.  There are no current or future plans to support Java on Posit Workbench.  Alternative packages such as `{openxlsx}` that do not rely on Java should be used instead.
@@ -190,10 +144,6 @@ install.packages("<pkg>", INSTALL_opts = "--no-lock")
 #### Why can't I install the `{xlsx}` package in Posit Workbench?
 
 This package relies on Java, which is not supported in Posit Workbench (please see [the FAQ above](https://github.com/Public-Health-Scotland/technical-docs/blob/main/Posit%20Infrastructure/FAQs.md#what-do-i-do-if-a-package-requires-rjava)). The `{openxlsx}` package is an excellent alternative. 
-
-#### Why does the `{rmapshaper}` package not install?
-
-`{rmapshaper}` has the dependencies `{V8}` and `{geojsonio}`, neither of which can be installed successfully on the CentOS 7 container image that Posit Workbench runs in. As these dependencies cannot be installed, {rmapshaper} also fails to install. As it stands, there is no immediate solution to resolve this.
 
 ### Projects
 
