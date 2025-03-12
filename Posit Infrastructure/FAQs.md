@@ -203,50 +203,25 @@ Projects in Posit Workbench allow you to divide your work into different working
 
 #### How do I open or switch to another project?
 
-Posit Workbench provides several ways to open or switch to another project, but there is one way that tends to produce fewer errors.  Please ensure that you always follow these steps to open a project:
+Posit Workbench provides several ways to open or switch to another project, as listed below:
 
-1. Open a "project opener" session with 0.2 CPU and 200 MB:  
-   ![](https://user-images.githubusercontent.com/46680486/279127344-10a70bdc-963c-48f2-b83f-e10e95fe9a13.png)
-   
-   These sessions are small because no data processing is supposed to be done on them. Having a small session helps to save resources as Posit Workbench works on a pay-as-you-go policy.
+* If you've recently opened the project, then it should be accessible from the Posit Workbench home page:
 
-2. After agreeing to the Usage Policy, click on the open new session icon ![](https://user-images.githubusercontent.com/46680486/279127331-4967eda2-f52a-4acd-a04b-5adf6e1e6b92.png) in the top right corner:  
-   ![](https://user-images.githubusercontent.com/46680486/279127337-94f82693-97d0-492d-b4ca-12c4bf4a44a5.png)
+![image](https://github.com/user-attachments/assets/426140fd-6c27-403f-beba-5752eeaa7f1f)
 
-3. In the pop-up window, select "Start within: Project", and click on the "Browse..." button:  
-   ![](https://user-images.githubusercontent.com/46680486/279127346-705fc95b-1f32-4b5c-84ce-bcc2fe9073ab.png)
+* Otherwise, you can launch an RStudio session (requesting a sensible amount of memory for the project's requirements) and select 'File -> Open Project':
 
-4. Navigate to your project folder and double-click on the `.Rproj` file:  
-   ![](https://user-images.githubusercontent.com/46680486/279127342-b78bf898-5950-419c-834d-3b02799e6c2e.png)
+![image](https://github.com/user-attachments/assets/0b965130-a9b2-4960-8b22-c404b2146f16)
 
-5. Input the CPU and Memory according to your project requirements (please refer to the [Knowledge Base guidance here](https://public-health-scotland.github.io/knowledge-base/docs/Posit%20Infrastructure?doc=How%20to%20Use%20RStudio%20for%20Measuring%20Your%20Memory%20Usage.md)), and click on "Start":  
-   ![](https://user-images.githubusercontent.com/46680486/279127341-8212b1ce-b297-44d9-ab33-fa2bd838b09c.png)
-   
-   To use the default CPU and memory resources, you can erase the text on these input boxes.
+('Recent Projects' will allow you to select from recent projects, also.)
 
-6. The new session will be open in a new tab. Wait until the new session has successfully opened your project. Then **do not forget** to come back to the previous tab to close the "project opener" session if you do not intend to use it anymore.
+* The Projects dropdown menu at the top right of RStudio is another way of creating and opening projects:
 
-This procedure for opening projects should save time in case errors are raised when opening projects because your "project opener" session does not close automatically when opening the new project. However, if you forget to close that session, once the project is successfully open, we will be spending money on idle sessions.
+![image](https://github.com/user-attachments/assets/e65a577b-b473-4d57-aff5-b9c8721f9cc0)
 
 !!! IMPORTANT !!!
 
 **If you get a 502 or 504 error**, do not close that window. Please refer to [Why do I get Status code 502/504 errors when starting a session and what can I do about it?](#sessions-502-504)
-
-!!! FURTHERMORE !!!
-
-Please do not attempt to switch to another project using the 'Project' drop down menu at the top-right of the Posit Workbench interface:
-
-![Project dropdown menu in RStudio](https://user-images.githubusercontent.com/45657289/215759371-64028dc2-a02e-4779-91c9-6bacf1369244.png)
-
-Similarly, using the option File  > Recent Projects drop down from the main menu at the top-left of the Posit Workbench interface:
-
-![File recent projects from the main menu in Posit Workbench](https://github.com/Public-Health-Scotland/technical-docs/assets/109799428/c644de6f-0b09-4d07-a53b-b71f714679f5)
-
-Doing so may result in Posit Workbench crashing or certain error messages such as:
-
-![Launch session error](https://user-images.githubusercontent.com/45657289/215759609-fa3ecbd3-36fc-4985-8abe-bd05af07bba4.png)
-
-This is a [known issue](https://github.com/rstudio/rstudio/issues/11914) in older versions of Posit Workbench which will likely be fixed when the Posit Workbench environment is next updated.
 
 ### Accessing files and databases
 
