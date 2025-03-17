@@ -1,61 +1,140 @@
 # Quick Start Guide: Transition to the New Posit Environment
 
 ## 1. Overview
-- **Purpose**: Help users transition smoothly to the new Posit environment.
-- **Audience**: Existing users of the old environment.
-- **Scope**: High-level overview, key differences, and essential resources.
+
+### Purpose
+This Quick Start Guide is designed to help you transition smoothly to the new Posit environment. It provides essential information and step-by-step instructions to get you started on day one.  It is not a comprehensive guide; further documentation and guidance will be added to the [PHS Data Science Knowledge Base](https://public-health-scotland.github.io/knowledge-base/) in due course.
+
+### Audience
+This guide is intended for existing users of the old Posit environment who are moving to the new Posit environment.
+
+### Scope
+This guide covers:
+- A high-level overview of the new Posit environment's specifications and features.
+- Step-by-step instructions to get you started with logging in and setting up your environment.
+- Essential resources, including URLs for accessing the new Posit applications
 
 ---
 
 ## 2. Environment Specifications
-- **New Features**:
-  - Overview of Applications and their versions
-  - R and Python versions
-  - Supported IDEs: RStudio Pro, Jupyter Notebook, JupyterLab, Visual Studio Code.
-- **Infrastructure**:
-  - Kubernetes implementation
-- **Performance Improvements**:
-  - Enhanced speed and reliability e.g. previous issues that are now fixed.
+
+### Operating System and Application Specifications
+
+- **Operating Sytem**
+  - Ubuntu 22.04.5 LTS Jammy Jellyfish
+- **Applications and Versions**:
+  - **Posit Workbench**: 2024.09.1+394.pro7, “Cranberry Hibiscus” (f54d2f92)
+  - **Posit Package Manager**: v2024.08.2-9
+- **R and Python Versions**:
+  - **R**: v4.4.2 only
+  - **Python**: Default version is 3.13.0, with additional support for versions 3.10.12 and 3.12.6.
+- **Supported IDEs**:
+  - RStudio Pro 2024.09.1 Build 394.pro7 with support for Quarto 1.5
+  - Jupyter Notebook 7.2.3
+  - JupyterLab 4.2.6
+  - Visual Studio Code 1.93.0
 
 ---
 
-## 3. Key Differences Between Old and New Environment
-
-
----
-
-## 4. Getting Started
-### Step 1: Logging In
-- Access the new environment at [Posit Login URL].
-- Use your existing credentials
-
-### Step 2: The New Posit Workbench Homepage
+### Infrastructure Specification
+- The environment is hosted on [Microsoft Azure](https://azure.microsoft.com/en-gb).
+- Posit Workbench sessions are launched on a [Kubernetes cluster](https://www.vmware.com/topics/kubernetes-cluster)
+- There are two node pools in the Kubernetes cluster (nodepool and bigpool) which have different types of Virtual Machine (VM):
+  - nodepool (default): Standard_E20as_v5 with 20 vCPUs and 160GiB RAM - scales up to 48 nodes
+  - bigpool (BIG): Standard_E32as_v5 with 32 vCPUs and 256GiB RAM - scales up to 6 nodes
+- You will only have access to the "bigpool" if you are a member of the `positwb_super_user` UNIX group.  You can request access to this group by emailing the [Data Science Team](phs.datascience@phs.scot).  You will also need Line Manager authorisation.
+- The Kubernetes container image has been upgraded to use **Ubuntu 22.04.5 LTS (Jammy Jellyfish)**, providing better support for Posit Workbench, R, Python, and associated packages.
+- A reduced-size version of TeX has been installed in the container image to decrease its size and reduce session startup times.
 
 ---
 
-## 5. URLs for New Posit Applications
-- **Posit Workbench*: [Insert URL]
-- **Posit Package Manager**: [Insert URL]
+### Performance and Reliability Improvements
+- The root cause of **Status code 502/504 errors** has been addressed.  These errors should now only occur in exceptional circumstances.
+- RStudio projects now open reliably on the first attempt, even when saved on Stats.
+- Previously opened RStudio projects are now listed on the Posit Workbench homepage and can be opened directly from there without having to open an RStudio Pro session first.
+- Previous workarounds for installing geospatial R packages such as `{sf}` and `{leaflet}` are no longer required.  You can install and load these packages in the same way as any other R package.
+- R Packages that require C++14 or C++17 support, such as `{ranger}`, now install without error.
+
+---
+
+## 3. URLs for New Posit Applications
+- **Posit Workbench**: https://pwb-prod.publichealthscotland.org/
+- **Posit Package Manager**: https://ppm-prod.publichealthscotland.org/
 - **Posit Connect**: _Coming soon..._
 
+## 4. Logging in and Starting a Session
+
+- Follow the link above to the new production Posit Workbench environment and log in using your LDAP username and password.  These are the same credentials you have used for the old Posit Workbench environment.
+- The "New Session" dialog window has changed slightly.  On first requesting a new session, you are given a choice of the four available IDEs:
+
+
+- As before, you need to enter the number of CPUs and Memory you need for your session.  **Important Change: you must specify the amount of memory you require in gigabytes (GB)**:
+
+
+
+**Remember to select the minimum number of CPUs and amount of Memory required for the work you intend to do.**  In most cases, you only require more than 1 CPU if you are knowingly going to be running code using multiple threads or parallel processing.  The amount of Memory your require is dependent on the number of R packages you intend to use and the size of the dataset you will be working with.  There is further guidance available on the PHS Data Science Knowledge Base at https://public-health-scotland.github.io/knowledge-base/docs/Posit%20Infrastructure?doc=Memory%20Usage%20in%20SMR01.md
+
+- Once you click the "Start Session" button, a further dialog will appear in the bottom-right of your browser window giving you updates on the progress of starting the session:
+
+
+
+**Important Note: normally sessions will take just a few seconds to start, but if the Kubernetes cluster needs to scale up to accommodate your session, it can take up to 10 minutes for your session to start.  This is normal and expected behaviour.**
+
+- The session will be listed on the Posit Workbench homepage as "PENDING" during this process:
+
+
+- If the "Join session when ready" checkbox was ticked in the "New Session" dialog window, the session will automatically load in your browser.  Alternatively, once the session shows as "ACTIVE" on the Posit Workbench homepage, you can click the session to open it:
+
+## 5. Configuring your RStudio Pro environment
+
+### Global Options
+
+- Once your RStudio Pro session has started, please ensure that you configure your settings as follows:
+  - Access the RStudio Global Opations menu by going to _Tools > Global Options..._
+  - In the General menu, be sure that the settings match those in the screenshot below:
+
+
+
+  - _Optional, but recommended:_ On the Appearance menu, change the editor font to "Cascadia Code".  This font has support for ligatures that map multiple characters to single glyphs e.g. rendering "<-" as a single arrow glyph.
+ 
+### Installing Packages
+
+- You will need to install R packages that you need.  These will not transfer over from the old Posit environment.
+- R (in both RStudio Pro and Visual Studio Code) has been configured to install binary versions of packages by default from Posit Package Manager.  This significantly reduces the installation time for packages.
+- You can further speed up package installation time by requesting more than 1 CPU for your session and running the following code before installing your packages:
+
+```r
+install.packages("parallelly")
+available_cores <- as.numeric(parallelly::availableCores())
+options(Ncpus = available_cores)
+Sys.setenv(MAKEFLAGS = paste("-j", as.character(available_cores), sep = ""))
+```
+
+This will force the R packages to install in parallel, if possible, and any packages that do not have a pre-compiled binary will have their source code compiled in parallel (i.e. faster).
+
+- On day one, if you need to install our PHS R packages (`{phsmethods}`, `{phsopendata}`, `{phstemplates}`, `{phsstyles}` and `{slfhelper}`)(`{phsmethods}`, `{phsopendata}`, `{phstemplates}`, `{phsstyles}` and `{slfhelper}`), you will have to install these directly from GitHub using the `remotes::install_github()` function.  In a few weeks time, the Data Science Team will configure Posit Package Manager with pre-built binaries for these packages.
 
 ---
 
-## 6. FAQs
+## 6. Getting Support
+
+
+
+
+---
+
+## 5. FAQs
 ### What if I encounter a problem?
-- Ensure your credentials are correct.
 - Contact the Data Science Team for support using the form at [https://forms.office.com/e/pqmmNMkhT6]
 
 
 
 ---
 
-## 7. Additional Resources
+### Useful Links
 - [PHS Data Science Knowledge Base](https://public-health-scotland.github.io/knowledge-base/)
 - [PHS Data and Intelligence Forum](https://teams.microsoft.com/l/team/19%3Ae9f55a12b7d94ef49877ff455a07f035%40thread.tacv2/conversations?groupId=ec4250f9-b70a-4f32-9372-a232ccb4f713&tenantId=10efe0bd-a030-4bca-809c-b5e6745e499a)
 
 ---
 
-## 8. Support and Feedback
-For technical assistance or to provide feedback:
-- Complete the form at [https://forms.office.com/e/pqmmNMkhT6].
+
