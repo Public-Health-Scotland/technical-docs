@@ -12,7 +12,8 @@ This guide is intended for existing users of the old Posit environment who are m
 This guide covers:
 - A high-level overview of the new Posit environment's specifications and features.
 - Step-by-step instructions to get you started with logging in and setting up your environment.
-- Essential resources, including URLs for accessing the new Posit applications
+- Details on how to get help.
+- Links to other useful information and resources.
 
 ---
 
@@ -127,16 +128,33 @@ This will force the R packages to install in parallel, if possible, and any pack
 
 ## 6. Getting Support
 
+**Important Change - please read carefully**
 
+There is a new support process for the new Posit environment as follows:
 
+1. All requests for support and to report issues with the new Posit environment must be made via the form at https://forms.office.com/e/pqmmNMkhT6
+
+These requests for support will first reach the Data Science Team, who will provide first line support where possible.  If the Data Science Team cannot resolve the issue, it is passed to second-line support.
+
+2. Second line support for the new Posit environment will be provided by Jumping Rivers.  An Engineer or Data Scientist at Jumping Rivers may contact you directly about the issue you are experiencing.
+
+3. NSS DaS will only become involved in exceptional circumstances, such as a network outage, or if a significant change is required in the Microsoft Azure cloud computing environment.  The Data Science Team will co-ordinate the communication between Jumping Rivers and NSS DaS in these instances.
+
+**Important Notes**
+
+- You must complete the form linked to above in order to receive support relating to the new Posit environment.
+- Do not contact Jumping Rivers, unless they request further information from you directly.
+- Do not raise a request or incident in Service Now, unless directed to do so by the Data Science Team.
 
 ---
 
 ## 5. FAQs
 ### What if I encounter a problem?
 - Contact the Data Science Team for support using the form at [https://forms.office.com/e/pqmmNMkhT6]
-
-
+### How can I get access to Posit Connect?
+- Posit Connect has been deployed into the new Posit environment along with Posit Workbench and Posit Package Manager.  Work continues to further test the capabilities of Posit Connect and assess how we can best make use of this application in PHS.  If you would like to get involved in this testing, please contact ...
+### Where are all my files?
+- Any files you had saved in your home directory on the old Posit environment will not be migrated to the new Posit environment.  The home directory should only be used for the installation of R and Python packages.  Anything else should be saved in an area on Stats.
 
 ---
 
