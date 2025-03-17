@@ -67,23 +67,30 @@ This guide covers:
 - Follow the link above to the new production Posit Workbench environment and log in using your LDAP username and password.  These are the same credentials you have used for the old Posit Workbench environment.
 - The "New Session" dialog window has changed slightly.  On first requesting a new session, you are given a choice of the four available IDEs:
 
+![New Session Dialog 1](https://github.com/user-attachments/assets/000c2943-bd4b-4818-974a-679dbb8987a9)
 
 - As before, you need to enter the number of CPUs and Memory you need for your session.  **Important Change: you must specify the amount of memory you require in gigabytes (GB)**:
 
+![New Session Dialog 2](https://github.com/user-attachments/assets/bd593345-4b9a-49a4-a4c4-f52008524438)
 
 
 **Remember to select the minimum number of CPUs and amount of Memory required for the work you intend to do.**  In most cases, you only require more than 1 CPU if you are knowingly going to be running code using multiple threads or parallel processing.  The amount of Memory your require is dependent on the number of R packages you intend to use and the size of the dataset you will be working with.  There is further guidance available on the PHS Data Science Knowledge Base at https://public-health-scotland.github.io/knowledge-base/docs/Posit%20Infrastructure?doc=Memory%20Usage%20in%20SMR01.md
 
 - Once you click the "Start Session" button, a further dialog will appear in the bottom-right of your browser window giving you updates on the progress of starting the session:
 
+![Starting Session Dialog](https://github.com/user-attachments/assets/2966723d-9b0a-42e2-99cb-9b6a8c1aa6e7)
 
 
 **Important Note: normally sessions will take just a few seconds to start, but if the Kubernetes cluster needs to scale up to accommodate your session, it can take up to 10 minutes for your session to start.  This is normal and expected behaviour.**
 
 - The session will be listed on the Posit Workbench homepage as "PENDING" during this process:
 
+![RStudio Pro Session Pending](https://github.com/user-attachments/assets/0713f025-c984-4a46-9c48-bbbf2fb1ea35)
 
 - If the "Join session when ready" checkbox was ticked in the "New Session" dialog window, the session will automatically load in your browser.  Alternatively, once the session shows as "ACTIVE" on the Posit Workbench homepage, you can click the session to open it:
+
+![RStudio Pro Session Active](https://github.com/user-attachments/assets/e7e81280-e71b-4d5e-9742-4ca2650bb9b3)
+
 
 ## 5. Configuring your RStudio Pro environment
 
@@ -93,10 +100,12 @@ This guide covers:
   - Access the RStudio Global Opations menu by going to _Tools > Global Options..._
   - In the General menu, be sure that the settings match those in the screenshot below:
 
-
+![Global Options](https://github.com/user-attachments/assets/c1441dba-b6af-4bec-b017-cc371bd14091)
 
   - _Optional, but recommended:_ On the Appearance menu, change the editor font to "Cascadia Code".  This font has support for ligatures that map multiple characters to single glyphs e.g. rendering "<-" as a single arrow glyph.
- 
+
+![Cascadia Code](https://github.com/user-attachments/assets/591ad6c5-4fad-4c25-9142-4ae0df288428)
+
 ### Installing Packages
 
 - You will need to install R packages that you need.  These will not transfer over from the old Posit environment.
@@ -112,7 +121,7 @@ Sys.setenv(MAKEFLAGS = paste("-j", as.character(available_cores), sep = ""))
 
 This will force the R packages to install in parallel, if possible, and any packages that do not have a pre-compiled binary will have their source code compiled in parallel (i.e. faster).
 
-- On day one, if you need to install our PHS R packages (`{phsmethods}`, `{phsopendata}`, `{phstemplates}`, `{phsstyles}` and `{slfhelper}`)(`{phsmethods}`, `{phsopendata}`, `{phstemplates}`, `{phsstyles}` and `{slfhelper}`), you will have to install these directly from GitHub using the `remotes::install_github()` function.  In a few weeks time, the Data Science Team will configure Posit Package Manager with pre-built binaries for these packages.
+- On day one, if you need to install our PHS R packages (`{phsmethods}`, `{phsopendata}`, `{phstemplates}`, `{phsstyles}` and `{slfhelper}`), you will have to install these directly from GitHub using the `remotes::install_github()` function.  In a few weeks time, the Data Science Team will configure Posit Package Manager with pre-built binaries for these packages.
 
 ---
 
