@@ -109,7 +109,7 @@ This guide covers:
 
 ### Installing Packages
 
-- You will need to install R packages that you need.  These will not transfer over from the old Posit environment.  In the old Posit environment, you can run the following R code to write out a CSV file listing the packages you had installed.  This might be helpful for re-installing the packages you need:
+- You will need to install the R packages that you need.  These will not transfer over from the old Posit environment.  In the old Posit environment, you can run the following R code to write out a CSV file listing the packages you had installed.  This might be helpful for re-installing the packages you need:
 
 ```r
 # Function to check and install rstudioapi if necessary
