@@ -223,9 +223,9 @@ There is a new support process for the new Posit environment as follows:
 
 1. All requests for support and to report issues with the new Posit environment must be made via the form at https://forms.office.com/e/pqmmNMkhT6
 
-These requests for support will first reach the Data Science Team, who will provide first line support where possible.  If the Data Science Team cannot resolve the issue, it is passed to second-line support.
+These requests for support will first reach the Data Science Team, who will provide first-line support where possible.  If the Data Science Team cannot resolve the issue, it is passed to second-line support.
 
-2. Second line support for the new Posit environment will be provided by Jumping Rivers.  An Engineer or Data Scientist at Jumping Rivers may contact you directly about the issue you are experiencing.
+2. Second-line support for the new Posit environment will be provided by Jumping Rivers.  An Engineer or Data Scientist at Jumping Rivers may contact you directly about the issue you are experiencing.
 
 3. NSS DaS will only become involved in exceptional circumstances, such as a network outage, or if a significant change is required in the Microsoft Azure cloud computing environment.  The Data Science Team will co-ordinate the communication between Jumping Rivers and NSS DaS in these instances.
 
