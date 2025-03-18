@@ -98,7 +98,7 @@ This guide covers:
 ### Global Options
 
 - Once your RStudio Pro session has started, please ensure that you configure your settings as follows:
-  - Access the RStudio Global Opations menu by going to _Tools > Global Options..._
+  - Access the RStudio Global Options menu by going to _Tools > Global Options..._
   - In the General menu, be sure that the settings match those in the screenshot below:
 
 ![Global Options](https://github.com/user-attachments/assets/c1441dba-b6af-4bec-b017-cc371bd14091)
