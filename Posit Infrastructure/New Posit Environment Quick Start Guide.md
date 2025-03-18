@@ -168,7 +168,7 @@ if (!is.null(save_path)) {
 }
 ```
 
-- R (in both RStudio Pro and Visual Studio Code) has been configured to install binary versions of packages by default from Posit Package Manager.  This significantly reduces the installation time for packages.
+- R (in both RStudio Pro and Visual Studio Code) has been configured to install binary versions of packages by default from the PHS Posit Package Manager.  This significantly reduces the installation time for packages.
 - You can further speed up package installation time by requesting more than 1 CPU for your session and running the following code before installing your packages:
 
 ```r
@@ -180,7 +180,7 @@ Sys.setenv(MAKEFLAGS = paste("-j", as.character(available_cores), sep = ""))
 
 This will force the R packages to install in parallel, if possible, and any packages that do not have a pre-compiled binary will have their source code compiled in parallel (i.e. faster).
 
-- On day one, if you need to install our PHS R packages (`{phsmethods}`, `{phsopendata}`, `{phstemplates}`, `{phsstyles}`, `{phsverse}` and `{slfhelper}`), you will have to install these directly from GitHub using the `remotes::install_github()` function.  In a few weeks time, the Data Science Team will configure Posit Package Manager with pre-built binaries for these packages.
+- On day one, if you need to install our PHS R packages (`{phsmethods}`, `{phsopendata}`, `{phstemplates}`, `{phsstyles}`, `{phsverse}` and `{slfhelper}`), you will have to install these directly from GitHub using the `remotes::install_github()` function.  In a few weeks time, the Data Science Team will configure the PHS Posit Package Manager with pre-built binaries for these packages.
 
 ---
 
