@@ -184,6 +184,37 @@ This will force the R packages to install in parallel, if possible, and any pack
 
 ---
 
+## 5. Night Sessions
+
+**Important Change - please read carefully**
+
+All sessions, both active and idle, will be automatically removed (or "killed") at **7.15pm** each day.
+
+If you need your session to continue running beyond 7.15pm, you must include the word **NIGHT** at the start of your session's name e.g.
+
+![New NIGHT Session Dialog](https://github.com/user-attachments/assets/bbdc6139-8b6e-4cbd-8697-507074e063a1)
+
+### Automatically close an RStudio Pro session
+
+If you want your script to end your RStudio Pro session automatically when it completes all of its tasks, then the following code snippet will reliably close the session, even if you have closed your web browser.  Be sure to include this at the end of your NIGHT session script so that it closes when it is complete.
+
+```r
+# Get the Process ID of the R session
+ppid <- system(paste("ps -o ppid= -p", Sys.getpid()), intern = TRUE)
+# Gracefully terminate the R session
+system(paste("kill -15", ppid))
+```
+
+On the Posit Workbench homepage, the RStudio Pro session will report that the session is `Executing` whilst R code continues to run:
+
+![NIGHT session executing](https://github.com/user-attachments/assets/b50c0dab-3950-4c83-9b8a-ea76f7faef43)
+
+On completion, and once the session has closed successfully, the session will be reported as having `Finished`:
+
+![NIGHT session finished](https://github.com/user-attachments/assets/0ef26b7f-cf91-4887-b43c-35691aff1cc0)
+
+---
+
 ## 6. Getting Support
 
 **Important Change - please read carefully**
