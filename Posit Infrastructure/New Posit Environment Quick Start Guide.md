@@ -21,7 +21,7 @@ This guide covers:
 
 ### Operating System and Application Specifications
 
-- **Operating Sytem**
+- **Operating System**
   - Ubuntu 22.04.5 LTS Jammy Jellyfish
 - **Applications and Versions**:
   - **Posit Workbench**: 2024.09.1+394.pro7, “Cranberry Hibiscus” (f54d2f92)
