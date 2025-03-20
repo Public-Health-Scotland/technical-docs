@@ -218,11 +218,6 @@ Posit Workbench provides several ways to open or switch to another project, as l
 * The Projects dropdown menu at the top right of RStudio is another way of creating and opening projects:
 
 ![image](https://github.com/user-attachments/assets/e65a577b-b473-4d57-aff5-b9c8721f9cc0)
-
-!!! IMPORTANT !!!
-
-**If you get a 502 or 504 error**, do not close that window. Please refer to [Why do I get Status code 502/504 errors when starting a session and what can I do about it?](#sessions-502-504)
-
 ### Accessing files and databases
 
 #### Can a folder on the stats area be accessed from the server?
