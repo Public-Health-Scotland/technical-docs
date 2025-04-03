@@ -219,7 +219,7 @@ On completion, and once the session has closed successfully, the session will be
 Set your Git email and username by running the following commands in the terminal:
 
 git config --global user.email <your email address>
-git config --global user.name <your Github/Gitea username>
+git config --global user.name <Your full name>
 
 ---
 ## 7. Getting Support
