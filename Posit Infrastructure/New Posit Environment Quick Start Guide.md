@@ -216,7 +216,7 @@ On completion, and once the session has closed successfully, the session will be
 ---
 ## 6. Configure Git
 
-Set your Git email and username by running the following commands in the terminal:
+Add your name and email to Git by running the following commands in the terminal:
 
 git config --global user.email <your email address>
 git config --global user.name <Your full name>
