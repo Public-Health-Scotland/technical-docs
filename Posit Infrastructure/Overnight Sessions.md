@@ -6,13 +6,13 @@ This document aims to provide users with information on running Posit Workbench 
 
 ## Background
 
-An automated process has been put in place to close sessions in Posit Workbench every evening at 9pm. During **Daylight Saving Time**, sessions will close at **8pm**.
+An automated process has been put in place to close sessions in Posit Workbench every evening at 7:15pm.
 
 This automated process can be overridden by including the word "NIGHT" at the start of the name of the relevant Posit Workbench session, **when the session is started**.
 
 ## Process to start a "NIGHT" session
 
-A Posit Workbench session that a user would like to continue running past 8pm must be named with the word "NIGHT" **when the session is started**.  The following steps must be carried out to ensure that the session remains open past 8pm:
+A Posit Workbench session that a user would like to continue running past 7:15pm must be named with the word "NIGHT" **when the session is started**.  The following steps must be carried out to ensure that the session remains open past 7\:15pm\:
 
 1. After successfully logging into Posit Workbench, the user will be presented with the following screen:
 
@@ -26,4 +26,4 @@ A Posit Workbench session that a user would like to continue running past 8pm mu
 
 4. Amend any other settings as required in the "New Session" dialog box, and click the blue "Start Session" button.  The session will start as normal.
 
-**Important Note:** If you open a project from within a session started by following the steps above, the process of opening that project will start another session and close your "NIGHT" session.  As such, the session that the project opens in will no longer have "NIGHT" at the start of its name, and it will be closed at 8pm by the automated process.
+**Important Note:** If you open a project from within a session started by following the steps above, the process of opening that project will start another session and close your "NIGHT" session.  As such, the session that the project opens in will no longer have "NIGHT" at the start of its name, and it will be closed at 7:15pm by the automated process.
