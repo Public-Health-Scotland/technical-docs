@@ -24,7 +24,6 @@ This document aims to answer frequently asked questions from users in relation t
   * [What do I do if a package requires `{rJava}`?](#what-do-i-do-if-a-package-requires-rjava)
   * [What should I do if I encounter a 'failed to lock directory' error?](#what-should-i-do-if-i-encounter-a-failed-to-lock-directory-error)
   * [Why can't I install the `{xlsx}` package in Posit Workbench?](#why-cant-i-install-the-xlsx-package-in-posit-workbench)
-  * [Why does the `{rmapshaper}` package not install?](#why-does-the-rmapshaper-package-not-install)
 * [Projects](#projects)
   * [What is a project (in Posit Workbench)?](#what-is-a-project-in-posit-workbench)
   * [How do I open or switch to another project?](#how-do-i-open-or-switch-to-another-project)
@@ -191,9 +190,6 @@ install.packages("<pkg>", INSTALL_opts = "--no-lock")
 
 This package relies on Java, which is not supported in Posit Workbench (please see [the FAQ above](https://github.com/Public-Health-Scotland/technical-docs/blob/main/Posit%20Infrastructure/FAQs.md#what-do-i-do-if-a-package-requires-rjava)). The `{openxlsx}` package is an excellent alternative. 
 
-#### Why does the `{rmapshaper}` package not install?
-
-`{rmapshaper}` has the dependencies `{V8}` and `{geojsonio}`, neither of which can be installed successfully on the CentOS 7 container image that Posit Workbench runs in. As these dependencies cannot be installed, {rmapshaper} also fails to install. As it stands, there is no immediate solution to resolve this.
 
 ### Projects
 
