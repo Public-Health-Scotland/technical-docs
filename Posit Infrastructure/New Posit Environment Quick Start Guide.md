@@ -107,6 +107,17 @@ This guide covers:
 
 ![Cascadia Code](https://github.com/user-attachments/assets/591ad6c5-4fad-4c25-9142-4ae0df288428)
 
+If the "Cascadia Code" font is not listed, this is because the font is not installed on your laptop.  You can download the font from Microsoft's GitHub repo at https://github.com/microsoft/cascadia-code?tab=readme-ov-file  The direct link to download the zip is https://github.com/microsoft/cascadia-code/releases/download/v2407.24/CascadiaCode-2407.24.zip
+
+Unzip this file, then navigate to `CascadiaCode-2407.24 -> ttf`.  Right click on the file `CascadiaCode.ttf` and click `Install`.  This will install the font for your user only.  Administrative rights are not required to install the font.
+
+Make sure to close all of your open RStudio sessions.  Next time you open an RStudio session, you will have the option to select the "Cascadia Code" font.
+
+Other font suggestions that work well in RStudio that use ligatures are:
+
+- [Fira Code](https://fonts.google.com/specimen/Fira+Code?query=fira+code)
+- [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+
 ### Installing Packages
 
 - You will need to install the R packages that you need.  These will not transfer over from the old Posit environment.  In the old Posit environment, you can run the following R code to write out a CSV file listing the packages you had installed.  This might be helpful for re-installing the packages you need:
