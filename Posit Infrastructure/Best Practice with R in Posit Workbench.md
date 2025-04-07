@@ -224,11 +224,11 @@ system(paste("kill -15", ppid))
 
 On the Posit Workbench homepage, the RStudio Pro session will report that the session is `Executing` whilst R code continues to run:
 
-_screenshot to be inserted here_
+![image](https://github.com/user-attachments/assets/a56290b4-b6c5-4d73-b136-30b01e52a83a)
 
 On completion, and once the session has closed successfully, the session will be reported as having `Finished`:
 
-_screenshot to be inserted here_
+![image](https://github.com/user-attachments/assets/2d60cf26-8018-41d8-9470-f442596007b3)
 
 ## Importing and exporting data
 
