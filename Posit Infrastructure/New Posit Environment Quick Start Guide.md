@@ -195,9 +195,115 @@ This will force the R packages to install in parallel, if possible, and any pack
 
 ### Restoring `{renv}` environments
 
-It is likely that your RStudio projects that use `{renv}` to track the packages (and their versions) that your project needs, will not restore successfully.  This is due to many older versions of packages not support R v4.4.2.  To update your `{renv}` project environment to work in the new Posit environment, please follow these steps:
+It is likely that RStudio projects that use `{renv}` will not restore successfully without making some changes first.  This is due to
 
+- the URLs for Posit Package Manager have changed;
+- many older versions of packages do not support R v4.4.2.
 
+To update your `{renv}` project environment to work in the new Posit environment, please follow these steps:
+
+1. In a new RStudio Pro session, install the latest version of the `{renv}` package by running the following R command on the console:
+
+```{r}
+install.packages("renv")
+```
+
+**IMPORTANT - take a note of the version of {renv} that was installed.  As at 10th April 2025, this is likely to be v1.1.4**
+
+2. In the same RStudio Pro session, open your project's .Rprofile file and delete the line:
+
+```{r}
+source("renv/activate.R")
+```
+
+Save the file.
+
+3. Then, open the project's `renv.lock` file and make the following changes:
+
+- Update the version of R by changing the old version
+
+```{json}
+    "Version": "4.1.2",
+```
+
+to R version 4.4.2
+
+```{json}
+    "Version": "4.4.2",
+```
+
+- Update the list of repositories (where R packages are installed from) to point to the new Production Posit Package Manager:
+
+```{json}
+    "Repositories": [
+      {
+        "Name": "RSPM",
+        "URL": "https://ppm.publichealthscotland.org/all-r/latest"
+      }
+    ]
+```
+
+to 
+
+```{json}
+    "Repositories": [
+      {
+        "Name": "CRAN",
+        "URL": "https://ppm-prod.publichealthscotland.org/cran/__linux__/jammy/latest"
+      }
+    ]
+```
+
+- If you have any PHS R packages hosted on GitHub in the `{renv}` environment, then make sure to add a further repository to the list as follows:
+
+```{json}
+    "Repositories": [
+      {
+        "Name": "CRAN",
+        "URL": "https://ppm-prod.publichealthscotland.org/cran/__linux__/jammy/latest"
+      },
+      {
+        "Name": "PHSGITHUB",
+        "URL": "https://ppm-prod.publichealthscotland.org/phs-github/latest"
+      }
+    ]
+```
+
+- Go through the rest of the renv.lock file and replace where it says "Repository": "RSPM" with "Repository": "CRAN". If the R package is a PHS R package (e.g. {phsstyles}) then replace "Repository": "RSPM" with "Repository": "PHSGITHUB".
+
+```{json}
+    "renv": {
+      "Package": "renv",
+      "Version": "1.0.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "utils"
+      ],
+      "Hash": "41b847654f567341725473431dd0d5ab"
+    }
+```
+
+Make sure to change the version to the version of `{renv}` you installed in step 1 above.
+
+4. Save and close all the open files, and the RStudio session.
+5. Open a new RStudio Pro session
+6. Open the RStudio project with the `{renv}` environment you want to restore.
+7. On the R console, re-initialise the {renv} environment, but without installing any packages:
+
+```{r}
+renv::init(bare = TRUE)
+```
+
+8. Now you can restore the `{renv}` environment using the contents of the `renv.lock` file. To do this, run the following R command on the console:
+
+```{r}
+renv::restore()
+```
+
+All the R packages your project requires should be installed successfully without error.  If not, move on to step 9 below:
+
+9. 
 
 ---
 
