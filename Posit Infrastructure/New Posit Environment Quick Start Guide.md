@@ -303,7 +303,27 @@ renv::restore()
 
 All the R packages your project requires should be installed successfully without error.  If not, move on to step 9 below:
 
-9. 
+9. It may be necessary to install the latest versions of all the packages listed in your `{renv}` environment's lockfile in order to successfully restore the environment.  Follow these steps to do so:
+
+- With your `{renv}` project opened in an RStudio Pro session, get a list of all the required packages from your project's lockfile:
+
+```{r}
+lockfile <- renv::lockfile_read("renv.lock")
+```
+
+- Install the latest versions of the packages required:
+
+```{r}
+renv::install(names(lockfile$Packages))
+```
+
+This could take a while to complete...time for :coffee:
+
+- Update the `{renv}` lockfile by snapshotting all packages installed in the project's library: 
+
+```{r}
+renv::snapshot(type = "all"
+```
 
 ---
 
