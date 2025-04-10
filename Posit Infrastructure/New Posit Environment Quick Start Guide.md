@@ -193,6 +193,12 @@ This will force the R packages to install in parallel, if possible, and any pack
 
 - On day one, if you need to install our PHS R packages (`{phsmethods}`, `{phsopendata}`, `{phstemplates}`, `{phsstyles}`, `{phsverse}` and `{slfhelper}`), you will have to install these directly from GitHub using the `remotes::install_github()` function.  In a few weeks time, the Data Science Team will configure the PHS Posit Package Manager with pre-built binaries for these packages.
 
+### Restoring `{renv}` environments
+
+It is likely that your RStudio projects that use `{renv}` to track the packages (and their versions) that your project needs, will not restore successfully.  This is due to many older versions of packages not support R v4.4.2.  To update your `{renv}` project environment to work in the new Posit environment, please follow these steps:
+
+
+
 ---
 
 ## 5. Night Sessions
