@@ -214,8 +214,17 @@ On completion, and once the session has closed successfully, the session will be
 ![NIGHT session finished](https://github.com/user-attachments/assets/0ef26b7f-cf91-4887-b43c-35691aff1cc0)
 
 ---
+## 6. Configure Git
 
-## 6. Getting Support
+Add your name and email to Git by running the following commands in the terminal:
+
+```
+git config --global user.email <your email address>
+git config --global user.name <Your full name>
+```
+
+---
+## 7. Getting Support
 
 **Important Change - please read carefully**
 
@@ -237,7 +246,7 @@ These requests for support will first reach the Data Science Team, who will prov
 
 ---
 
-## 5. FAQs
+## 8. FAQs
 ### What if I encounter a problem?
 - Contact the Data Science Team for support using the form at [https://forms.office.com/e/pqmmNMkhT6]
 ### How can I get access to Posit Connect?
