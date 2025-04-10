@@ -271,20 +271,20 @@ to
 
 - Go through the rest of the renv.lock file and replace where it says "Repository": "RSPM" with "Repository": "CRAN". If the R package is a PHS R package (e.g. {phsstyles}) then replace "Repository": "RSPM" with "Repository": "PHSGITHUB".
 
+Make sure to change the version to the version of `{renv}` you installed in step 1 above e.g.
+
 ```{json}
     "renv": {
       "Package": "renv",
-      "Version": "1.0.3",
+      "Version": "1.1.4",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
       "Hash": "41b847654f567341725473431dd0d5ab"
     }
 ```
-
-Make sure to change the version to the version of `{renv}` you installed in step 1 above.
 
 4. Save and close all the open files, and the RStudio session.
 5. Open a new RStudio Pro session
@@ -322,7 +322,7 @@ This could take a while to complete...time for :coffee:
 - Update the `{renv}` lockfile by snapshotting all packages installed in the project's library: 
 
 ```{r}
-renv::snapshot(type = "all"
+renv::snapshot(type = "all")
 ```
 
 ---
