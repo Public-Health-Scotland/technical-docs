@@ -214,14 +214,29 @@ On completion, and once the session has closed successfully, the session will be
 ![NIGHT session finished](https://github.com/user-attachments/assets/0ef26b7f-cf91-4887-b43c-35691aff1cc0)
 
 ---
-## 6. Configure Git
+## 6. Configure Git and GitHub
 
+### Configure Git
 Add your name and email to Git by running the following commands in the terminal:
 
 ```
 git config --global user.email <your email address>
 git config --global user.name <Your full name>
 ```
+
+### Create an SSH key
+In the **Git/SVN** tab, hit *Create RSA Key* (A). 
+In the window that appears, hit the *Create* button (B). 
+Close this window.
+
+Click, *View public key* (C), and copy the displayed public key (D).
+![](https://github.com/SurgicalInformatics/healthyr_book/blob/8da2d63f5ac55e1734b2ca9afdc800d17c5401cb/images/chapter14/1.png)
+
+### Add the SSH key to GitHub
+On GitHub, log in, open the account settings page and go to the [SSH keys tab](https://github.com/settings/keys) (A). 
+Click *Add SSH key* and paste the public key you copied from RStudio (B).
+
+![](https://github.com/SurgicalInformatics/healthyr_book/blob/8da2d63f5ac55e1734b2ca9afdc800d17c5401cb/images/chapter14/2.png)
 
 ---
 ## 7. Getting Support
