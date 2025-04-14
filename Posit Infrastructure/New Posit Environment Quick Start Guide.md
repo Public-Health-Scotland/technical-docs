@@ -180,7 +180,14 @@ Sys.setenv(MAKEFLAGS = paste("-j", as.character(available_cores), sep = ""))
 
 This will force the R packages to install in parallel, if possible, and any packages that do not have a pre-compiled binary will have their source code compiled in parallel (i.e. faster).
 
-- On day one, if you need to install our PHS R packages (`{phsmethods}`, `{phsopendata}`, `{phstemplates}`, `{phsstyles}`, `{phsverse}` and `{slfhelper}`), you will have to install these directly from GitHub using the `remotes::install_github()` function.  In a few weeks time, the Data Science Team will configure the PHS Posit Package Manager with pre-built binaries for these packages.
+- On day one, if you need to install our PHS R packages (`{phsopendata}`, `{phstemplates}`, `{phsstyles}`, `{phsverse}` and `{slfhelper}`), you will have to install these directly from GitHub using `remotes::install_github()`. For example:
+
+```r
+remotes::install_github("Public-Health-Scotland/phsopendata")
+remotes::install_github("Public-Health-Scotland/phsstyles")
+```
+
+In a few weeks, the Data Science Team will set up the PHS Posit Package Manager with pre-built binaries for these packages. Please note that `{phsmethods}` is available on CRAN and can be installed using `install.packages()`, just like most other packages.
 
 ---
 
