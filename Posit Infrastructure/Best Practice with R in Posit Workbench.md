@@ -216,10 +216,11 @@ grid.arrange(g1, g2, nrow = 2)
 If you want your script to end your RStudio Pro session automatically when it completes all of its tasks, then the following code snippet will reliably close the session, even if you have closed your web browser.
 
 ```r
-# Get the Process ID of the R session
-ppid <- system(paste("ps -o ppid= -p", Sys.getpid()), intern = TRUE)
-# Gracefully terminate the R session
-system(paste("kill -15", ppid))
+# Get the Process ID of the RStudio Pro session
+ppid <- system2("ps", c("-o ppid=", "-p", Sys.getpid()), stdout = TRUE)
+
+# Gracefully terminate the session
+system2("kill", c("-15", ppid))
 ```
 
 On the Posit Workbench homepage, the RStudio Pro session will report that the session is `Executing` whilst R code continues to run:
