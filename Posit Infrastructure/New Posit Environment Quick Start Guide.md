@@ -216,7 +216,10 @@ On completion, and once the session has closed successfully, the session will be
 ---
 ## 6. Configure Git and GitHub
 
+The following is only relevant if you/your team use Git in your work (i.e. collaborative work using repositories hosted on Github):
+
 ### Configure Git
+
 Add your name and email to Git by running the following commands in the terminal:
 
 ```
