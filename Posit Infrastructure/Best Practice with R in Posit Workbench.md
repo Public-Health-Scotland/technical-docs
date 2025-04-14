@@ -211,15 +211,25 @@ g2 <- ggplot(data = iris_areas, mapping = aes(x = Sepal.Area)) +
 grid.arrange(g1, g2, nrow = 2)
 ```
 
-### Automatically close an R session
+### Automatically close an RStudio Pro session
 
-If you want your script to end the session automatically when it completes all its tasks, then include the `q()` or `quit()` function in your script. Both functions perform the same task of terminating the current session.
-
-The first argument, `save`, specifies whether the current environment should be saved. The default behaviour will often ask you interactively, which means it won't automatically close by itself. As discussed earlier, it's considered best practice to never save your environment, so we should pre-emptively tell it not to save the workspace variables:
+If you want your script to end your RStudio Pro session automatically when it completes all of its tasks, then the following code snippet will reliably close the session, even if you have closed your web browser.
 
 ```r
-quit(save = "no")
+# Get the Process ID of the RStudio Pro session
+ppid <- system2("ps", c("-o ppid=", "-p", Sys.getpid()), stdout = TRUE)
+
+# Gracefully terminate the session
+system2("kill", c("-15", ppid))
 ```
+
+On the Posit Workbench homepage, the RStudio Pro session will report that the session is `Executing` whilst R code continues to run:
+
+![image](https://github.com/user-attachments/assets/a56290b4-b6c5-4d73-b136-30b01e52a83a)
+
+On completion, and once the session has closed successfully, the session will be reported as having `Finished`:
+
+![image](https://github.com/user-attachments/assets/2d60cf26-8018-41d8-9470-f442596007b3)
 
 ## Importing and exporting data
 
