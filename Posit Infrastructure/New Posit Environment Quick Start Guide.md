@@ -285,7 +285,16 @@ Make sure to change the version to the version of `{renv}` you installed in step
       "Hash": "41b847654f567341725473431dd0d5ab"
     }
 ```
-
+Note that the packages listed below have been found to cause issues. It may save you some time to go through the renv.lock file at this stage and change the versions for each package to the versions listed here (or newer):
+```
+lattice  - 0.22-6
+MASS     - 7.3-61
+Matrix   - 1.7-1
+mgcv     - 1.9-1
+nlme     - 3.1-166
+jsonlite - 1.8.9
+haven    - 2.5.4
+```
 4. Save and close all the open files, and the RStudio session.
 5. Open a new RStudio Pro session
 6. Open the RStudio project with the `{renv}` environment you want to restore.
@@ -301,7 +310,7 @@ renv::init(bare = TRUE)
 renv::restore()
 ```
 
-All the R packages your project requires should be installed successfully without error.  If not, move on to step 9 below:
+All the R packages your project requires should be installed successfully without error. If not, move on to step 9 below:
 
 9. It may be necessary to install the latest versions of all the packages listed in your `{renv}` environment's lockfile in order to successfully restore the environment.  Follow these steps to do so:
 
