@@ -11,6 +11,8 @@ However, the default method of installing extensions through the VS Code UI in
 Posit Workbench does not work, despite extensive testing and investigation by both
 PHS and Jumping Rivers. Here, we offer a workaround to this issue.
 
+---
+
 ## Current Limitations
 
 * The VS Code UI extension installer does not work in Posit Workbench
@@ -19,6 +21,8 @@ due to unresolved technical constraints.
 * Microsoft's Terms of Service strictly forbid using their Marketplace extensions
 with third-party tools like code-server - see [here](https://github.com/coder/code-server/blob/main/docs/FAQ.md#why-cant-code-server-use-microsofts-extension-marketplace)
 for more information.
+
+---
 
 ## Terminal-Based Workaround
 
