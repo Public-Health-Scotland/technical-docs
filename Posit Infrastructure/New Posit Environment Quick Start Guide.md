@@ -107,6 +107,17 @@ This guide covers:
 
 ![Cascadia Code](https://github.com/user-attachments/assets/591ad6c5-4fad-4c25-9142-4ae0df288428)
 
+If the "Cascadia Code" font is not listed, this is because the font is not installed on your laptop.  You can download the font from Microsoft's GitHub repo at https://github.com/microsoft/cascadia-code?tab=readme-ov-file  The direct link to download the zip is https://github.com/microsoft/cascadia-code/releases/download/v2407.24/CascadiaCode-2407.24.zip
+
+Unzip this file, then navigate to `CascadiaCode-2407.24 -> ttf`.  Right click on the file `CascadiaCode.ttf` and click `Install`.  This will install the font for your user only.  Administrative rights are not required to install the font.
+
+Make sure to close all of your open RStudio sessions.  Next time you open an RStudio session, you will have the option to select the "Cascadia Code" font.
+
+Other font suggestions that work well in RStudio that use ligatures are:
+
+- [Fira Code](https://fonts.google.com/specimen/Fira+Code?query=fira+code)
+- [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+
 ### Installing Packages
 
 - You will need to install the R packages that you need.  These will not transfer over from the old Posit environment.  In the old Posit environment, you can run the following R code to write out a CSV file listing the packages you had installed.  This might be helpful for re-installing the packages you need:
@@ -188,6 +199,147 @@ remotes::install_github("Public-Health-Scotland/phsstyles")
 ```
 
 In a few weeks, the Data Science Team will set up the PHS Posit Package Manager with pre-built binaries for these packages. Please note that `{phsmethods}` is available on CRAN and can be installed using `install.packages()`, just like most other packages.
+
+### Restoring `{renv}` environments
+
+It is likely that RStudio projects that use `{renv}` will not restore successfully without making some changes first.  This is due to
+
+- the URLs for Posit Package Manager have changed;
+- many older versions of packages do not support R v4.4.2.
+
+To update your `{renv}` project environment to work in the new Posit environment, please follow these steps:
+
+1. In a new RStudio Pro session, install the latest version of the `{renv}` package by running the following R command on the console:
+
+```{r}
+install.packages("renv")
+```
+
+**IMPORTANT - take a note of the version of {renv} that was installed.  As at 10th April 2025, this is likely to be v1.1.4**
+
+2. In the same RStudio Pro session, open your project's .Rprofile file and delete the line:
+
+```{r}
+source("renv/activate.R")
+```
+
+Save the file.
+
+3. Then, open the project's `renv.lock` file and make the following changes:
+
+- Update the version of R by changing the old version
+
+```{json}
+    "Version": "4.1.2",
+```
+
+to R version 4.4.2
+
+```{json}
+    "Version": "4.4.2",
+```
+
+- Update the list of repositories (where R packages are installed from) to point to the new Production Posit Package Manager:
+
+```{json}
+    "Repositories": [
+      {
+        "Name": "RSPM",
+        "URL": "https://ppm.publichealthscotland.org/all-r/latest"
+      }
+    ]
+```
+
+to 
+
+```{json}
+    "Repositories": [
+      {
+        "Name": "CRAN",
+        "URL": "https://ppm-prod.publichealthscotland.org/cran/__linux__/jammy/latest"
+      }
+    ]
+```
+
+- If you have any PHS R packages hosted on GitHub in the `{renv}` environment, then make sure to add a further repository to the list as follows:
+
+```{json}
+    "Repositories": [
+      {
+        "Name": "CRAN",
+        "URL": "https://ppm-prod.publichealthscotland.org/cran/__linux__/jammy/latest"
+      },
+      {
+        "Name": "PHSGITHUB",
+        "URL": "https://ppm-prod.publichealthscotland.org/phs-github/latest"
+      }
+    ]
+```
+
+- Go through the rest of the renv.lock file and replace where it says "Repository": "RSPM" with "Repository": "CRAN". If the R package is a PHS R package (e.g. {phsstyles}) then replace "Repository": "RSPM" with "Repository": "PHSGITHUB".
+
+Make sure to change the version to the version of `{renv}` you installed in step 1 above e.g.
+
+```{json}
+    "renv": {
+      "Package": "renv",
+      "Version": "1.1.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "utils"
+      ],
+      "Hash": "41b847654f567341725473431dd0d5ab"
+    }
+```
+Note that the packages listed below have been found to cause issues. It may save you some time to go through the renv.lock file at this stage and change the versions for each package to the versions listed here (or newer):
+```
+lattice  - 0.22-6
+MASS     - 7.3-61
+Matrix   - 1.7-1
+mgcv     - 1.9-1
+nlme     - 3.1-166
+jsonlite - 1.8.9
+haven    - 2.5.4
+```
+4. Save and close all the open files, and the RStudio session.
+5. Open a new RStudio Pro session
+6. Open the RStudio project with the `{renv}` environment you want to restore.
+7. On the R console, re-initialise the {renv} environment, but without installing any packages:
+
+```{r}
+renv::init(bare = TRUE)
+```
+
+8. Now you can restore the `{renv}` environment using the contents of the `renv.lock` file. To do this, run the following R command on the console:
+
+```{r}
+renv::restore()
+```
+
+All the R packages your project requires should be installed successfully without error. If not, move on to step 9 below:
+
+9. It may be necessary to install the latest versions of all the packages listed in your `{renv}` environment's lockfile in order to successfully restore the environment.  Follow these steps to do so:
+
+- With your `{renv}` project opened in an RStudio Pro session, get a list of all the required packages from your project's lockfile:
+
+```{r}
+lockfile <- renv::lockfile_read("renv.lock")
+```
+
+- Install the latest versions of the packages required:
+
+```{r}
+renv::install(names(lockfile$Packages))
+```
+
+This could take a while to complete...time for :coffee:
+
+- Update the `{renv}` lockfile by snapshotting all packages installed in the project's library: 
+
+```{r}
+renv::snapshot(type = "all")
+```
 
 ---
 
