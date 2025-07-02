@@ -29,7 +29,7 @@ The Posit Workbench server is accessed via a web browser. To log in, follow the 
 
 2. Open a web browser.
 
-3. Navigate to Posit Workbench at: [https://pwb.publichealthscotland.org/](https://pwb.publichealthscotland.org/)
+3. Navigate to Posit Workbench at: [https://pwb-prod.publichealthscotland.org/](https://pwb-prod.publichealthscotland.org/)
 
 4. You will be presented with the following login page:
 
