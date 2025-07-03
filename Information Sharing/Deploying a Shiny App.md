@@ -7,8 +7,6 @@ At PHS, we currently use [shinyapps.io](http://shinyapps.io) to host Shiny apps.
 
 ## Contents
 
-- [Deploying (Publishing) a Shiny App](#deploying-publishing-a-shiny-app)
-  - [Contents](#contents)
   - [General Guidance](#general-guidance)
   - [Deploying a Shiny App](#deploying-a-shiny-app)
     - [Adding Authentication to Apps](#adding-authentication-to-apps)
