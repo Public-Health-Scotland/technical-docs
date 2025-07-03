@@ -1,9 +1,9 @@
 # Deploying (Publishing) a Shiny App
 
-At PHS, we currently use [shinyapps.io](http://shinyapps.io) to host Shiny apps. The server is located outside of the UK and hosted by Posit, which means that we can only host public-facing apps with no confidential data. If you have doubts about this for your app, you should contact the PHS Stats Gov [phs.statsgov@phs.scot](mailto:phs.statsgov@phs.scot) team to assess. General [dashboard development guidance](https://public-health-scotland.github.io/knowledge-base/docs/Information%20Sharing?doc=Dashboard%20development%20guidance.md) is available and should be followed when developing apps, prior to deployment.
+At PHS, we currently use [shinyapps.io](http://shinyapps.io) to host Shiny apps. The server is located outside of the UK and hosted by Posit, which means that we can only host public-facing apps with no confidential data. If you have doubts about this for your app, you should contact the PHS Stats Gov [phs.statsgov@phs.scot](mailto:phs.statsgov@phs.scot) team to assess. Before deploying a Shiny application, there is general [dashboard development guidance](https://public-health-scotland.github.io/knowledge-base/docs/Information%20Sharing?doc=Dashboard%20development%20guidance.md) available that should be followed while developing apps, and reviewed prior to deployment.
 
 > [!NOTE]
-> There is work underway to provide a platform to host Shiny apps and another information products that may use confidential data and allow for greater control over who and what can be viewed. This will use the Posit Connect software and is being managed by the Posit Programme.
+> There is work underway to provide a platform to host Shiny apps and other information products that may use confidential data and allow for greater control over who and what can be viewed. This will use the Posit Connect software and is being managed by the Posit Programme.
 
 ## Contents
 
@@ -25,7 +25,7 @@ There are some key points to consider before deploying an app:
 
 Shiny apps should also be deployed with the following considerations in mind:
 
-- Each app should have a specific purpose and be updated over time. This means that deployments should be minimised, with most apps requiring only 1 or 2 versions: a live version and a PRA version where required (some using a test version for limited periods).
+- Each app should have a specific purpose and be updated over time. This means that deployed versions should be minimised, with most apps requiring only 1 or 2 versions: a live version and a PRA version where required (some using a test version for limited periods).
 - Follow naming conventions for apps, which should be named following the format `phs-descriptive-name`, noting the `phs-` prefix.
   - PRA versions should have a `-pra` suffix added, e.g. `phs-descriptive-name-pra`.
   - Test versions should have a `-test` suffix added, e.g. `phs-descriptive-name-test`.
@@ -42,12 +42,12 @@ Shiny apps should also be deployed with the following considerations in mind:
 
 The process to deploy an app uses the `{rsconnect}` package, with the process outlined below:
 
-1. Complete [this form](https://forms.office.com/e/shBeTxkvBD) for each new app to be deployed.
+1. Complete [this form](https://forms.office.com/e/shBeTxkvBD) for each **new** app to be deployed (new releases or updates are not required).
    _As shinyapps.io is a shared service, we need to know which apps belong to PHS. This allows organisational oversight of published content and clear contacts with app authors if there are any changes on the server._
    This will also send an automated message containing the deployment authentication details. These are general purpose and can be used for multiple deployments.
    > [!WARNING]
    > The details should be kept secure and not shared more widely, this includes committing to git.
-2. Connect to the shinyapps.io server using the credentials from the previous step (this should only need to be done once):
+2. Connect to the shinyapps.io server using the credentials from the previous step (this should only need to be done once per user):
    ```
    rsconnect::setAccountInfo(
       name = "scotland",
