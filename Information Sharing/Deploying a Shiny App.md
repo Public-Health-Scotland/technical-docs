@@ -43,9 +43,11 @@ The process to deploy an app uses the `{rsconnect}` package, with the process ou
 1. Complete [this form](https://forms.office.com/e/shBeTxkvBD) for each **new** app to be deployed (new releases or updates are not required).
    _As shinyapps.io is a shared service, we need to know which apps belong to PHS. This allows organisational oversight of published content and clear contacts with app authors if there are any changes on the server._
    This will also send an automated message containing the deployment authentication details. These are general purpose and can be used for multiple deployments.
-   > [!WARNING]
-   > The details should be kept secure and not shared more widely, this includes committing to git.
-2. Connect to the shinyapps.io server using the credentials from the previous step (this should only need to be done once per user):
+   
+  > [!WARNING]
+  > The details should be kept secure and not shared more widely, this includes committing to git.
+
+3. Connect to the shinyapps.io server using the credentials from the previous step (this should only need to be done once per user):
    ```
    rsconnect::setAccountInfo(
       name = "scotland",
@@ -53,7 +55,7 @@ The process to deploy an app uses the `{rsconnect}` package, with the process ou
       secret = "REDACTED"
       )
    ```
-3. Deploy the app (this function bundles the application and sends to the shinyapps.io service, it should be ran for deployment only and not added to the application codebase):
+4. Deploy the app (this function bundles the application and sends to the shinyapps.io service, it should be ran for deployment only and not added to the application codebase):
    ```
    rsconnect::deployApp(
       appDir = "path/to/app",
