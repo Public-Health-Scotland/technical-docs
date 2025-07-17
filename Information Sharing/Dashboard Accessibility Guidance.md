@@ -124,45 +124,25 @@ The logo must be presented in accordance with PHS branding guidelines and style 
 
 ### Colour palette for digital products
 
-#### Main colour palette (HEX)
+The below tables show the main and supporting colour palettes available within the PHS Brand guidelines. The tables show the name, swatch, and the hex and RGB values for recreating this colours within digital products. 
 
-|                | **Purple** | **Magenta** | **Blue** | **Green** |
-|----------------|------------|-------------|----------|-----------|
-| **HEX**        | #3F3685    | #9B4393     | #0078D4  | #83BB26   |
-| **TINT - 80%** | #655E9D    | #AF69A9     | #3393DD  | #9CC951   |
-| **TINT - 50%** | #9F9BC2    | #CDA1C9     | #80BCEA  | #C1DD93   |
-| **TINT - 30%** | #C5C3DA    | #E1C7DF     | #B3D7F2  | #DAEBBE   |
-| **TINT - 10%** | #ECEBF3    | #F5ECF4     | #E6F2FB  | #F3F8E9   |
+#### Main colour palette
 
-#### Main colour palette (RGB)
+| **Colour** | **80% Tint** | **50% Tint** | **30% Tint** | **10% Tint** |
+|:----------:|:----------:|:----------:|:----------:|:----------:|
+| **PHS Purple** <br> ![#3F3685](https://placehold.co/200x75/3F3685/3F3685) <br> `#3F3685` <br> `(63,54,133)`  | **PHS Purple 80%** <br> ![#655E9D](https://placehold.co/200x75/655E9D/655E9D) <br> `#655E9D` <br> `(101,94,157)` | **PHS Purple 50%** <br> ![#9F9BC2](https://placehold.co/200x75/9F9BC2/9F9BC2) <br> `#9F9BC2` <br> `(159,155,194)` | **PHS Purple 30%** <br> ![#C5C3DA](https://placehold.co/200x75/C5C3DA/C5C3DA) <br> `#C5C3DA` <br> `(197,195,218)` | **PHS Purple 10%** <br> ![#ECEBF3](https://placehold.co/200x75/ECEBF3/ECEBF3) <br> `#ECEBF3` <br> `(236,235,243)` |
+| **PHS Magenta** <br> ![#9B4393](https://placehold.co/200x75/9B4393/9B4393) <br> `#9B4393` <br> `(155,67,147)`  | **PHS Magenta 80%** <br> ![#AF69A9](https://placehold.co/200x75/AF69A9/AF69A9) <br> `#AF69A9` <br> `(175,105,169)` | **PHS Magenta 50%** <br> ![#CDA1C9](https://placehold.co/200x75/CDA1C9/CDA1C9) <br> `#CDA1C9` <br> `(205,161,201)` | **PHS Magenta 30%** <br> ![#E1C7DF](https://placehold.co/200x75/E1C7DF/E1C7DF) <br> `#E1C7DF` <br> `(225,199,223)` | **PHS Magenta 10%** <br> ![#F5ECF4](https://placehold.co/200x75/F5ECF4/F5ECF4) <br> `#F5ECF4` <br> `(245,236,244)` |
+| **PHS Blue** <br> ![#0078D4](https://placehold.co/200x75/0078D4/0078D4) <br> `#0078D4` <br> `(0,120,212)`  | **PHS Blue 80%** <br> ![#3393DD](https://placehold.co/200x75/3393DD/3393DD) <br> `#3393DD` <br> `(51,147,221)` | **PHS Blue 50%** <br> ![#80BCEA](https://placehold.co/200x75/80BCEA/80BCEA) <br> `#80BCEA` <br> `(128,188,234)` | **PHS Blue 30%** <br> ![#B3D7F2](https://placehold.co/200x75/B3D7F2/B3D7F2) <br> `#B3D7F2` <br> `(179,215,242)` | **PHS Blue 10%** <br> ![#E6F2FB](https://placehold.co/200x75/E6F2FB/E6F2FB) <br> `#E6F2FB` <br> `(230,242,251)` |
+| **PHS Green** <br> ![#83BB26](https://placehold.co/200x75/83BB26/83BB26) <br> `#83BB26` <br> `(131,187,38)`  | **PHS Green 80%** <br> ![#9CC951](https://placehold.co/200x75/9CC951/9CC951) <br> `#9CC951` <br> `(156,201,81)` | **PHS Green 50%** <br> ![#C1DD93](https://placehold.co/200x75/C1DD93/C1DD93) <br> `#C1DD93` <br> `(193,221,147)` | **PHS Green 30%** <br> ![#DAEBBE](https://placehold.co/200x75/DAEBBE/DAEBBE) <br> `#DAEBBE` <br> `(218,235,190)` | **PHS Green 10%** <br> ![#F3F8E9](https://placehold.co/200x75/F3F8E9/F3F8E9) <br> `#F3F8E9` <br> `(243,248,233)` |
 
-|                | **Purple**   | **Magenta**  | **Blue**     | **Green**    |
-|----------------|--------------|--------------|--------------|--------------|
-| **HEX**        | 63,54,133    | 155,67,147   | 0,120,212    | 131,187,38   |
-| **TINT - 80%** | 101,94,157   | 175,105,169  | 51,147,221   | 156,201,81   |
-| **TINT - 50%** | 159,155,194  | 205,161,201  | 128,188,234  | 193,221,147  |
-| **TINT - 30%** | 197,195,218  | 225,199,223  | 179,215,242  | 218,235,190  |
-| **TINT - 10%** | 236,235,243  | 245,236,244  | 230,242,251  | 243,248,233  |
+#### Supporting colour palette
 
-#### Supporting colour palette (HEX)
-
-|                | **Graphite** | **Teal** | **Liberty** | **Rust** |
-|----------------|--------------|----------|-------------|----------|
-| **HEX**        | #948DA3      | #1E7F84  | #6B5C85     | #C73918  |
-| **TINT - 80%** | #A9A4B5      | #4B999D  | #897D9D     | #D26146  |
-| **TINT - 50%** | #CAC6D1      | #8FBFC2  | #B5AEC2     | #E39C8C  |
-| **TINT - 30%** | #DFDDE3      | #BCD9DA  | #D3CEDA     | #EEC4BA  |
-| **TINT - 10%** | #F4F4F6      | #E9F2F3  | #F0EFF3     | #F9EBE8  |
-
-#### Supporting colour palette (RGB)
-
-| **null**       | **Graphite** | **Teal**     | **Liberty**  | **Rust**     |
-|----------------|--------------|--------------|--------------|--------------|
-| **HEX**        | 148,141,163  | 30,127,132   | 107,92,133   | 199,57,24    |
-| **TINT - 80%** | 169,164,181  | 75,153,157   | 137,125,157  | 210,97,70    |
-| **TINT - 50%** | 202,198,209  | 143,191,194  | 181,174,194  | 227,156,140  |
-| **TINT - 30%** | 223,221,227  | 188,217,218  | 211,206,218  | 238,196,186  |
-| **TINT - 10%** | 244,244,246  | 233,242,243  | 240,239,243  | 249,235,232  |
+| **Colour** | **80% Tint** | **50% Tint** | **30% Tint** | **10% Tint** |
+|:----------:|:----------:|:----------:|:----------:|:----------:|
+| **PHS Graphite** <br> ![#948DA3](https://placehold.co/200x75/948DA3/948DA3) <br> `#948DA3` <br> `(148,141,163)`  | **PHS Graphite 80%** <br> ![#A9A4B5](https://placehold.co/200x75/A9A4B5/A9A4B5) <br> `#A9A4B5` <br> `(169,164,181)` | **PHS Graphite 50%** <br> ![#CAC6D1](https://placehold.co/200x75/CAC6D1/CAC6D1) <br> `#CAC6D1` <br> `(202,198,209)` | **PHS Graphite 30%** <br> ![#DFDDE3](https://placehold.co/200x75/DFDDE3/DFDDE3) <br> `#DFDDE3` <br> `(223,221,227)` | **PHS Graphite 10%** <br> ![#F4F4F6](https://placehold.co/200x75/F4F4F6/F4F4F6) <br> `#F4F4F6` <br> `(244,244,246)` |
+| **PHS Teal** <br> ![#1E7F84](https://placehold.co/200x75/1E7F84/1E7F84) <br> `#1E7F84` <br> `(30,127,132)`  | **PHS Teal 80%** <br> ![#4B999D](https://placehold.co/200x75/4B999D/4B999D) <br> `#4B999D` <br> `(75,153,157)` | **PHS Teal 50%** <br> ![#8FBFC2](https://placehold.co/200x75/8FBFC2/8FBFC2) <br> `#8FBFC2` <br> `(143,191,194)` | **PHS Teal 30%** <br> ![#BCD9DA](https://placehold.co/200x75/BCD9DA/BCD9DA) <br> `#BCD9DA` <br> `(188,217,218)` | **PHS Teal 10%** <br> ![#E9F2F3](https://placehold.co/200x75/E9F2F3/E9F2F3) <br> `#E9F2F3` <br> `(233,242,243)` |
+| **PHS Liberty** <br> ![#6B5C85](https://placehold.co/200x75/6B5C85/6B5C85) <br> `#6B5C85` <br> `(107,92,133)`  | **PHS Liberty 80%** <br> ![#897D9D](https://placehold.co/200x75/897D9D/897D9D) <br> `#897D9D` <br> `(137,125,157)` | **PHS Liberty 50%** <br> ![#B5AEC2](https://placehold.co/200x75/B5AEC2/B5AEC2) <br> `#B5AEC2` <br> `(181,174,194)` | **PHS Liberty 30%** <br> ![#D3CEDA](https://placehold.co/200x75/D3CEDA/D3CEDA) <br> `#D3CEDA` <br> `(211,206,218)` | **PHS Liberty 10%** <br> ![#F0EFF3](https://placehold.co/200x75/F0EFF3/F0EFF3) <br> `#F0EFF3` <br> `(240,239,243)` |
+| **PHS Rust** <br> ![#C73918](https://placehold.co/200x75/C73918/C73918) <br> `#C73918` <br> `(199,57,24)`  | **PHS Rust 80%** <br> ![#D26146](https://placehold.co/200x75/D26146/D26146) <br> `#D26146` <br> `(210,97,70)` | **PHS Rust 50%** <br> ![#E39C8C](https://placehold.co/200x75/E39C8C/E39C8C) <br> `#E39C8C` <br> `(227,156,140)` | **PHS Rust 30%** <br> ![#EEC4BA](https://placehold.co/200x75/EEC4BA/EEC4BA) <br> `#EEC4BA` <br> `(238,196,186)` | **PHS Rust 10%** <br> ![#F9EBE8](https://placehold.co/200x75/F9EBE8/F9EBE8) <br> `#F9EBE8` <br> `(249,235,232)` |
 
 ## Alternative formats
 
