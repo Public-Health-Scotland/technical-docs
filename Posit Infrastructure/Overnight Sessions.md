@@ -12,7 +12,7 @@ This automated process can be overridden by including the word "NIGHT" at the st
 
 ## Process to start a "NIGHT" session
 
-A Posit Workbench session that a user would like to continue running past 7:15pm must be named with the word "NIGHT" **when the session is started**.  The following steps must be carried out to ensure that the session remains open past 7\:15pm\:
+A Posit Workbench session that a user would like to continue running past 7:15pm must be named with the word "NIGHT" **when the session is started**. The following steps must be carried out to ensure that the session remains open past 7:15pm:
 
 1. After successfully logging into Posit Workbench, the user will be presented with the following screen:
 

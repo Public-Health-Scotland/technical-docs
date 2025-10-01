@@ -33,7 +33,7 @@ Public Health Scotland's Data Science team will be providing first-line support 
 - **Check Access Permissions**: Ensure that you have access permissions to the server or specific data sets. Check with someone else in your team, or DaS (via [Service Now](https://nhsnss.service-now.com/phs/)) to confirm your access permissions. _All database connections that were available on the old server infrastructure have been migrated and made available for testing during UAT._
 - **Check Browser**: Sometimes, the issue might be related to the browser you are using. This has been identified in a couple of areas already with Mozilla Firefox. Try using a different browser to see if the issue persists; all Chromium based browsers are tested and work as expected (i.e. Microsoft Edge and Google Chrome).
 
-If you have followed these troubleshooting steps and the issue still persists, please raise a support request by providing the following details (you can also use this form to reach out with questions about the infrastructure).:
+If you have followed these troubleshooting steps and the issue still persists, please raise a support request by providing the following details (you can also use this form to reach out with questions about the infrastructure):
 
 - Specific steps taken that led to the issue
 - Error messages or symptoms
