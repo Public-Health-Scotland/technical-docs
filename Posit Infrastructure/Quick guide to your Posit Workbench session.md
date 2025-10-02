@@ -2,7 +2,7 @@
 
 ## Who is this for?
 
-* Every user of the Posit Workbench, regardless of expertise level. 
+* Every user of Posit Workbench, regardless of expertise level. 
 * The information has been kept as basic as possible.
 
 ## What is this quick guide about?
