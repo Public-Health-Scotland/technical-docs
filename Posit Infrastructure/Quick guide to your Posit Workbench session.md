@@ -46,8 +46,10 @@ The Central Processing Unit (CPU) is the primary component of a computer that ex
 *	If you are running code that relies on parallel processing (things like matrix multiplications or complex statistical models) you could request 2 or more CPUs. Check to see if this speeds up the processing (and whether this compensates for the additional cost of 6p per hour per number of CPUs).
 
 ## What if my session needs to run overnight?
-*	Sessions are closed automatically at 7:15pm every day.
-*	If you have work that needs to continue beyond 7:15pm you should add the word NIGHT at the start of the session name when starting that session. If you're working on a project, your project will also need the word NIGHT in its name.
+*	Sessions are closed automatically at 19:15 (7:15 pm) every day.
+*	If you have work that needs to continue beyond this time you should add the word NIGHT at the start of the session name when starting that session. If you're working on a project, your project will also need the word NIGHT in its name.
+* See [Overnight Sessions](Overnight%20Sessions.md) for the full guidance.
+
 
 ## How can I use less memory?
 Using the parquet file format from the `{arrow}` package uses less memory and is faster to write. 
