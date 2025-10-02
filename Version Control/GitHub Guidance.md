@@ -38,7 +38,7 @@ The following rules should be followed in order to adhere to security and confid
 
 To ensure consistency of use within the organisation, some guidance on styling while using git and GitHub is outlined below:
 
-- **Repos names** should be lowercase with hyphens, descriptive and unique. For example, if you need a repo for *time series*, the repo name should be specific enough to highlight the publication or team name, e.g. `tpp-time-series`.
+- **Repo names** should be lowercase with hyphens, descriptive and unique. For example, if you need a repo for *time series*, the repo name should be specific enough to highlight the publication or team name, e.g. `tpp-time-series`.
 - **Commit messages** should be concise and meaningful. If you need to raise awareness of something particular, the pull request commentary could be a better place.
 - **Teams** can be used, although consider how broad the team can be to be most effective. Instead of creating a team for a publication, does the team or health topic have better coverage?
 - **README files** are automatically rendered on the first page when visiting the repo on GitHub. They are the perfect place to provide users an overview of the project and how to get involved, an example is given in the [r-project-structure repo](https://github.com/Public-Health-Scotland/r-project-structure/blob/master/README.md). Where possible, README files should be generated for each public repo.

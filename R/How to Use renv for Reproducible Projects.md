@@ -22,7 +22,7 @@ Pre-requisite: a project (preferably version-controlled using git).
 #### Existing project
 
 1. Open the project.
-2. Call `renv::init()` to initialise renv within that project. This can take a while depending on the size of the project.
+2. Call `renv::init()` to initialise renv within that project. This can take a while, depending on the size of the project.
 3. Calling `renv::status()` should confirm the new 'lockfile' is synced with the project (i.e., contains details of all the required packages).
 4. Commit the changes (additional files and folders) to version control.
 
@@ -31,21 +31,21 @@ Pre-requisite: a project (preferably version-controlled using git).
 #### Adding (/removing) packages to the project
 
 1. Install (or remove) the required packages, preferably with `renv::install()`.
-2. Change the code, by adding (or removing) calls to `library()` or `require()`, or the package function calls themselves e.g. `dplyr::group_by()`.
+2. Change the code by adding (or removing) calls to `library()` or `require()`, or the package function calls themselves, e.g. `dplyr::group_by()`.
 3. Calling `renv::status()` will tell you there are changes that aren't recorded in the lockfile.
 4. Calling `renv::snapshot()` will record any changes into the lockfile.
 5. Calling `renv::status()` should now confirm everything's synced.
 6. Commit the changes in the renv.lock file using version control.
-   - The `.gitignore` should have been updated to exclude files/directories that shouldn't be tracked but the `.gitignore` itself may need to be committed here.
-   - `.Rprofile` - A project level file that gets things running by calling the `activate.R` script.
-   - `renv/activate.R` - The code that gets the environment set up and does all the necessary background work.
-   - `renv.lock` - The description of the project's dependencies to be reproduced.
+   - The `.gitignore` should have been updated to exclude files/directories that shouldn't be tracked, but the `.gitignore` itself may need to be committed here.
+   - `.Rprofile`: project-level file that sources `renv/activate.R`.
+   - `renv/activate.R`: sets up the environment and performs the required background work.
+   - `renv.lock`: records the project's dependencies to reproduce the environment.
 
 ### Restoring the environment
 
 #### Using a project that has already had [{renv}](https://rstudio.github.io/renv/) initialised (e.g., when collaborating on a colleague's project)
 
-1. Ensure the project is synced with the latest version-controlled repository (e.g., `git pull` from github).
+1. Ensure the project is synced with the latest version-controlled repository (e.g., `git pull` from GitHub).
 2. Call `renv::restore()` to make sure your local version of the project has all the required packages.
 3. Calling `renv::status()` should now confirm everything's synced.
 
@@ -53,15 +53,15 @@ Pre-requisite: a project (preferably version-controlled using git).
 
 ![renv-complete-workflow](https://github.com/Public-Health-Scotland/technical-docs/assets/33964310/391de4ef-c7d3-4a09-8eed-95c0f48b50eb)
 
-[{renv}](https://rstudio.github.io/renv/) works by storing the exact versions of each package used within each project. This helps to isolate the project from any external changes that might have caused problems (e.g., updating/removing packages when working on a different project). Once [{renv}](https://rstudio.github.io/renv/) is initialised in a project it stays on unless deliberately turned off (see [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html)).
+[{renv}](https://rstudio.github.io/renv/) works by storing the exact versions of each package used within each project. This helps to isolate the project from any external changes that might have caused problems (e.g., updating/removing packages when working on a different project). Once [{renv}](https://rstudio.github.io/renv/) is initialised in a project, it stays on unless deliberately turned off (see [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html)).
 
-When you initialise [{renv}](https://rstudio.github.io/renv/) in a project (renv::init()) it searches the scripts for any calls to `library()`, `require()` or package function calls and identifies which versions of each package are in use from the versions installed in the user's package library.. The following files/folders are then added to the project:
+When you initialise [{renv}](https://rstudio.github.io/renv/) in a project (`renv::init()`), it searches the scripts for any calls to `library()`, `require()`, or package function calls and identifies which versions of each package are in use from the versions installed in the user's package library. The following files/folders are then added to the project:
 
-- The folder `renv/library`: this is used for storing the packages. If the project is version-controlled using git a `.gitignore` file will be written to `renv/`, so that this library is ignored when changes to the project are committed.
+- The folder `renv/library`: this is used for storing the packages. If the project is version-controlled using git, a `.gitignore` file will be written to `renv/`, so that this library is ignored when changes to the project are committed.
 - The lockfile `renv.lock`: this stores the details of the packages (including the versions used).
 - The profile file `.Rprofile`: this is run automatically when the project is opened, to ensure it uses the packages stored in renv/library.
 
-Caution: the packages stored in renv/library and detailed in the lockfile are frozen in time and won't benefit from bug fixes. To update to the latest versions of packages call `renv::update()` periodically, and make sure the code still works before recording the new versions in the lockfile using `renv::snapshot()`. If the code doesn't work with the new versions you can roll back to the versions in the lockfile using `renv::restore()` (for more info see [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html)).
+Caution: the packages stored in renv/library and detailed in the lockfile are frozen in time and won't benefit from bug fixes. To update to the latest versions of packages, call `renv::update()` periodically, and make sure the code still works before recording the new versions in the lockfile using `renv::snapshot()`. If the code doesn't work with the new versions, you can roll back to the versions in the lockfile using `renv::restore()` (for more info see [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html)).
 
 ## Resources
 

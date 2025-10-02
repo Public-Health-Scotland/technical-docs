@@ -8,7 +8,7 @@ This document aims to provide users with information on the minimum memory requi
 
 Computer random access memory (RAM) gives applications a place to store and access data that are being actively used, and to do so quickly.
 
-Executing an SQL query against a database will result in that data being read into your R session's memory in its entirety, and all subsequent operations on that data are performed *in-memory*. You therefore need to ensure that your session has access to sufficient free memory to hold the size of data you intend to work within your analysis.
+When you execute an SQL query against a database, the entire dataset is loaded into the memory of your R session. As a result, all subsequent operations on that data are done in memory. It is essential to ensure that your session has enough available memory to accommodate the size of the data you plan to analyse.
 
 The following table presents various sizes of extracts from the SMR01 dataset, from 1 month's worth of data, to the whole of SMR01, along with the amount of memory required just to fetch these data into R, and the recommended amount of memory to request if you intend to work with a dataset of this size.
 
