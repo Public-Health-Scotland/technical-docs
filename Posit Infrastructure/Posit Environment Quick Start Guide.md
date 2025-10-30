@@ -75,7 +75,7 @@ Unfortunately, the new homepage does not yet support opening Projects stored on 
 - Click on the `Settings` option on that drop-down menu.
 - The Settings page will load, and in the section titled `Default Homepage`, there is a button to the right-hand side titled `Switch to Legacy Homepage`.  Click this and you will be taken to the legacy version of the Posit Workbench homepage which you should be more familiar with.
 
-On first requesting a new session, you are given a choice of the five available IDEs, including Positron Pro.  You will note that the button to select Positron Pro has a _Preview_ tag, and as such we would recommend only using Positron Pro for evaluation purposes at this stage:
+On first requesting a new session, you are given a choice of the five available IDEs, including Positron Pro.  You will note that the button to select Positron Pro has a _Preview_ tag, and there are known issues with starting the R interpreter in a Positron Pro session.  Until this issue is resolved, we would recommend only using Positron Pro for evaluation purposes at this stage:
 
 ![Screenshot of the New Session Dialog](https://github.com/user-attachments/assets/8109b4ee-07d5-4c50-befd-e713d8b10328)
 
