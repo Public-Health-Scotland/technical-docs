@@ -99,6 +99,8 @@ If the "Join session when ready" checkbox was ticked in the "New Session" dialog
 
 ![RStudio Pro Session Active](https://github.com/user-attachments/assets/e7e81280-e71b-4d5e-9742-4ca2650bb9b3)
 
+**Important Note: RStudio Pro sessions will default to R v4.5.1.  If you need to use R v4.4.2, please select this in the dropdown at the top-right of the RStudio IDE interface.**
+
 ## 5. Configuring your RStudio Pro environment
 
 ### Global Options
