@@ -1,4 +1,4 @@
-# Quick Start Guide: Transition to the New Posit Environment
+# Posit Environment Quick Start Guide
 
 ## 1. Overview
 
