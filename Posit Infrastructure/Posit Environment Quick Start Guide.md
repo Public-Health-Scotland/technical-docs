@@ -351,13 +351,11 @@ renv::snapshot(type = "all")
 
 ## 5. Night Sessions
 
-**Important Change - please read carefully**
-
 All sessions, both active and idle, will be automatically removed (or "killed") at **7.15pm** each day.
 
 If you need your session to continue running beyond 7.15pm, you must include the word **NIGHT** at the start of your session's name e.g.
 
-![New NIGHT Session Dialog](https://github.com/user-attachments/assets/bbdc6139-8b6e-4cbd-8697-507074e063a1)
+![Screenshot of NIGHT session dialog](https://github.com/user-attachments/assets/6a17d84c-2efb-45c1-9055-c1da09466830)
 
 ### Automatically close an RStudio Pro session
 
