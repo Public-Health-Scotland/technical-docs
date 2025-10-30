@@ -6,7 +6,7 @@
 This Quick Start Guide provides essential information and step-by-step instructions to get you started with the Posit Environment on day one.  It is not a comprehensive guide; further documentation and guidance will continue to be added and updated on the [PHS Data Science Knowledge Base](https://public-health-scotland.github.io/knowledge-base/).
 
 ### Audience
-This guide assumes some previous experience with the R programming language, the RStudio Integrated Development Environment (IDE), and perhaps a earlier version of Posit Workbench.
+This guide assumes some previous experience with the R programming language, the RStudio Integrated Development Environment (IDE), and perhaps an earlier version of Posit Workbench.
 
 ### Scope
 This guide covers:
