@@ -58,37 +58,46 @@ This guide covers:
 
 ## 4. Logging in and Starting a Session
 
-- Follow the link above to Posit Workbench environment and log in using your LDAP username and password.
-- The homepage in Posit Workbench has been redesigned and now features separate tabs for Projects/Sessions and Workbench Jobs:
-<img width="1906" height="1073" alt="image" src="https://github.com/user-attachments/assets/65ecf7b5-56ec-4022-b54f-e31564acc421" />
-Unfortunately, the new homepage does not yet support opening Projects stored on Stats directly from the homepage, so it is recommended to revert back to the legacy homepage for now.
+Follow the link above to Posit Workbench environment and log in using your LDAP username and password.
 
-- The "New Session" dialog window has changed slightly.  On first requesting a new session, you are given a choice of the four available IDEs:
+The homepage in Posit Workbench has been redesigned with a focus on [project-based workflows](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/):
 
-![New Session Dialog 1](https://github.com/user-attachments/assets/000c2943-bd4b-4818-974a-679dbb8987a9)
+![Screenshot of the new Posit Workbench homepage](https://github.com/user-attachments/assets/65ecf7b5-56ec-4022-b54f-e31564acc421)
 
-- As before, you need to enter the number of CPUs and Memory you need for your session.  **Important Change: you must specify the amount of memory you require in gigabytes (GB)**:
+After logging in, the Posit Workbench home page contains two sections (tabs) for project, session, and job management:
 
-![New Session Dialog 2](https://github.com/user-attachments/assets/bd593345-4b9a-49a4-a4c4-f52008524438)
+- Projects tab contains a table of projects and their sessions.
+- Jobs tab contains a table of Workbench Jobs and/or Audited Jobs
 
+Unfortunately, the new homepage does not yet support opening Projects stored on Stats, so it is recommended to revert back to the legacy homepage for now.  To do this:
+
+- Click on your name at the top-right hand corner of the new Posit Workbench homepage, and a drop-down menu will open.
+- Click on the `Settings` option on that drop-down menu.
+- The Settings page will load, and in the section titled `Default Homepage`, there is a button to the right-hand side titled `Switch to Legacy Homepage`.  Click this and you will be taken to the legacy version of the Posit Workbench homepage which you should be more familiar with.
+
+On first requesting a new session, you are given a choice of the five available IDEs, including Positron Pro.  You will note that the button to select Positron Pro has a _Preview_ tag, and as such we would recommend only using Positron Pro for evaluation purposes at this stage:
+
+![Screenshot of the New Session Dialog](https://github.com/user-attachments/assets/8109b4ee-07d5-4c50-befd-e713d8b10328)
+
+As before, you need to enter the number of CPUs and Memory you need for your session:
+
+![Screenshot of the New Session Dialog with CPU and Memory options](https://github.com/user-attachments/assets/39340ed2-688a-4a6b-89f8-5015f7424937)
 
 **Remember to select the minimum number of CPUs and amount of memory required for the work you intend to do.**  In most cases, you only require more than 1 CPU if you are knowingly going to be running code using multiple threads or parallel processing.  The amount of memory you require is primarily dependent on the size of the dataset you will be working with.  There is further guidance available on the PHS Data Science Knowledge Base at https://public-health-scotland.github.io/knowledge-base/docs/Posit%20Infrastructure?doc=Memory%20Usage%20in%20SMR01.md
 
-- Once you click the "Start Session" button, a further dialog will appear in the bottom-right of your browser window giving you updates on the progress of starting the session:
+Once you click the "Start Session" button, a further dialog will appear in the bottom-right of your browser window giving you updates on the progress of starting the session:
 
 ![Starting Session Dialog](https://github.com/user-attachments/assets/2966723d-9b0a-42e2-99cb-9b6a8c1aa6e7)
 
+**Important Note: normally sessions will take just a few seconds to start, but if the Kubernetes cluster needs to scale up to accommodate your session, it can take several minutes for your session to start.  This is normal and expected behaviour.**
 
-**Important Note: normally sessions will take just a few seconds to start, but if the Kubernetes cluster needs to scale up to accommodate your session, it can take up to 10 minutes for your session to start.  This is normal and expected behaviour.**
-
-- The session will be listed on the Posit Workbench homepage as "PENDING" during this process:
+The session will be listed on the Posit Workbench homepage as "PENDING" during this process:
 
 ![RStudio Pro Session Pending](https://github.com/user-attachments/assets/0713f025-c984-4a46-9c48-bbbf2fb1ea35)
 
-- If the "Join session when ready" checkbox was ticked in the "New Session" dialog window, the session will automatically load in your browser.  Alternatively, once the session shows as "ACTIVE" on the Posit Workbench homepage, you can click the session to open it:
+If the "Join session when ready" checkbox was ticked in the "New Session" dialog window, the session will automatically load in your browser.  Alternatively, once the session shows as "ACTIVE" on the Posit Workbench homepage, you can click the session to open it:
 
 ![RStudio Pro Session Active](https://github.com/user-attachments/assets/e7e81280-e71b-4d5e-9742-4ca2650bb9b3)
-
 
 ## 5. Configuring your RStudio Pro environment
 
@@ -98,11 +107,11 @@ Unfortunately, the new homepage does not yet support opening Projects stored on 
   - Access the RStudio Global Options menu by going to _Tools > Global Options..._
   - In the General menu, be sure that the settings match those in the screenshot below:
 
-![Global Options](https://github.com/user-attachments/assets/c1441dba-b6af-4bec-b017-cc371bd14091)
+![Screenshot of Global Options dialog on the General tab](https://github.com/user-attachments/assets/c1441dba-b6af-4bec-b017-cc371bd14091)
 
-  - _Optional, but recommended:_ On the Appearance menu, change the editor font to "Cascadia Code".  This font has support for ligatures that map multiple characters to single glyphs e.g. rendering "<-" as a single arrow glyph.
+  - _Optional, but recommended:_ On the Appearance menu, change the editor font to "Cascadia Code", or any other font that you have installed that has support for ligatures.  These map multiple characters to single glyphs e.g. rendering "<-" as a single arrow glyph.
 
-![Cascadia Code](https://github.com/user-attachments/assets/591ad6c5-4fad-4c25-9142-4ae0df288428)
+![Screenshot of the Global Options dialog on the Appearance tab with the Cascadia Code editor font selected](https://github.com/user-attachments/assets/82c8fd30-3f39-40cc-80de-77674cc41bf7)
 
 If the "Cascadia Code" font is not listed, this is because the font is not installed on your laptop.  You can download the font from Microsoft's GitHub repo at https://github.com/microsoft/cascadia-code?tab=readme-ov-file  The direct link to download the zip is https://github.com/microsoft/cascadia-code/releases/download/v2407.24/CascadiaCode-2407.24.zip
 
