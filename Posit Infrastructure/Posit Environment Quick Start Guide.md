@@ -234,7 +234,7 @@ These requests for support will first reach the Data Science Team, who will prov
 
 ## 8. FAQs
 ### What if I encounter a problem?
-- Contact the Data Science Team for support using the form at [https://forms.office.com/e/pqmmNMkhT6]
+- Contact the Data Science Team for support using the form at <https://forms.office.com/e/pqmmNMkhT6>
 ### How can I get access to Posit Connect?
 - Posit Connect has been deployed into the new Posit environment along with Posit Workbench and Posit Package Manager.  Work continues to further test the capabilities of Posit Connect and assess how we can best make use of this application in PHS.  If you would like to get involved in this testing, please contact Ross Elder at [Ross.Elder@phs.scot](mailto:Ross.Elder@phs.scot).
 
