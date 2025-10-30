@@ -3,14 +3,14 @@
 ## 1. Overview
 
 ### Purpose
-This Quick Start Guide is designed to help you transition smoothly to the new Posit environment. It provides essential information and step-by-step instructions to get you started on day one.  It is not a comprehensive guide; further documentation and guidance will be added to the [PHS Data Science Knowledge Base](https://public-health-scotland.github.io/knowledge-base/) in due course.
+This Quick Start Guide provides essential information and step-by-step instructions to get you started with the Posit Environment on day one.  It is not a comprehensive guide; further documentation and guidance will continue to be added and updated on the [PHS Data Science Knowledge Base](https://public-health-scotland.github.io/knowledge-base/).
 
 ### Audience
-This guide is intended for existing users of the old Posit environment who are moving to the new Posit environment.
+This guide assumes some previous experience with the R programming language, the RStudio Integrated Development Environment (IDE), and perhaps a earlier version of Posit Workbench.
 
 ### Scope
 This guide covers:
-- A high-level overview of the new Posit environment's specifications and features.
+- A high-level overview of the Posit Environment's specifications and features.
 - Step-by-step instructions to get you started with logging in and setting up your environment.
 - Details on how to get help.
 - Links to other useful information and resources.
@@ -24,16 +24,18 @@ This guide covers:
 - **Operating System**
   - Ubuntu 22.04.5 LTS Jammy Jellyfish
 - **Applications and Versions**:
-  - **Posit Workbench**: 2024.09.1+394.pro7, “Cranberry Hibiscus” (f54d2f92)
-  - **Posit Package Manager**: v2024.08.2-9
+  - **Posit Workbench**: 2025.09.1+401.pro2, “Cucumberleaf Sunflower” (59cf440a).
+  - **Posit Package Manager**: v2025.09.0-7
+  - **Posit Connect**: _Coming soon..._
 - **R and Python Versions**:
-  - **R**: v4.4.2 only
-  - **Python**: Default version is 3.13.0, with additional support for versions 3.10.12 and 3.12.6.
+  - **R**: Default version is v4.5.1, with additional support for v4.4.2 
+  - **Python**: Default version is 3.13.8, with additional support for versions 3.12.11 and 3.10.12
 - **Supported IDEs**:
-  - RStudio Pro 2024.09.1 Build 394.pro7 with support for Quarto 1.5
+  - RStudio Pro 2025.09.1 Build 401.pro2 with support for Quarto 1.8.25
   - Jupyter Notebook 7.2.3
-  - JupyterLab 4.2.6
-  - Visual Studio Code 1.93.0
+  - JupyterLab 4.2.7
+  - Visual Studio Code 1.102.0
+  - Positron Pro 2025.08.1 build 11 (for evaluation purposes only)
 
 ---
 
@@ -44,17 +46,8 @@ This guide covers:
   - nodepool (default): Standard_E20as_v5 with 20 vCPUs and 160GiB RAM - scales up to 48 nodes
   - bigpool (BIG): Standard_E32as_v5 with 32 vCPUs and 256GiB RAM - scales up to 6 nodes
 - You will only have access to the "bigpool" if you are a member of the `positwb_super_user` UNIX group.  You can request access to this group by emailing the [Data Science Team](phs.datascience@phs.scot).  You will also need Line Manager authorisation.
-- The Kubernetes container image has been upgraded to use **Ubuntu 22.04.5 LTS (Jammy Jellyfish)**, providing better support for Posit Workbench, R, Python, and associated packages.
+- The Kubernetes container image is based on **Ubuntu 22.04.5 LTS (Jammy Jellyfish)**, providing better support for Posit Workbench, R, Python, and associated packages.
 - A reduced-size version of TeX has been installed in the container image to decrease its size and reduce session startup times.
-
----
-
-### Performance and Reliability Improvements
-- The root cause of **Status code 502/504 errors** has been addressed.  These errors should now only occur in exceptional circumstances.
-- RStudio projects now open reliably on the first attempt, even when saved on Stats.
-- Previously opened RStudio projects are now listed on the Posit Workbench homepage and can be opened directly from there without having to open an RStudio Pro session first.
-- Previous workarounds for installing geospatial R packages such as `{sf}` and `{leaflet}` are no longer required.  You can install and load these packages in the same way as any other R package.
-- R Packages that require C++14 or C++17 support, such as `{ranger}`, now install without error.
 
 ---
 
