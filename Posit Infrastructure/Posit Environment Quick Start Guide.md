@@ -51,14 +51,18 @@ This guide covers:
 
 ---
 
-## 3. URLs for New Posit Applications
+## 3. URLs for Posit Applications
 - **Posit Workbench**: https://pwb-prod.publichealthscotland.org/
 - **Posit Package Manager**: https://ppm-prod.publichealthscotland.org/
 - **Posit Connect**: _Coming soon..._
 
 ## 4. Logging in and Starting a Session
 
-- Follow the link above to the new production Posit Workbench environment and log in using your LDAP username and password.  These are the same credentials you have used for the old Posit Workbench environment.
+- Follow the link above to Posit Workbench environment and log in using your LDAP username and password.
+- The homepage in Posit Workbench has been redesigned and now features separate tabs for Projects/Sessions and Workbench Jobs:
+<img width="1906" height="1073" alt="image" src="https://github.com/user-attachments/assets/65ecf7b5-56ec-4022-b54f-e31564acc421" />
+Unfortunately, the new homepage does not yet support opening Projects stored on Stats directly from the homepage, so it is recommended to revert back to the legacy homepage for now.
+
 - The "New Session" dialog window has changed slightly.  On first requesting a new session, you are given a choice of the four available IDEs:
 
 ![New Session Dialog 1](https://github.com/user-attachments/assets/000c2943-bd4b-4818-974a-679dbb8987a9)
