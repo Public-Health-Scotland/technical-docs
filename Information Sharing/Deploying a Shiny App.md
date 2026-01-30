@@ -126,3 +126,6 @@ There are a few reasons why you might want to delete a Shiny app from the server
 
 > [!NOTE]
 > Archiving an app is an essential part of the process that cannot be skipped. Where an app has been archived and not deleted, the shinyapps.io admins will periodically delete these apps as part of normal server maintenance.
+
+> [!WARNING]
+> Any app that is related to public reporting that is no longer required must follow official archival processes, they cannot just be deleted. For support with this, please contact the PHS Stats Gov ([phs.statsgov@phs.scot](mailto:phs.statsgov@phs.scot)) team. 
