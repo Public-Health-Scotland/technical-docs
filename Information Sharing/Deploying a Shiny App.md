@@ -1,6 +1,8 @@
 # Deploying (Publishing) a Shiny App
 
-At PHS, we currently use [shinyapps.io](http://shinyapps.io) to host Shiny apps. The server is located outside of the UK and hosted by Posit, which means that we can only host public-facing apps with no confidential data. If you have doubts about this for your app, you should contact the PHS Stats Gov [phs.statsgov@phs.scot](mailto:phs.statsgov@phs.scot) team to assess. Before deploying a Shiny application, there is general [dashboard development guidance](https://public-health-scotland.github.io/knowledge-base/docs/Information%20Sharing?doc=Dashboard%20development%20guidance.md) available that should be followed while developing apps, and reviewed prior to deployment.
+At PHS, we currently use [shinyapps.io](http://shinyapps.io) to host Shiny apps. The server is located outside of the UK and hosted by Posit, which means that we can only host public-facing apps with no confidential data. If you have doubts about this for your app, you should contact the PHS Stats Gov team (at [phs.statsgov@phs.scot](mailto:phs.statsgov@phs.scot)) to assess. 
+
+Before deploying a Shiny application, there are a number of considerations around suitability, design and development, and compliance requirements. There is general dashboard development guidance being developed that can be followed when considering and then developing apps. Until this is available, you can contact the PHS Data Science team (at [phs.datascience@phs.scot](mailto:phs.datascience@phs.scot)) or access peer support on the Data & Intelligence Forum.
 
 > [!NOTE]
 > There is work underway to provide a platform to host Shiny apps and other information products that may use confidential data and allow for greater control over who and what can be viewed. This will use the Posit Connect software and is being managed by the Posit Programme.
