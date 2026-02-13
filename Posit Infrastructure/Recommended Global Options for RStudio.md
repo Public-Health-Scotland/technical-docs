@@ -1,4 +1,4 @@
-# Recommendations on Global Options in Posit Workbench RStudio
+# Recommended Global Options for RStudio
 
 ## Purpose
 
@@ -14,7 +14,7 @@ The Global Options window can be accessed from a Posit Workbench session through
 
 ### Workspace
 
-The workspace contains all the objects (vectors, matrices, data frames, etc.) and their values that have been defined in the current R session.  There are two options that can be set in the Global Options window that affect the behaviour of sessions and their workspaces:
+The workspace contains all the objects (vectors, matrices, data frames, etc.) and their values that have been defined in the current R session.  Two options can be set in the Global Options window that affect the behaviour of sessions and their workspaces:
 
 ![Global Options Menu in RStudio with Workspace highlighted](https://user-images.githubusercontent.com/45657289/212689097-9c1d3aed-0373-4d9f-9095-884d1651e0fc.png)
 
@@ -32,9 +32,9 @@ However, there are two main reasons why you would not want to save your R enviro
 
 In the situation where a project's working directory contains a `.RData` file, by default, the contents of that `.RData` file will be loaded into the session's environment when opening the project.  There are two main reasons why we would not want this to happen:
 
-* By opening a project and restoring that project's `.RData` file, the data and variables that were saved in the file will be loaded into the R environment, replacing any data and variables that were already there. This can cause confusion for users because they may not be aware of the contents of the `.RData` file and how they relate to the current project.
+* By opening a project and restoring that project's `.RData` file, the data and variables that were saved in the file will be loaded into the R environment, replacing any data and variables that were already there. This can confuse users because they may not be aware of the contents of the `.RData` file and how they relate to the current project.
 
-For example, imagine you are working on a project that uses a specific dataset and a set of variables. You save the project and close your Posit Workbench session. Later, another user opens the project and this action, by default, restores the .RData file. However, this `.RData` file contains a different dataset and a different set of variables to those that the user is expecting. If they continue working on the project without noticing this, they may inadvertently be analysing the wrong data or using the wrong variables in their analysis. This can lead to incorrect results, wasted time, and confusion.
+For example, imagine you are working on a project that uses a specific dataset and a set of variables. You save the project and close your Posit Workbench session. Later, another user opens the project and this action, by default, restores the .RData file. However, this `.RData` file contains a different dataset and a different set of variables than those that the user is expecting. If they continue working on the project without noticing this, they may inadvertently be analysing the wrong data or using the wrong variables in their analysis. This can lead to incorrect results, wasted time, and confusion.
 
 * The process of loading a `.RData` file into the R environment can, particularly if it is a large file, take a very long time.  In fact, the Posit Workbench session will crash, if the amount of memory required to restore the `.RData` file exceeds the amount of memory available to the session.
 
