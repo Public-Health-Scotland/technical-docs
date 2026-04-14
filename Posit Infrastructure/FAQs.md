@@ -125,6 +125,12 @@ If clicking the refresh button in your web browser had no effect, return to the 
 
 ### Installing Packages
 
+#### How do I install the `{gt}` package?
+
+Versions of the [`{gt}`](https://gt.rstudio.com/) package, up to and including v0.5.0, use [PhantomJS](https://phantomjs.org/) (a scriptable headless browser) to take screenshots of tables produced by `{gt}`.  Newer versions of `{gt}` require a Chromium-based browser which is not yet configured correctly in the Posit Workbench environment.
+
+Instructions and a script for installing and testing v0.5.0 of the `{gt}` package and all of its dependencies can be found in the [posit-workbench-install-gt](https://github.com/Public-Health-Scotland/posit-workbench-install-gt) repo.
+
 #### What do I do if I cannot install any packages?
 
 If you cannot install any packages **and** have an error message saying your home directory is not writeable or the directory is not correctly mounted then you should raise a call in [Service Now](https://nhsnss.service-now.com/phs/) and ask to have your cache cleared. Only raise a service call if you are getting these error messages.
