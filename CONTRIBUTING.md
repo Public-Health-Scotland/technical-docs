@@ -2,7 +2,7 @@
 
 Firstly, thanks for taking the time to check out this guide and thinking about contributing!
 
-The following is a set of guidelines for contributing to PHS technical documentation. As the back-end to the [PHS Data Science Knowledge Base documentation page](https://public-health-scotland.github.io/knowledge-base/docs/), there is specific requirements to ensure that the documentation is consistent and accessible.
+The following is a set of guidelines for contributing to PHS technical documentation. As the back-end to the [PHS Data Science Knowledge Base documentation page](https://public-health-scotland.github.io/knowledge-base/docs/), there are specific requirements to ensure that the documentation is consistent and accessible.
 
 #### Table Of Contents
 
