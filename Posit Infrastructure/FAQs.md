@@ -25,6 +25,7 @@ This document aims to answer frequently asked questions from users in relation t
 * [Projects](#projects)
   * [What is a project (in Posit Workbench)?](#what-is-a-project-in-posit-workbench)
   * [How do I open or switch to another project?](#how-do-i-open-or-switch-to-another-project)
+  * [How do I clear the recent projects list?](#how-do-i-clear-the-recent-projects-list)
 * [Accessing files and databases](#accessing-files-and-databases)
   * [Can a folder on the stats area be accessed from the server?](#can-a-folder-on-the-stats-area-be-accessed-from-the-server)
   * [Why can't I access any databases?](#why-cant-i-access-any-databases) 
@@ -168,6 +169,16 @@ Posit Workbench provides several ways to open or switch to another project, as l
 * The Projects dropdown menu at the top right of RStudio is another way of creating and opening projects:
 
 ![image](https://github.com/user-attachments/assets/e65a577b-b473-4d57-aff5-b9c8721f9cc0)
+
+#### How do I clear the recent projects list?
+
+If the RStudio IDE is showing old projects in the recent projects list, you can clear this list from the File menu:
+
+1. Open an RStudio session in Posit Workbench.
+2. Select `File` > `Recent Projects` > `Clear Project List`.
+
+This only clears the list of recent projects shown in RStudio. It does not delete any project folders, files or `.Rproj` files.
+
 ### Accessing files and databases
 
 #### Can a folder on the stats area be accessed from the server?
