@@ -32,6 +32,8 @@ The following rules should be followed in order to adhere to security and confid
 3. Ensure that **comments within code do not contain any confidential information** such as CHI numbers or other patient identifiable information.
 4. It is fine to embed file paths in your code, but make sure that these do not include **sensitive folder names** (e.g. customer names).
 
+For practical guidance on keeping small sensitive values out of scripts, see [How to Use Environment Variables Safely](/Version%20Control/How%20to%20Use%20Environment%20Variables%20Safely.md).
+
 > **Note** - if any of the above occurs, please follow standard Information Governance (IG) procedures. As a first step, this should be to remove the offending commit from history (not just adding a new commit). There is a GitHub document to support this: [https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)
 
 ## Style Guide
