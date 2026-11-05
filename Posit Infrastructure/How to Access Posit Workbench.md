@@ -9,9 +9,9 @@
 
 If you're new to Posit Workbench and require access for your role, a user account and relevant access are set up by DaS, including access to Posit Package Manager. This follows a similar process to the 'Access to Data' process, requires line manager approval, and is subject to the [Acceptable Usage Policy](Acceptable%20Usage%20Policy%20for%20Posit%20Workbench.md). Accounts may be deactivated after a period of inactivity; if this affects you, see [Deactivated User](#deactivated-user).
 
-1. Go to [ServiceNow](https://nhsnss.service-now.com/phs/) > Digital & Security > Service Catalog > Make a Request
-2. Select 'Corporate Applications' as the Product or Service
-3. Another dropdown will appear where you can select the appropriate Posit application. In this case, Workbench.
+1. Go to [Halo](https://publichealthscotland.haloitsm.com/portal) > Report an Issue
+2. Select 'Software or Service' under 'Assets or Software Service'
+3. Another dropdown will appear where you can select the appropriate Posit application. In this case, 'POSIT (formerly R Studio) Workbench'.
 4. Complete the rest of the form, and attach authorisation from your line manager (similar to the Access to Data process).
 5. Submit the request!
 
