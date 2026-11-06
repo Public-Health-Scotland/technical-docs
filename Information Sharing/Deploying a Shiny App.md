@@ -1,8 +1,10 @@
 # Deploying (Publishing) a Shiny App
 
-At PHS, we currently use [shinyapps.io](http://shinyapps.io) to host Shiny apps. The server is located outside of the UK and hosted by Posit, which means that we can only host public-facing apps with no confidential data. If you have doubts about this for your app, you should contact the PHS Stats Gov team (at [phs.statsgov@phs.scot](mailto:phs.statsgov@phs.scot)) to assess. 
+At PHS, we currently use [shinyapps.io](http://shinyapps.io) to host Shiny apps. The server is located outside of the UK and hosted by Posit, which means that we can only host public-facing apps with no confidential data. If you have doubts about this for your app, you should contact the PHS Stats Gov team (at [phs.statsgov@phs.scot](mailto:phs.statsgov@phs.scot)) to assess.
 
-Before deploying a Shiny application, there are a number of considerations around suitability, design and development, and compliance requirements. There is general dashboard development guidance being developed that can be followed when considering and then developing apps. Until this is available, you can contact the PHS Data Science team (at [phs.datascience@phs.scot](mailto:phs.datascience@phs.scot)) or access peer support on the Data & Intelligence Forum.
+**All apps deployed to the Scotland shinyapps.io account must be registered**, you can do that using this form: [https://forms.office.com/e/shBeTxkvBD]().
+
+Before deploying a Shiny application, there are also a number of considerations around suitability, design and development, and compliance requirements. There is general dashboard development guidance being developed that can be followed when considering and then developing apps. Until this is available, you can contact the PHS Data Science team (at [phs.datascience@phs.scot](mailto:phs.datascience@phs.scot)) or access peer support on the Data & Intelligence Forum. Other than that:
 
 > [!NOTE]
 > There is work underway to provide a platform to host Shiny apps and other information products that may use confidential data and allow for greater control over who and what can be viewed. This will use the Posit Connect software and is being managed by the Posit Programme.
@@ -42,14 +44,15 @@ Shiny apps should also be deployed with the following considerations in mind:
 
 The process to deploy an app uses the `{rsconnect}` package, with the process outlined below:
 
-1. Complete [this form](https://forms.office.com/e/shBeTxkvBD) for each **new** app to be deployed (new releases or updates are not required).
+1. [**Register the app**](https://forms.office.com/e/shBeTxkvBD), required for each **new** app to be deployed.
    _As shinyapps.io is a shared service, we need to know which apps belong to PHS. This allows organisational oversight of published content and clear contacts with app authors if there are any changes on the server._
-   This will also send an automated message containing the deployment authentication details. These are general purpose and can be used for multiple deployments.
+
+2. [**Request the deployment credentials**](https://scottish.sharepoint.com/:l:/s/PHS-PositConnectImplementation/JACMZICoCVYfTocnrtDQ64-lAerVHcm-WUlauQkq7CN2jFg?nav=YTZhZTIzYzUtYTY5OS00OThjLWIyODUtMTczYjAxY2I0YWJm) to connect to the Scotland shinyapps.io. These are general purpose and can be used for multiple deployments.
    
   > [!WARNING]
   > The details should be kept secure and not shared more widely, this includes committing to git.
 
-3. Connect to the shinyapps.io server using the credentials from the previous step (this should only need to be done once per user):
+3. **Connect to shinyapps.io** from your development environment (e.g. RStudio) using the credentials from the previous step (this should only need to be done once per user):
    ```
    rsconnect::setAccountInfo(
       name = "scotland",
@@ -57,7 +60,7 @@ The process to deploy an app uses the `{rsconnect}` package, with the process ou
       secret = "REDACTED"
       )
    ```
-4. Deploy the app (this function bundles the application and sends to the shinyapps.io service, it should be ran for deployment only and not added to the application codebase):
+4. **Deploy the app** (this function bundles the application and sends to the shinyapps.io service, it should be ran for deployment only and not added to the application codebase):
    ```
    rsconnect::deployApp(
       appDir = "path/to/app",
