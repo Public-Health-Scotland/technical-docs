@@ -10,8 +10,7 @@ Positron](https://positron.posit.co/tutorial-migrate-from-rstudio)
 
 ## Key things to know before you start
 
--   **Projects are folders** - Positron opens folders directly, rather
-    than relying on .Rproj files.
+-   **Projects are folders** - Positron opens folders directly, rather than relying on .Rproj files, like RStudio. In order to continue working with functions like `here::here()`, Positron uses environments or a `.here` file placed in the root directory.
 
 -   **The Command Palette (Ctrl+Shift+P) is your friend** - many actions
     that have menu options in RStudio can also be found here.
