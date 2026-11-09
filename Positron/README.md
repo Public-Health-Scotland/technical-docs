@@ -16,9 +16,6 @@ Positron](https://positron.posit.co/tutorial-migrate-from-rstudio)
 -   **The Command Palette (Ctrl+Shift+P) is your friend** - many actions
     that have menu options in RStudio can also be found here.
 
--   Positron can open projects created in RStudio, Positron, and
-    JupyterLab. If you're using Posit Workbench, **some settings and
-    tools can be shared** **between different IDEs**, such as saved
-    credentials, installed packages, and GitHub SSH configuration.
+-   Positron can open projects created in RStudio, Positron, VS Code, and JupyterLab. If you're using Posit Workbench, **some settings and tools can be shared between different IDEs**, such as saved credentials, installed packages, and GitHub SSH configuration.
 
 ![Positron interface highlighting Command Palette in the top centre of the window](images/clipboard-452278570.png)
