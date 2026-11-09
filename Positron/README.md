@@ -8,7 +8,7 @@ For a more in-depth guide and a hands-on Positron walkthrough, see
 [Migrate to Positron from RStudio --
 Positron](https://positron.posit.co/tutorial-migrate-from-rstudio)
 
-# Key things to know before you start
+## Key things to know before you start
 
 -   **Projects are folders** - Positron opens folders directly, rather
     than relying on .Rproj files.
