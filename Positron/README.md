@@ -27,4 +27,4 @@ Positron](https://positron.posit.co/tutorial-migrate-from-rstudio)
     tools can be shared** **between different IDEs**, such as saved
     credentials, installed packages, and GitHub SSH configuration.
 
-![](images/clipboard-452278570.png)
+![Positron interface highlighting Command Palette in the top centre of the window](images/clipboard-452278570.png)

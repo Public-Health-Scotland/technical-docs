@@ -143,6 +143,7 @@ A collection of terms and definitions used across Data Science in PHS.
 | **Posit Connect** | A publishing platform for sharing applications, documents, notebooks, and dashboards created in R or Python. |
 | **Posit Package Manager** | An internal package manager for R and Python. |
 | **Posit Workbench** | A centralised data science platform giving access to RStudio, Jupyter, and VS Code [IDE](#i)s. | 
+| **Positron** | Positron is a data science Integrated development environment (IDE) developed by Posit. It is designed primarily for R and Python and provides tools for coding, data analysis, visualisation, version control, and working with language-specific environments. |
 | **Prediction** | The process of using a trained model to make predictions on new data. |
 | **Python** | A general-purpose programming language. |
 
