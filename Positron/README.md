@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Positron
 
 This guide is intended as a quick reference for existing RStudio users
