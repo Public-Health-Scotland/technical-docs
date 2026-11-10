@@ -1,4 +1,4 @@
-# How do I work with R (and Python) in Positron?
+# Quick start guide on working with R (and Python) in Positron
 
 ## How to start using Positron
 
