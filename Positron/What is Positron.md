@@ -30,7 +30,7 @@ You can choose whichever is most appropriate for the work you are doing.
 
 Positron typically requires more memory than RStudio, particularly when using multiple interpreters or extensions. It is recommended to request a session with at least **4 GB** for a basic or simple project.
 
-**Note** that you may have to request extra memory for your Posit Workbench profile if you can't already access 4 GB.
+**Note** that you may have to request a different Kubernetes Profile that permits requesting a greater amount of memory for your sessions.  The form at https://forms.office.com/e/VEutAJ8p9Y allows you to submit a request for a change to your Posit Workbench Kubernetes Profile, or a request on behalf of someone else.
 
 ## Can I open projects created with RStudio, VS Code, or JupyterLab in Positron?
 
