@@ -44,7 +44,7 @@ For the best compatibility, check the R or Python version and the project's pack
 
 Positron doesn't use .Rproj files. Instead, you open the project folder itself as a workspace. In Positron, a workspace is simply a folder opened in its own window and is used as the project's working directory. As soon as you open the project folder, check that the working directory is correct before running any scripts. You can do this using `getwd()` in the R Console or, for a more general, language-independent check, by running `pwd` in the Terminal.
 
-Existing .Rproj files can remain in the folder, particularly if you still use the project in RStudio.
+Existing .Rproj files can remain in the folder, particularly if you still use the project in RStudio, as they will be ignored by Positron.
 
 Positron can also create and manage project-specific package environments using renv for R and venv for Python, with pip or the faster uv package manager for managing Python packages. To create a new workspace, go to New \> New Folder from Template, where you can select from folder types including Python, R, Jupyter and Empty.
 
