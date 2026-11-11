@@ -36,7 +36,7 @@ Positron typically requires more memory than RStudio, particularly when using mu
 
 **Yes. Projects created in RStudio, VS Code, or JupyterLab can typically be opened** **and used in Positron.**
 
-For the best compatibility, check the R or Python version and the project's package environment. For R projects, ensure the renv environment and package versions are compatible with the R version being used. For Python projects, an existing venv may need to be recreated when moving to a different Python version. This is particularly important when moving between different Posit Workbench versions.
+For the best compatibility, check the R or Python version and the project's package environment. For R projects, ensure the `{renv}` environment and package versions are compatible with the R version being used. For Python projects, an existing `venv` may need to be recreated when moving to a different Python version. This is particularly important when moving between different Posit Workbench versions.
 
 ## What replaces RStudio Projects?
 
