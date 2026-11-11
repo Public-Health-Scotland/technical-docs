@@ -28,7 +28,7 @@ You can choose whichever is most appropriate for the work you are doing.
 
 ## How much memory does Positron need in Posit Workbench?
 
-Positron typically requires more memory than RStudio, particularly when using multiple interpreters or extensions. It is recommended to use at least **4 GB** for a basic or simple project.
+Positron typically requires more memory than RStudio, particularly when using multiple interpreters or extensions. It is recommended to request a session with at least **4 GB** for a basic or simple project.
 
 **Note** that you may have to request extra memory for your Posit Workbench profile if you can't already access 4 GB.
 
