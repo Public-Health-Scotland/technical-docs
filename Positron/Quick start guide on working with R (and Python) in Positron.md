@@ -19,7 +19,7 @@
 
 ### Closing a session
 
-Closing the browser tab/window does not terminate the session! To close a session, click on 'Posit Workbench' in the bottom-left corner to return to the Posit Workbench homepage, tick the box next to your session and click Quit. Then wait a moment to ensure the session has closed.
+**Closing the browser tab/window does not terminate the session!** To close a session, click on 'Posit Workbench' in the bottom-left corner to return to the Posit Workbench homepage, tick the box next to your session and click Quit. Then wait a moment to ensure the session has closed.
 
 ## Where do I change the R version/interpreter?
 
