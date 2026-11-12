@@ -6,18 +6,22 @@ To refresh your memory on git use, please see the section on [Version Control](h
 
 ## User Interface
 
-You can connect to a GitHub/Gitea repository via the UI on Positron and VS Code. The recommended approach for GitHub is to [set up an SSH Key](https://code.publichealthscotland.scot/git-guide/rstudio-setup.html#authentication-for-remotes). Gitea only supports HTTPS authentication with your username and password, which doesn't save for use across different sessions.
+You can connect to a GitHub/Gitea repository via the UI on Positron and VS Code. Although Gitea only supports HTTPS authentication with your username and password, which doesn't save for use across different sessions (i.e. you have to do this every time). Therefore, the recommended approach for GitHub is to [set up an SSH Key](https://code.publichealthscotland.scot/git-guide/rstudio-setup.html#authentication-for-remotes).
 
 1.  Open Source Control from the Activity panel.
 2.  Click 'Clone Repository'.
 3.  On the dialogue panel, provide the repository URL to clone that repository.
 4.  After that, it will ask you to provide a folder where to clone it into, for example /conf/yourfolder/. Please do not clone repositories under your home folder as this will impact Posit performance organisation-wide.
 
+Once a repository has been opened in Positron, the Source Control view (![Source Control button](images/source_control_logo.png)), in the Activity Bar, can be used to perform common version control tasks through the user interface. This includes viewing file changes, staging and committing updates, pushing and pulling changes, and navigating between branches without using terminal commands.
+
+![Source Control panel overview](images/source_control_overview.png)
+
 ## Cloning from GitHub via Terminal
 
 Below are quick instructions for cloning a GitHub repository starting with setting up an SSH key required for GitHub [authentication](https://code.publichealthscotland.scot/git-guide/rstudio-setup.html#authentication-for-remotes), if you have not done so before. You only need to do the SSH set up once. You can use this approach in any IDE using the terminal.
 
-1.  In Positron, click on the three bars at the top of the Activity Panel \> View \> Terminal to open the terminal, or use the shortcut Ctrl + `.
+1.  In Positron, click on the three bars at the top of the Activity Panel \> View \> Terminal to open the terminal, or use the shortcut Ctrl + \`.
 2.  To check if you have an SSH key already, type: `ls ~/.ssh` and press enter.
 3.  Look for a file such as 'id_ed25519'.
 4.  To create an SSH key, first create a directory: `mkdir -p ~/.ssh`
