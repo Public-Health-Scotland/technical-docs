@@ -1,0 +1,43 @@
+# Working with Version Control (Git)
+
+There are a couple of ways to connect Positron to GitHub/Gitea repositories. If working in Positron for the first time, you'll need to set up your identity using `git config --global user.name` and `git config --global user.email`, see the Git Guide more details about [configuring git for the first time](https://code.publichealthscotland.scot/git-guide/git-setup.html).
+
+To refresh your memory on git use, please see the section on [Version Control](https://kb.publichealthscotland.scot/docs/Version%20Control).
+
+## User Interface
+
+You can connect to a GitHub/Gitea repository via the UI on Positron and VS Code. Although Gitea only supports HTTPS authentication with your username and password, which doesn't save for use across different sessions (i.e. you have to do this every time). Therefore, the recommended approach for GitHub is to [set up an SSH Key](https://code.publichealthscotland.scot/git-guide/rstudio-setup.html#authentication-for-remotes).
+
+1.  Open Source Control from the Activity panel.
+2.  Click 'Clone Repository'.
+3.  On the dialogue panel, provide the repository URL to clone that repository.
+4.  After that, it will ask you to provide a folder where to clone it into, for example /conf/yourfolder/. Please do not clone repositories under your home folder as this will impact Posit performance organisation-wide.
+
+Once a repository has been opened in Positron, the Source Control view (![Source Control button](images/source_control_logo.png)), in the Activity Bar, can be used to perform common version control tasks through the user interface. This includes viewing file changes, staging and committing updates, pushing and pulling changes, and navigating between branches without using terminal commands.
+
+![Source Control panel overview](images/source_control_overview.png)
+
+## Cloning from GitHub via Terminal
+
+Below are quick instructions for cloning a GitHub repository starting with setting up an SSH key required for GitHub [authentication](https://code.publichealthscotland.scot/git-guide/rstudio-setup.html#authentication-for-remotes), if you have not done so before. You only need to do the SSH set up once. You can use this approach in any IDE using the terminal.
+
+1.  In Positron, click on the three bars at the top of the Activity Panel \> View \> Terminal to open the terminal, or use the shortcut Ctrl + \`.
+2.  To check if you have an SSH key already, type: `ls ~/.ssh` and press enter.
+3.  Look for a file such as 'id_ed25519'.
+4.  To create an SSH key, first create a directory: `mkdir -p ~/.ssh`
+5.  Then generate the key: `ssh-keygen -t ed25519 -C <your email>`. Your email should be the one in your GitHub/Gitea account (this should be your PHS email).
+6.  Press enter through the prompts.
+7.  To check the contents of your ssh folder, use: `ls ~/.ssh`
+8.  To get your key in terminal type: `cat ~/.ssh/id_ed25519.pub` where id_ed25519.pub is the file with your key.
+9.  Your key starts with 'ssh' and ends with your email. Copy the key.
+10. Go to GitHub \> click on your profile picture \> Settings \> [SSH Keys](https://github.com/settings/keys). Name your new key (e.g. Positron), paste in the key and click Add SSH Key.
+11. To check that the key is working, in the terminal, use: `ssh -T git@github.com`
+12. Then, to clone a repository, copy the repository URL from GitHub under the Code button, selecting **SSH**.
+13. On Positron, move into a folder you want to clone the repository in, by typing e.g. `cd /conf/<yourfolder>`. Please do not clone repositories under your home folder as this will impact Posit performance organisation-wide.
+14. Paste the URL into this command in terminal: `git clone <URL>`, e.g. `git clone git@github.com:Public-Health-Scotland/vscode_prep.git`
+
+## Using a script to automate SSH setup
+
+Alternatively, users who are comfortable cloning repositories from GitHub can use the [PHS vscode_prep repository](https://github.com/Public-Health-Scotland/vscode_prep/tree/main/GitHub) and follow the README instructions to run the `setup_github_ssh_min.sh` script.
+
+Because the repository is public, it can be cloned without first configuring SSH. The same instructions can be used in VS Code, Positron or RStudio terminal.

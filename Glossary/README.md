@@ -137,11 +137,13 @@ A collection of terms and definitions used across Data Science in PHS.
 | Term | Definition |
 | ---- | ---------- |
 | **P-value** | The probability of obtaining a result at least as extreme as the one observed, assuming that the null hypothesis is correct. |
+| **pip** | The standard package manager for Python, used to install, update, and remove Python packages. |
 | **Pipeline** | A sequence of data processing components. |
 | **Posit** | [Posit](posit.co) is the company that produces Posit Workbench and other data science tools. |
 | **Posit Connect** | A publishing platform for sharing applications, documents, notebooks, and dashboards created in R or Python. |
 | **Posit Package Manager** | An internal package manager for R and Python. |
 | **Posit Workbench** | A centralised data science platform giving access to RStudio, Jupyter, and VS Code [IDE](#i)s. | 
+| **Positron** | Positron is an Integrated Development Environment (IDE) for Data Science developed by Posit. It is designed primarily for R and Python and provides tools for coding, data analysis, visualisation, version control, and working with language-specific environments. |
 | **Prediction** | The process of using a trained model to make predictions on new data. |
 | **Python** | A general-purpose programming language. |
 
@@ -182,6 +184,7 @@ A collection of terms and definitions used across Data Science in PHS.
 
 | Term | Definition |
 | ---- | ---------- |
+| **uv** | A fast Python package and environment manager that can create virtual environments and install packages as an alternative to pip. |
 
 ## V
 
