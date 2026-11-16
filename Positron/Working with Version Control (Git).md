@@ -6,12 +6,13 @@ To refresh your memory on git use, please see the section on [Version Control](h
 
 ## User Interface
 
-You can connect to a GitHub/Gitea repository via the UI on Positron and VS Code. Although Gitea only supports HTTPS authentication with your username and password, which doesn't save for use across different sessions (i.e. you have to do this every time). Therefore, the recommended approach for GitHub is to [set up an SSH Key](https://code.publichealthscotland.scot/git-guide/rstudio-setup.html#authentication-for-remotes).
+You can connect to a GitHub/Gitea repository via the user interface (UI) on Positron and VS Code. Although Gitea only supports HTTPS authentication with your username and password, which doesn't save for use across different sessions (i.e. you have to do this every time). Therefore, the recommended approach for GitHub is to [set up an SSH Key](https://code.publichealthscotland.scot/git-guide/rstudio-setup.html#authentication-for-remotes).
 
 1.  Open Source Control from the Activity panel.
 2.  Click 'Clone Repository'.
 3.  On the dialogue panel, provide the repository URL to clone that repository.
 4.  After that, it will ask you to provide a folder where to clone it into, for example /conf/yourfolder/. Please do not clone repositories under your home folder as this will impact Posit performance organisation-wide.
+5.  After cloning, you can use the Source Control interface to view and switch branches, and review commit history.
 
 Once a repository has been opened in Positron, the Source Control view (![Source Control button](images/source_control_logo.png)), in the Activity Bar, can be used to perform common version control tasks through the user interface. This includes viewing file changes, staging and committing updates, pushing and pulling changes, and navigating between branches without using terminal commands.
 
