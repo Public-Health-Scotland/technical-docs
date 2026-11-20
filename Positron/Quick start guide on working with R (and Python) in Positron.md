@@ -1,0 +1,52 @@
+# Quick start guide on working with R (and Python) in Positron
+
+## How to start using Positron
+
+1.  Log into [Posit Workbench](https://pwb.publichealthscotland.org/)
+
+2.  Click New session
+
+3.  Select **Positron Pro** and choose the required CPUs and memory (min
+    4 GB)
+
+4.  Positron will open in a new Workbench session
+
+5.  Open your project folder by selecting **Open** in the top left
+
+6.  Navigate to the required folder and select it
+
+7.  The folder explorer will appear on the left and any files you open will appear in the main editor.
+
+### Closing a session
+
+**Closing the browser tab/window does not terminate the session!** To close a session, click on 'Posit Workbench' in the bottom-left corner to return to the Posit Workbench homepage, tick the box next to your session and click Quit. Then wait a moment to ensure the session has closed.
+
+## Where do I change the R version/interpreter?
+
+**RStudio: R version -\> Positron: Interpreter Selector**
+
+Click the **Interpreter Selector** in the top-right. It displays the version of R currently in use and allows you to switch to another installed version of R or Python, or start an additional interpreter. You can also see all the active interpreters, switch between, close, and start new ones using the `+` button in the 'Console' pane.
+
+![Positron interface highlighting R version drop-down button in the top right of the window](images/clipboard-2231531301.png)
+
+## How do I inspect a dataframe?
+
+**RStudio: Environment -\> Positron: Session -\> Data**
+
+Go to the Variables pane in the Session tab and, next to any data frame, click on the grid icon. Positron's Data Explorer then lets you view, interactively filter and sort your data frame, making it easier to investigate your data.
+
+## If I had a package installed in RStudio, do I need to redownload it in Positron?
+
+**Not necessarily. Packages belong to the R library/environment, rather than to the RStudio or Positron IDEs themselves.**
+
+If Positron is using the same R library, previously installed packages will still be available.
+
+Please note: your home environment, including packages, may be cleared during upgrades to Posit Workbench. No project files should be stored here in line with the [Posit Acceptable Usage Policy](Acceptable%20Usage%20Policy%20for%20Posit%20Workbench.md).
+
+## How do I restart the session?
+
+**Restart the active R interpreter: `Ctrl` + `Shift` + `0`**
+
+Alternatively, open the Command Palette and select Interpreter: Restart Active Interpreter Session. This restarts the active interpreter without restarting Positron or closing your Workbench session.
+
+Restarting the active R interpreter removes all objects from the session and provides a clean environment.

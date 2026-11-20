@@ -1,0 +1,43 @@
+## Coming from RStudio
+
+This is an overview of Positron equivalents to RStudio features.
+
+Use this as a quick-reference chart of these differences, including where to find these features and their shortcuts.
+
+| RStudio feature | Positron equivalent | Where to find it in Positron | Positron shortcut |
+|------------------|------------------|------------------|------------------|
+| RStudio Project (`.Rproj`) | Workspace (a folder) | **File \> Open Folder**, or **New \> New Folder from Template** |  |
+| Tools \> Global Options | Settings | Command Palette: *Preferences: Open Settings (UI)* | `Ctrl + ,` |
+| Command Palette | Command Palette (the main way to find any action) |  | `Ctrl + Shift + P` |
+| R version selector | Interpreter Selector (R or Python, and several sessions at once) | Top-right of the window |  |
+| Session \> Restart R | Restart the active interpreter | Command Palette: *Interpreter: Restart Active Interpreter Session* | `Ctrl + Shift + 0` (not `Ctrl + Shift + F10`) |
+| Source pane | Editor | Centre of the window |  |
+| Console | Console | Panel at the bottom | Clear: `Ctrl + L` |
+| Terminal | Terminal | Panel at the bottom, or **View \> Terminal** | `` Ctrl + ` `` (backtick) |
+| Environment pane | Variables pane | Session area (secondary side bar) |  |
+| `View()` / data viewer | Data Explorer (sort, filter, summary statistics; also opens CSV and Parquet files) | Table icon next to a data frame in the Variables pane, or `View()` |  |
+| Memory usage indicator | Memory usage meter | Variables pane |  |
+| Files pane | Explorer | Activity Bar (first icon) |  |
+| Edit \> Find in Files | Search | Activity Bar | `Ctrl + Shift + F` |
+| Git pane | Source Control | Activity Bar | `Ctrl + Alt + M` \* |
+| Packages pane | Packages pane | Activity Bar, or Command Palette: *View: Packages* |  |
+| Plots pane | Plots pane | Session area |  |
+| Plot zoom | Open plot in new window or editor tab | Plots pane toolbar menu |  |
+| Help pane | Help pane | Session area | `F1` on a function name |
+| Viewer pane | Viewer pane | Session area |  |
+| Build pane (Check, Document, Load All) | Commands (no dedicated pane) | Command Palette (search "R:") | `Ctrl + Shift + E` / `D` / `L` |
+| Package tests | Test Explorer | Activity Bar | `Ctrl + Shift + T` |
+| Run line or selection | Run current statement or selection |  | `Ctrl + Enter` |
+| Source current script | Run file | Run button at the top-right of the editor | `Ctrl + Shift + S` \* |
+| Insert pipe | Insert pipe |  | `Ctrl + Shift + M` |
+| Insert assignment `<-` | Insert assignment |  | `Alt + -` |
+| Comment or uncomment lines | Toggle line comment |  | `Ctrl + /`, or `Ctrl + Shift + C` \* |
+| Insert code section | Insert section | Command Palette: *Insert Section* | `Ctrl + Shift + R` \* |
+| Knit / Render | Quarto: Preview | Preview button at the top-right of the editor | `Ctrl + Shift + K` |
+| Addins | Extensions and commands | Extensions in the Activity Bar |  |
+| Snippets | Snippets | Command Palette: *Snippets: Configure Snippets* |  |
+| Save and restore `.RData` workspace | Not available | Restart starts a clean session |  |
+| Data import widget | Not available | Use code, for example `readr::read_csv()` |  |
+| Profiling pane | Not available | Use `profvis` from the Console |  |
+
+*\* Notes settings that have to be turned on in settings.*
