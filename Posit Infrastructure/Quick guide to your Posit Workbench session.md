@@ -37,7 +37,7 @@ More detailed information on the Knowledge Base:
 
 *	[More technical information about Kubernetes profiles, memory, and CPU](Posit%20Workbench%20and%20Kubernetes.md)
 
-*	[How to Use the R Studio Profiling Tool](How%20to%20Use%20the%20R%20Studio%20Profiling%20Tool.md): for measuring how much time and memory are required for a script. Optimal memory and CPU requirements, plus run time, could then be added to the script's header. 
+*	[How to Use RStudio for Measuring Your Memory Usage](How%20to%20Use%20RStudio%20for%20Measuring%20Your%20Memory%20Usage.md): for measuring how much time and memory are required for a script. Optimal memory and CPU requirements, plus run time, could then be added to the script's header. 
 
 ## How many CPUs do I need?  
 The Central Processing Unit (CPU) is the primary component of a computer that executes instructions.

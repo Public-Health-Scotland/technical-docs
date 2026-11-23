@@ -43,7 +43,7 @@ This guide covers:
 - There are two node pools in the Kubernetes cluster (nodepool and bigpool) which have different types of Virtual Machine (VM):
   - nodepool (default): Standard_E20as_v5 with 20 vCPUs and 160GiB RAM - scales up to 48 nodes
   - bigpool (BIG): Standard_E32as_v5 with 32 vCPUs and 256GiB RAM - scales up to 6 nodes
-- You will only have access to the "bigpool" if you are a member of the `positwb_super_user` UNIX group.  You can request access to this group by emailing the [Data Science Team](phs.datascience@phs.scot).  You will also need Line Manager authorisation.
+- You will only have access to the "bigpool" if you are a member of the `positwb_super_user` UNIX group.  You can request access to this group by emailing the [Data Science Team](mailto:phs.datascience@phs.scot).  You will also need Line Manager authorisation.
 - The Kubernetes container image is based on **Ubuntu 22.04.5 LTS (Jammy Jellyfish)**, providing better support for Posit Workbench, R, Python, and associated packages.
 - A reduced-size version of TeX has been installed in the container image to decrease its size and reduce session startup times.
 
@@ -231,13 +231,13 @@ In the window that appears, hit the *Create* button (B).
 Close this window.
 
 Click, *View public key* (C), and copy the displayed public key (D).
-![](https://github.com/SurgicalInformatics/healthyr_book/blob/8da2d63f5ac55e1734b2ca9afdc800d17c5401cb/images/chapter14/1.png)
+![RStudio Global Options, Git/SVN tab, in four steps: (A) select Create RSA Key, (B) select Create with no password, (C) select View public key, (D) copy the key shown](https://raw.githubusercontent.com/SurgicalInformatics/healthyr_book/8da2d63f5ac55e1734b2ca9afdc800d17c5401cb/images/chapter14/1.png)
 
 ### Add the SSH key to GitHub
 On GitHub, log in, open the account settings page and go to the [SSH keys tab](https://github.com/settings/keys) (A). 
 Click *Add SSH key* and paste the public key you copied from RStudio (B).
 
-![](https://github.com/SurgicalInformatics/healthyr_book/blob/8da2d63f5ac55e1734b2ca9afdc800d17c5401cb/images/chapter14/2.png)
+![GitHub settings, SSH and GPG keys, in two steps: (A) select New SSH key, (B) enter any title, paste the key and select Add SSH key](https://raw.githubusercontent.com/SurgicalInformatics/healthyr_book/8da2d63f5ac55e1734b2ca9afdc800d17c5401cb/images/chapter14/2.png)
 
 ---
 ## 8. Getting Support
