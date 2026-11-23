@@ -1,0 +1,66 @@
+name: Check docs
+
+# Checks the docs changed in a pull request and explains how to fix any
+# problems, beside the lines they're on. The checks come from the
+# knowledge-base repository, which builds the site from these docs, so the
+# site and the checks always agree.
+#
+# Repository variables (Settings > Secrets and variables > Actions > Variables):
+#   KB_REF              knowledge-base branch to check with (default: main)
+#   DOCS_CHECK_BLOCKING "true" to fail the check when something must be fixed
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-docs-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Check documentation
+    runs-on: ubuntu-latest
+    steps:
+      # The docs are checked out at the top of the workspace, so the problems
+      # shown on the pull request point at the right files. Folders starting
+      # with "." aren't docs, so knowledge-base goes in .knowledge-base.
+      - name: Checkout docs
+        uses: actions/checkout@v4
+        with:
+          # Full history so the pull request can be compared with main.
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Checkout knowledge-base
+        uses: actions/checkout@v4
+        with:
+          repository: Public-Health-Scotland/knowledge-base
+          ref: ${{ vars.KB_REF || 'main' }}
+          path: .knowledge-base
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .knowledge-base/.nvmrc
+          cache: npm
+          cache-dependency-path: .knowledge-base/package-lock.json
+
+      # Only the check's own dependencies are needed, so install scripts
+      # (which set up the website build) are skipped.
+      - name: Install the checks
+        working-directory: .knowledge-base
+        run: npm ci --ignore-scripts
+
+      - name: Check changed docs
+        working-directory: .knowledge-base
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          # Report only, unless blocking has been switched on.
+          ADVISORY: ${{ vars.DOCS_CHECK_BLOCKING != 'true' && '--advisory' || '' }}
+        run: |
+          git -C .. diff --name-only -z --diff-filter=d "$BASE"...HEAD -- '*.md' |
+            xargs -0 -r node scripts/check-docs.mjs --dir .. --format github $ADVISORY --
