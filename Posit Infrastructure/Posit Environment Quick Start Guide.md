@@ -26,14 +26,12 @@ This guide covers:
 - **Applications and Versions**:
   - **Posit Workbench**: 2026.08.1+195.pro1, “Yellow Yarrow” (e0674ae6).
   - **Posit Package Manager**: v2026.08.0
-  - **Posit Connect**: _Coming soon..._
+  - **Posit Connect**: v2026.08.1
 - **R and Python Versions**:
-  - **R**: Default version is v4.6.1, with additional support for v4.5.3  
+  - **R**: Default version is v4.6.1, with additional support for v4.5.3 and v4.4.3
   - **Python**: Default version is 3.14.7, with additional support for versions 3.13.14, 3.12.13 and 3.11.15
 - **Supported IDEs**:
-  - o	RStudio Pro 2026.08.1 Build 195.pro1 with support for Quarto 1.10.18
-  - Jupyter Notebook 7.2.3
-  - JupyterLab 4.6.4
+- RStudio Pro 2026.08.1 Build 195.pro1 with support for Quarto 1.10.18
   - Visual Studio Code 1.124.0
   - Positron Pro  2026.08.0 build 331
 
@@ -65,19 +63,17 @@ The homepage in Posit Workbench has been redesigned with a focus on [project-bas
 ![Screenshot of the new Posit Workbench homepage](https://github.com/user-attachments/assets/a7ce10d7-2486-4571-91d4-4044e2f8b9d6)
 
 
-After logging in, the Posit Workbench home page contains two sections (tabs) for project, session, and job management:
+After logging in, the Posit Workbench home page contains two sections (tabs) for projects/sessions, and job management:
 
 - Projects tab contains a table of projects and their sessions.
 - Jobs tab contains a table of Workbench Jobs and/or Audited Jobs
 
-On first requesting a new session, you are given a choice of the five available IDEs, including Positron Pro.  You will note that the button to select Positron Pro has a _Preview_ tag, and there are known issues with starting the R interpreter in a Positron Pro session.  Until this issue is resolved, we would recommend only using Positron Pro for evaluation purposes at this stage:
-
-![Screenshot of the New Session Dialog](https://github.com/user-attachments/assets/95f1c1d2-4b44-4554-8cfd-32e7973a012f)
+On first requesting a new session, you are given a choice of the three available IDEs, including Positron Pro.  Note that the previously available functionality of Jupyter Notebook and JupyterLab has now been replaced by equivalent functionality in Positron Pro.
 
 
-As before, you need to enter the number of CPUs and Memory you need for your session:
 
-![Screenshot of the New Session Dialog with CPU and Memory options](https://github.com/user-attachments/assets/dde5426c-f6a8-4bff-8f18-5e333b7390e0)
+As before, you need to enter the number of CPUs and Memory you need for your session.
+
 
 **Remember to select the minimum number of CPUs and amount of memory required for the work you intend to do.**  In most cases, you only require more than 1 CPU if you are knowingly going to be running code using multiple threads or parallel processing.  The amount of memory you require is primarily dependent on the size of the dataset you will be working with.  There is further guidance available on the PHS Data Science Knowledge Base at https://public-health-scotland.github.io/knowledge-base/docs/Posit%20Infrastructure?doc=Memory%20Usage%20in%20SMR01.md
 
@@ -204,7 +200,7 @@ Please note that `{phsmethods}` is available on CRAN and can be installed using 
 
 ### Restoring `{renv}` environments
 
-It is likely that RStudio projects that use `{renv}` will open and restore successfully without making any changes, however you may have to ensure that you select R v4.4.2 from within the RStudio IDE if your project is incompatible with R v4.5.1.
+It is likely that RStudio projects that use `{renv}` will open and restore successfully without making any changes, however you may have to select R v4.5.3 or v4.4.3 from within the RStudio Pro IDE if your project is incompatible with R v4.6.1.
 
 ## 6. Night Sessions
 
@@ -212,7 +208,6 @@ All sessions, both active and idle, will be automatically removed (or "killed") 
 
 If you need your session to continue running beyond 7.15pm, you must include the word **NIGHT** at the start of your session's name e.g.
 
-![Screenshot of NIGHT session dialog](https://github.com/user-attachments/assets/f861ec8e-b050-4e96-bec6-8fdf1715550b)
 
 ---
 ## 7. Configure Git and GitHub
