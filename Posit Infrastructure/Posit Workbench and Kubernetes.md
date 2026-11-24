@@ -13,7 +13,7 @@ This document aims to provide users of Posit Workbench with high-level informati
 
 ### We first need to know what Docker images and containers are...
 
-<img src="https://user-images.githubusercontent.com/45657289/205093992-85731a44-0ae8-416b-b2c3-3d0ef24714a2.png" width="200">
+<img src="https://user-images.githubusercontent.com/45657289/205093992-85731a44-0ae8-416b-b2c3-3d0ef24714a2.png" width="200" alt="Docker logo">
 
 A Docker *image* contains the source code, libraries, dependencies, tools and other files that an application needs to run, in our case everything needed to run a Posit Workbench session.
 
@@ -23,7 +23,7 @@ A Docker *container* is a running instance of that image, in our case a running 
 
 Now that's out of the way, Kubernetes is simply a technology to automatically manage Docker containers based on a set of rules, so it doesn't need to be done manually.  The name is derived from the Greek word &kappa;&upsilon;&beta;&epsilon;&rho;&upsilon;&eta;&tau;&eta;&zeta; which means pilot or helmsman, hence the Kubernetes logo being a ship's steering wheel:
 
-<img src="https://user-images.githubusercontent.com/45657289/205086608-d563dde1-7cc2-416a-9c99-10d57a252940.png" width="100">
+<img src="https://user-images.githubusercontent.com/45657289/205086608-d563dde1-7cc2-416a-9c99-10d57a252940.png" width="100" alt="Kubernetes logo, a white ship's wheel on a blue background">
 
 ## Why Kubernetes? (and how does it work?)
 
