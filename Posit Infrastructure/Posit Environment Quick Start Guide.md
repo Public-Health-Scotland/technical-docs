@@ -22,20 +22,18 @@ This guide covers:
 ### Operating System and Application Specifications
 
 - **Operating System**
-  - Ubuntu 22.04.5 LTS Jammy Jellyfish
+  - Ubuntu 24.04 LTS Noble Numbat
 - **Applications and Versions**:
-  - **Posit Workbench**: 2025.09.1+401.pro2, “Cucumberleaf Sunflower” (59cf440a).
-  - **Posit Package Manager**: v2025.09.0-7
-  - **Posit Connect**: _Coming soon..._
+  - **Posit Workbench**: 2026.08.1+195.pro1, “Yellow Yarrow” (e0674ae6).
+  - **Posit Package Manager**: v2026.08.0
+  - **Posit Connect**: v2026.08.1
 - **R and Python Versions**:
-  - **R**: Default version is v4.5.1, with additional support for v4.4.2 
-  - **Python**: Default version is 3.13.8, with additional support for versions 3.12.11 and 3.10.12
+  - **R**: Default version is v4.6.1, with additional support for v4.5.3 and v4.4.3
+  - **Python**: Default version is 3.14.7, with additional support for versions 3.13.14, 3.12.13 and 3.11.15
 - **Supported IDEs**:
-  - RStudio Pro 2025.09.1 Build 401.pro2 with support for Quarto 1.8.25
-  - Jupyter Notebook 7.2.3
-  - JupyterLab 4.2.7
-  - Visual Studio Code 1.102.0
-  - Positron Pro 2025.08.1 build 11 (for evaluation purposes only)
+- RStudio Pro 2026.08.1 Build 195.pro1 with support for Quarto 1.10.18
+  - Visual Studio Code 1.124.0
+  - Positron Pro  2026.08.0 build 331
 
 ---
 
@@ -62,44 +60,35 @@ Follow the link above to Posit Workbench environment and log in using your LDAP 
 
 The homepage in Posit Workbench has been redesigned with a focus on [project-based workflows](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/):
 
-![Screenshot of the new Posit Workbench homepage](https://github.com/user-attachments/assets/65ecf7b5-56ec-4022-b54f-e31564acc421)
+![Screenshot of the new Posit Workbench homepage](https://github.com/user-attachments/assets/a7ce10d7-2486-4571-91d4-4044e2f8b9d6)
 
-After logging in, the Posit Workbench home page contains two sections (tabs) for project, session, and job management:
+
+After logging in, the Posit Workbench home page contains two sections (tabs) for projects/sessions, and job management:
 
 - Projects tab contains a table of projects and their sessions.
 - Jobs tab contains a table of Workbench Jobs and/or Audited Jobs
 
-Unfortunately, the new homepage does not yet support opening Projects stored on Stats, so it is recommended to revert back to the legacy homepage for now.  To do this:
+On first requesting a new session, you are given a choice of the three available IDEs, including Positron Pro.  Note that the previously available functionality of Jupyter Notebook and JupyterLab has now been replaced by equivalent functionality in Positron Pro.
 
-- Click on your name at the top-right hand corner of the new Posit Workbench homepage, and a drop-down menu will open.
-- Click on the `Settings` option on that drop-down menu.
-- The Settings page will load, and in the section titled `Default Homepage`, there is a button to the right-hand side titled `Switch to Legacy Homepage`.  Click this and you will be taken to the legacy version of the Posit Workbench homepage which you should be more familiar with.
+![Screenshot of new Posit Workbench IDEs](https://github.com/user-attachments/assets/806dce23-e2fd-4c0c-afd3-0e629184da8e)
 
-On first requesting a new session, you are given a choice of the five available IDEs, including Positron Pro.  You will note that the button to select Positron Pro has a _Preview_ tag, and there are known issues with starting the R interpreter in a Positron Pro session.  Until this issue is resolved, we would recommend only using Positron Pro for evaluation purposes at this stage:
+As before, you need to enter the number of CPUs and Memory you need for your session.
 
-![Screenshot of the New Session Dialog](https://github.com/user-attachments/assets/8109b4ee-07d5-4c50-befd-e713d8b10328)
-
-As before, you need to enter the number of CPUs and Memory you need for your session:
-
-![Screenshot of the New Session Dialog with CPU and Memory options](https://github.com/user-attachments/assets/39340ed2-688a-4a6b-89f8-5015f7424937)
+![Screenshot of the new Posit Workbench session options](https://github.com/user-attachments/assets/ec1065c4-4a35-4521-856d-e58319dfa22b)
 
 **Remember to select the minimum number of CPUs and amount of memory required for the work you intend to do.**  In most cases, you only require more than 1 CPU if you are knowingly going to be running code using multiple threads or parallel processing.  The amount of memory you require is primarily dependent on the size of the dataset you will be working with.  There is further guidance available on the PHS Data Science Knowledge Base at https://public-health-scotland.github.io/knowledge-base/docs/Posit%20Infrastructure?doc=Memory%20Usage%20in%20SMR01.md
 
-Once you click the "Start Session" button, a further dialog will appear in the bottom-right of your browser window giving you updates on the progress of starting the session:
-
-![Starting Session Dialog](https://github.com/user-attachments/assets/2966723d-9b0a-42e2-99cb-9b6a8c1aa6e7)
-
 **Important Note: normally sessions will take just a few seconds to start, but if the Kubernetes cluster needs to scale up to accommodate your session, it can take several minutes for your session to start.  This is normal and expected behaviour.**
 
-The session will be listed on the Posit Workbench homepage as "PENDING" during this process:
+Once you click the "Start Session" button, the session will be listed on the Posit Workbench homepage as "PENDING" during this process:
 
-![RStudio Pro Session Pending](https://github.com/user-attachments/assets/0713f025-c984-4a46-9c48-bbbf2fb1ea35)
+![RStudio Pro Session Pending](https://github.com/user-attachments/assets/f9d72a48-9e87-4462-be1c-ecde1416f70e)
 
-If the "Join session when ready" checkbox was ticked in the "New Session" dialog window, the session will automatically load in your browser.  Alternatively, once the session shows as "ACTIVE" on the Posit Workbench homepage, you can click the session to open it:
+If the "Auto-join" checkbox was ticked in the "New Session" dialog window, the session will automatically load in your browser.  Alternatively, once the session shows as "ACTIVE" on the Posit Workbench homepage, you can click the session to open it:
 
-![RStudio Pro Session Active](https://github.com/user-attachments/assets/e7e81280-e71b-4d5e-9742-4ca2650bb9b3)
+![RStudio Pro Session Active](https://github.com/user-attachments/assets/6265e78d-1715-4901-ad2f-efe8456b1536)
 
-**Important Note: RStudio Pro sessions will default to R v4.5.1.  If you need to use R v4.4.2, please select this in the dropdown at the top-right of the RStudio IDE interface.**
+**Important Note: RStudio Pro sessions will default to R v4.6.1. If you need to use R v4.5.3, please select this in the dropdown at the top-right of the RStudio IDE interface.**
 
 ## 5. Configuring your RStudio Pro environment
 
@@ -109,11 +98,11 @@ If the "Join session when ready" checkbox was ticked in the "New Session" dialog
   - Access the RStudio Global Options menu by going to _Tools > Global Options..._
   - In the General menu, be sure that the settings match those in the screenshot below:
 
-![Screenshot of Global Options dialog on the General tab](https://github.com/user-attachments/assets/c1441dba-b6af-4bec-b017-cc371bd14091)
+![Screenshot of Global Options dialog on the General tab](https://github.com/user-attachments/assets/0f9c74dc-2d69-41c4-8151-11795f5f8de2)
 
   - _Optional, but recommended:_ On the Appearance menu, change the editor font to "Cascadia Code", or any other font that you have installed that has support for ligatures.  These map multiple characters to single glyphs e.g. rendering "<-" as a single arrow glyph.
 
-![Screenshot of the Global Options dialog on the Appearance tab with the Cascadia Code editor font selected](https://github.com/user-attachments/assets/82c8fd30-3f39-40cc-80de-77674cc41bf7)
+![Screenshot of the Global Options dialog on the Appearance tab with the Cascadia Code editor font selected](https://github.com/user-attachments/assets/ea6be994-02f9-41cc-b6f3-d929851c935c)
 
 If the "Cascadia Code" font is not listed, this is because the font is not installed on your laptop.  You can download the font from Microsoft's GitHub repo at https://github.com/microsoft/cascadia-code?tab=readme-ov-file  The direct link to download the zip is https://github.com/microsoft/cascadia-code/releases/download/v2407.24/CascadiaCode-2407.24.zip
 
@@ -212,37 +201,18 @@ Please note that `{phsmethods}` is available on CRAN and can be installed using 
 
 ### Restoring `{renv}` environments
 
-It is likely that RStudio projects that use `{renv}` will open and restore successfully without making any changes, however you may have to ensure that you select R v4.4.2 from within the RStudio IDE if your project is incompatible with R v4.5.1.
+It is likely that RStudio projects that use `{renv}` will open and restore successfully without making any changes, however you may have to select R v4.5.3 or v4.4.3 from within the RStudio Pro IDE if your project is incompatible with R v4.6.1.
 
-## 5. Night Sessions
+## 6. Night Sessions
 
 All sessions, both active and idle, will be automatically removed (or "killed") at **7.15pm** each day.
 
 If you need your session to continue running beyond 7.15pm, you must include the word **NIGHT** at the start of your session's name e.g.
 
-![Screenshot of NIGHT session dialog](https://github.com/user-attachments/assets/6a17d84c-2efb-45c1-9055-c1da09466830)
-
-### Automatically close an RStudio Pro session
-
-If you want your script to end your RStudio Pro session automatically when it completes all of its tasks, then the following code snippet will reliably close the session, even if you have closed your web browser.  Be sure to include this at the end of your NIGHT session script so that it closes when it is complete.
-
-```r
-# Get the Process ID of the R session
-ppid <- system(paste("ps -o ppid= -p", Sys.getpid()), intern = TRUE)
-# Gracefully terminate the R session
-system(paste("kill -15", ppid))
-```
-
-On the Posit Workbench homepage, the RStudio Pro session will report that the session is `Executing` whilst R code continues to run:
-
-![NIGHT session executing](https://github.com/user-attachments/assets/b50c0dab-3950-4c83-9b8a-ea76f7faef43)
-
-On completion, and once the session has closed successfully, the session will be reported as having `Finished`:
-
-![NIGHT session finished](https://github.com/user-attachments/assets/0ef26b7f-cf91-4887-b43c-35691aff1cc0)
+![Screenshot of Posit Workbench session name](https://github.com/user-attachments/assets/33595233-d9bc-4281-877b-a4e584c30a4e)
 
 ---
-## 6. Configure Git and GitHub
+## 7. Configure Git and GitHub
 
 The following is only relevant if you/your team use Git in your work (i.e. collaborative work using repositories hosted on Github):
 
@@ -270,7 +240,7 @@ Click *Add SSH key* and paste the public key you copied from RStudio (B).
 ![](https://github.com/SurgicalInformatics/healthyr_book/blob/8da2d63f5ac55e1734b2ca9afdc800d17c5401cb/images/chapter14/2.png)
 
 ---
-## 7. Getting Support
+## 8. Getting Support
 
 The support process for the Posit Environment is as follows:
 
@@ -286,11 +256,11 @@ These requests for support will first reach the Data Science Team, who will prov
 
 - You must complete the form linked above to receive support relating to the Posit Environment.
 - Do not contact Jumping Rivers, unless they request further information from you directly.
-- Do not raise a request or incident in Service Now, unless directed to do so by the Data Science Team.
+- Do not raise a request or incident in Halo, unless directed to do so by the Data Science Team.
 
 ---
 
-## 8. FAQs
+## 9. FAQs
 ### What if I encounter a problem?
 - Contact the Data Science Team for support using the form at <https://forms.office.com/e/pqmmNMkhT6>
 ### How can I get access to Posit Connect?
