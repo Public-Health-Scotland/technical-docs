@@ -184,7 +184,7 @@ See the [PHS GitHub Guidance](Version%20Control/GitHub%20Guidance.md) for the fu
 
 ## Content checks
 
-Every pull request is checked automatically. The results appear on the pull request's **Checks** tab and beside the lines they refer to under **Files changed**.
+Every pull request is checked automatically. A comment on the pull request says what was found, and is updated each time you push a change. Problems also appear beside the lines they refer to under **Files changed**.
 
 ### Must fix
 

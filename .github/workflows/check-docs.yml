@@ -1,9 +1,9 @@
 name: Check docs
 
 # Checks the docs changed in a pull request and explains how to fix any
-# problems, beside the lines they're on. The checks come from the
-# knowledge-base repository, which builds the site from these docs, so the
-# site and the checks always agree.
+# problems, beside the lines they're on and in a comment on the pull
+# request. The checks come from the knowledge-base repository, which builds
+# the site from these docs, so the site and the checks always agree.
 #
 # Repository variables (Settings > Secrets and variables > Actions > Variables):
 #   KB_REF              knowledge-base branch to check with (default: main)
@@ -14,6 +14,8 @@ on:
 
 permissions:
   contents: read
+  # To add and update the comment with the results.
+  pull-requests: write
 
 concurrency:
   group: check-docs-${{ github.ref }}
@@ -52,15 +54,68 @@ jobs:
       # Only the check's own dependencies are needed, so install scripts
       # (which set up the website build) are skipped.
       - name: Install the checks
+        id: install
         working-directory: .knowledge-base
         run: npm ci --ignore-scripts
 
       - name: Check changed docs
+        id: check
         working-directory: .knowledge-base
         env:
           BASE: ${{ github.event.pull_request.base.sha }}
           # Report only, unless blocking has been switched on.
           ADVISORY: ${{ vars.DOCS_CHECK_BLOCKING != 'true' && '--advisory' || '' }}
+          # The report is kept for the pull request comment, then added to
+          # the job's page.
+          REPORT: ${{ runner.temp }}/report.md
         run: |
+          trap '[ -f "$REPORT" ] && cat "$REPORT" >> "$GITHUB_STEP_SUMMARY"' EXIT
           git -C .. diff --name-only -z --diff-filter=d "$BASE"...HEAD -- '*.md' |
+            GITHUB_STEP_SUMMARY="$REPORT" \
             xargs -0 -r node scripts/check-docs.mjs --dir .. --format github $ADVISORY --
+
+      # One comment per pull request, updated after each run. Pull requests
+      # from forks can't be commented on, so they only get the notes beside
+      # the lines and the job's page.
+      - name: Comment on the pull request
+        if: >-
+          !cancelled() && steps.install.outcome == 'success' &&
+          github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+          CHECK: ${{ steps.check.outcome }}
+          REPORT: ${{ runner.temp }}/report.md
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          marker='<!-- check-docs -->'
+          body="$RUNNER_TEMP/comment.md"
+          link="[View the report]($RUN_URL)"
+
+          if [ ! -f "$REPORT" ] && [ "$CHECK" != success ]; then
+            status="Document check couldn't run. The report says why."
+          elif [ ! -f "$REPORT" ]; then
+            status="No documents changed, so there was nothing to check."
+          elif ! grep -q '^Nothing to fix\.$' "$REPORT"; then
+            status="Document check found problems to fix before merging ❌"
+          elif ! grep -q '^No suggestions\.$' "$REPORT"; then
+            status="Document check found suggestions, but nothing that must be fixed ✅"
+          else
+            status="Document check run and found no issues ✅"
+          fi
+
+          { echo "$marker"; echo "$status $link"; } > "$body"
+          if [ -f "$REPORT" ] && grep -q '^| Where ' "$REPORT"; then
+            { echo; echo "<details><summary>Details</summary>"; echo
+              sed '1,/^$/d' "$REPORT"; echo "</details>"; } >> "$body"
+          fi
+
+          id=$(gh api "repos/$REPO/issues/$PR/comments" --paginate \
+            --jq ".[] | select(.user.login == \"github-actions[bot]\") | select(.body | startswith(\"$marker\")) | .id" |
+            head -n 1)
+          if [ -n "$id" ]; then
+            gh api -X PATCH "repos/$REPO/issues/comments/$id" -F body=@"$body" > /dev/null
+          elif [ -f "$REPORT" ] || [ "$CHECK" != success ]; then
+            gh api "repos/$REPO/issues/$PR/comments" -F body=@"$body" > /dev/null
+          fi
