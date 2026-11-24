@@ -70,7 +70,7 @@ After logging in, the Posit Workbench home page contains two sections (tabs) for
 
 On first requesting a new session, you are given a choice of the three available IDEs, including Positron Pro.  Note that the previously available functionality of Jupyter Notebook and JupyterLab has now been replaced by equivalent functionality in Positron Pro.
 
-![Screenshot of new Podit Workbench IDEs](https://github.com/user-attachments/assets/806dce23-e2fd-4c0c-afd3-0e629184da8e)
+![Screenshot of new Posit Workbench IDEs](https://github.com/user-attachments/assets/806dce23-e2fd-4c0c-afd3-0e629184da8e)
 
 As before, you need to enter the number of CPUs and Memory you need for your session.
 
