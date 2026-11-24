@@ -16,7 +16,7 @@ The first one, Explorer, shows the files and folders in your current workspace.
 
 The current version of Positron available (2026.08.0 build 331) has a "Packages" tab that lists all the installed packages and those which are available to be updated.
 
-![INSERT SCREENSHOT](.............)
+![Positron packages tab](images/positron_packages_tab.png)
 
 ## Where is Git / version control?
 
@@ -56,13 +56,13 @@ To insert a new code section, use the Command Palette (Ctrl + Shift + P) and typ
 
 These are diagnostic markers showing where potential issues occur throughout the document.
 
-## What are Extensions?
+## What are Extensions? {#what-are-extensions}
 
 **Extensions are add-ons that give Positron extra functionality.**
 
 Positron already includes the core functionality needed for R, Python and data science, but extensions can add support for additional languages, tools, and features. They can be managed from the Extensions tab in the Activity Bar.
 
-The version of Positron (and VS Code) in PHS Posit Workbench uses the Open VSX marketplace, so availability of extensions may vary from other versions of the application. It is important to keep extensions up to date, as newer versions may include bug fixes, security updates, new features, and compatibility improvements.  For a quick and seamless setup on Posit Workbench, we recommend using the [PHS vscode_prep repository](https://github.com/Public-Health-Scotland/vscode_prep), which provides scripts to install and update a recommended set of extensions for Positron and VS Code.
+The version of Positron (and VS Code) in PHS Posit Workbench uses the Open VSX marketplace, so availability of extensions may vary from other versions of the application. It is important to keep extensions up to date, as newer versions may include bug fixes, security updates, new features, and compatibility improvements. For a quick and seamless setup on Posit Workbench, we recommend using the [PHS vscode_prep repository](https://github.com/Public-Health-Scotland/vscode_prep), which provides scripts to install and update a recommended set of extensions for Positron and VS Code.
 
 ## Why does Positron look like VS Code?
 
