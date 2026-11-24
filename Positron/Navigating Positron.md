@@ -14,7 +14,9 @@ The first one, Explorer, shows the files and folders in your current workspace.
 
 ## Where are packages?
 
-The current version of Positron available (`2025.08.1`) doesn't have an equivalent Packages tab to RStudio. You can still manage R packages from the Console using functions such as `install.packages()` and `library()`. There are also extensions available that replicate this functionality (e.g. [Positron R Package Manager](https://open-vsx.org/extension/kv9898/positron-r-package-manager)).
+The current version of Positron available (2026.08.0 build 331) has a "Packages" tab that lists all the installed packages and those which are available to be updated.
+
+![INSERT SCREENSHOT](.............)
 
 ## Where is Git / version control?
 
