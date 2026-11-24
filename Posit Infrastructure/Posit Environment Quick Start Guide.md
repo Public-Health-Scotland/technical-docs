@@ -256,7 +256,7 @@ These requests for support will first reach the Data Science Team, who will prov
 
 - You must complete the form linked above to receive support relating to the Posit Environment.
 - Do not contact Jumping Rivers, unless they request further information from you directly.
-- Do not raise a request or incident in Service Now, unless directed to do so by the Data Science Team.
+- Do not raise a request or incident in Halo, unless directed to do so by the Data Science Team.
 
 ---
 
