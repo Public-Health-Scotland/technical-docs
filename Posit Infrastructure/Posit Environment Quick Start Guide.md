@@ -70,10 +70,11 @@ After logging in, the Posit Workbench home page contains two sections (tabs) for
 
 On first requesting a new session, you are given a choice of the three available IDEs, including Positron Pro.  Note that the previously available functionality of Jupyter Notebook and JupyterLab has now been replaced by equivalent functionality in Positron Pro.
 
-
+![Screenshot of new Podit Workbench IDEs](https://github.com/user-attachments/assets/806dce23-e2fd-4c0c-afd3-0e629184da8e)
 
 As before, you need to enter the number of CPUs and Memory you need for your session.
 
+![Screenshot of the new Posit Workbench session options](https://github.com/user-attachments/assets/ec1065c4-4a35-4521-856d-e58319dfa22b)
 
 **Remember to select the minimum number of CPUs and amount of memory required for the work you intend to do.**  In most cases, you only require more than 1 CPU if you are knowingly going to be running code using multiple threads or parallel processing.  The amount of memory you require is primarily dependent on the size of the dataset you will be working with.  There is further guidance available on the PHS Data Science Knowledge Base at https://public-health-scotland.github.io/knowledge-base/docs/Posit%20Infrastructure?doc=Memory%20Usage%20in%20SMR01.md
 
@@ -208,6 +209,7 @@ All sessions, both active and idle, will be automatically removed (or "killed") 
 
 If you need your session to continue running beyond 7.15pm, you must include the word **NIGHT** at the start of your session's name e.g.
 
+![Screenshot of Posit Workbench session name](https://github.com/user-attachments/assets/33595233-d9bc-4281-877b-a4e584c30a4e)
 
 ---
 ## 7. Configure Git and GitHub
