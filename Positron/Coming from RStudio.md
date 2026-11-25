@@ -1,4 +1,4 @@
-## Coming from RStudio
+# Coming from RStudio
 
 This is an overview of Positron equivalents to RStudio features.
 
