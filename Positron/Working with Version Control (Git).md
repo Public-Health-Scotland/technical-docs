@@ -1,12 +1,13 @@
 # Working with Version Control (Git)
 
-There are a couple of ways to connect Positron to GitHub/Gitea repositories. If working in Positron for the first time, you'll need to set up your identity using `git config --global user.name` and `git config --global user.email`, see the Git Guide more details about [configuring git for the first time](https://code.publichealthscotland.scot/git-guide/git-setup.html).
+There are a couple of ways to connect Positron to GitHub/Gitea repositories. If working in Positron for the first time, you'll need to set up your identity using `git config --global user.name <user name>` and `git config --global user.email <your email>`, see the Git Guide more details about [configuring git for the first time](https://code.publichealthscotland.scot/git-guide/git-setup.html). 
+Note: Gitea repositories only support HTTPS authentication, and you don't need an SSH key.
 
 To refresh your memory on git use, please see the section on [Version Control](https://kb.publichealthscotland.scot/docs/Version%20Control).
 
 ## User Interface
 
-You can connect to a GitHub/Gitea repository via the user interface (UI) on Positron and VS Code. Although Gitea only supports HTTPS authentication with your username and password, which doesn't save for use across different sessions (i.e. you have to do this every time). Therefore, the recommended approach for GitHub is to [set up an SSH Key](https://code.publichealthscotland.scot/git-guide/rstudio-setup.html#authentication-for-remotes).
+You can connect to a GitHub/Gitea repository through the user interface (UI) in Positron and VS Code, but your credentials aren't saved for use across different sessions (i.e. you have to do this every time).
 
 1.  Open Source Control from the Activity panel.
 2.  Click 'Clone Repository'.
@@ -14,7 +15,7 @@ You can connect to a GitHub/Gitea repository via the user interface (UI) on Posi
 4.  After that, it will ask you to provide a folder where to clone it into, for example /conf/yourfolder/. Please do not clone repositories under your home folder as this will impact Posit performance organisation-wide.
 5.  After cloning, you can use the Source Control interface to view and switch branches, and review commit history.
 
-Once a repository has been opened in Positron, the Source Control view (![Source Control button](images/source_control_logo.png)), in the Activity Bar, can be used to perform common version control tasks through the user interface. This includes viewing file changes, staging and committing updates, pushing and pulling changes, and navigating between branches without using terminal commands.
+Once a repository has been opened in Positron, the Source Control view in the Activity Bar, can be used to perform common version control tasks through the user interface. This includes viewing file changes, staging and committing updates, pushing and pulling changes, and navigating between branches without using terminal commands.
 
 ![Source Control panel overview](images/source_control_overview.png)
 
