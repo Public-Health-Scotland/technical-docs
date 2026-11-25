@@ -41,7 +41,7 @@ Go to the Variables pane in the Session tab and, next to any data frame, click o
 
 If Positron is using the same R library, previously installed packages will still be available.
 
-Please note: your home environment, including packages, may be cleared during upgrades to Posit Workbench. No project files should be stored here in line with the [Posit Acceptable Usage Policy](Acceptable%20Usage%20Policy%20for%20Posit%20Workbench.md).
+Please note: your home environment, including packages, may be cleared during upgrades to Posit Workbench. No project files should be stored here in line with the [Posit Acceptable Usage Policy](/Posit Infrastructure/Acceptable%20Usage%20Policy%20for%20Posit%20Workbench.md).
 
 ## How do I restart the session?
 
