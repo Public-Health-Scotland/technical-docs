@@ -139,7 +139,7 @@ A collection of terms and definitions used across Data Science in PHS.
 | **P-value** | The probability of obtaining a result at least as extreme as the one observed, assuming that the null hypothesis is correct. |
 | **pip** | The standard package manager for Python, used to install, update, and remove Python packages. |
 | **Pipeline** | A sequence of data processing components. |
-| **Posit** | [Posit](posit.co) is the company that produces Posit Workbench and other data science tools. |
+| **Posit** | [Posit](https://posit.co) is the company that produces Posit Workbench and other data science tools. |
 | **Posit Connect** | A publishing platform for sharing applications, documents, notebooks, and dashboards created in R or Python. |
 | **Posit Package Manager** | An internal package manager for R and Python. |
 | **Posit Workbench** | A centralised data science platform giving access to RStudio, Jupyter, and VS Code [IDE](#i)s. | 

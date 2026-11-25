@@ -2,7 +2,7 @@
 
 Firstly, thanks for taking the time to check out this guide and thinking about contributing!
 
-The following is a set of guidelines for contributing to PHS technical documentation. As the back-end to the [PHS Data Science Knowledge Base documentation page](https://public-health-scotland.github.io/knowledge-base/docs/), there are specific requirements to ensure that the documentation is consistent and accessible.
+The following is a set of guidelines for contributing to PHS technical documentation. As the back-end to the [PHS Data Science Knowledge Base documentation page](https://kb.publichealthscotland.scot/docs/), there are specific requirements to ensure that the documentation is consistent and accessible.
 
 #### Table Of Contents
 
@@ -12,12 +12,16 @@ The following is a set of guidelines for contributing to PHS technical documenta
 
 [Documentation Structure](#documentation-structure)
 
+* [Document details](#document-details)
+
 [How Can I Contribute?](#how-can-i-contribute)
 
 * [Reporting Bugs](#reporting-bugs)
 * [Requesting New Content](#requesting-new-content)
 * [Pull Requests](#pull-requests)
 * [Style Guides](#style-guides)
+
+[Content checks](#content-checks)
 
 ## Code of Conduct
 
@@ -31,7 +35,7 @@ Whether your question is about the resources available or something about new co
 
 ## Documentation Structure
 
-This repo forms the back-end for the [PHS Data Science Knowledge Base documentation page](https://public-health-scotland.github.io/knowledge-base/docs/). This requires a specific structure, which is outlined below, see also the [Markdown Style Guide](#markdown-style-guide) below.
+This repo forms the back-end for the [PHS Data Science Knowledge Base documentation page](https://kb.publichealthscotland.scot/docs/). This requires a specific structure, which is outlined below, see also the [Markdown Style Guide](#markdown-style-guide) below.
 
 ### Folders / Directories
 
@@ -56,13 +60,35 @@ Files created should be a `.md` file within a directory, with the following cons
 * *Within-repo links* should be relative to the root of the repo. For example, a link to the `Posit Infrastructure` directory would be `[Posit Infrastructure](/Posit%20Infrastructure)`.
 * *External links* should be absolute links, with the full URL. For example, a link to the Public Health Scotland website would be `[Public Health Scotland](https://publichealthscotland.scot)`.
 
+### Document details
+
+A doc can start with a few details between two `---` lines. They're all optional, and a new doc can start from the [document template](.github/DOC_TEMPLATE.md).
+
+```yaml
+---
+title: How to Access Posit Workbench
+description: Request an account and sign in for the first time.
+order: 1
+author: your-github-username
+last_reviewed: 2026-11-23
+review_interval: 12
+---
+```
+
+* *title* replaces the doc's first heading as its name in the navigation.
+* *description* is a sentence about the doc, shown in its section's list and to search engines.
+* *order* sets the doc's position in its section, lowest first. Docs without one follow, in alphabetical order. Use this instead of numbers in file names.
+* *author* is the GitHub username of the person who wrote the doc.
+* *last_reviewed* is the date someone last checked the whole doc was still accurate, written as `YYYY-MM-DD`.
+* *review_interval* is how many months the doc stays current after a review, from 1 to 36. Docs are due for review after 12 months if this isn't set.
+
 ## How Can I Contribute?
 
 ### Reporting Bugs
 
 This section guides you through submitting a bug report. Bugs in this context are likely to include everything from typos, to false or misleading content as part of documentation. Following the guidelines set out here helps understand your report, reproduce the behaviour, and find related reports.
 
-Before creating bug reports, please check [this list](#before-submitting-a-bug-report) as you might find out that you don't need to create one. When you are creating a bug report, please [include as many details as possible](#how-do-i-submit-a-good-bug-report). Fill out [the required template](https://github.com/Public-Health-Scotland/knowledge-base/blob/master/.github/ISSUE_TEMPLATE/bug_report.md), the information it asks for helps us resolve issues faster.
+Before creating bug reports, please check [this list](#before-submitting-a-bug-report) as you might find out that you don't need to create one. When you are creating a bug report, please [include as many details as possible](#how-do-i-submit-a-good-bug-report). Fill out [the required template](https://github.com/Public-Health-Scotland/technical-docs/issues/new/choose), the information it asks for helps us resolve issues faster.
 
 > **Note:** If you find a **Closed** issue that seems like it is the same thing that you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
 
@@ -141,6 +167,85 @@ See the [PHS GitHub Guidance](Version%20Control/GitHub%20Guidance.md) for the fu
 * use relative links where possible, for example `[Posit Infrastructure](/Posit%20Infrastructure)`
 * external links should be absolute, for example `[Public Health Scotland](https://publichealthscotland.scot)`, do not leave bare URLs
 
+#### Callouts
+
+* to highlight a note or warning, start a quote with its type on a line of its own. The site shows it with its label, as GitHub does:
+
+  ```markdown
+  > [!WARNING]
+  > Never commit passwords or other secrets.
+  ```
+
+* the types are `[!NOTE]`, `[!TIP]`, `[!IMPORTANT]`, `[!WARNING]` and `[!CAUTION]`
+
 #### Images
 
 * use relative links where possible, for example `![Posit Infrastructure](/Posit%20Infrastructure/posit-infrastructure.png)`
+
+## Content checks
+
+Every pull request is checked automatically. A comment on the pull request says what was found, and is updated each time you push a change. Problems also appear beside the lines they refer to under **Files changed**.
+
+### Must fix
+
+These break the site or stop someone using a page, so they need fixing before the pull request is merged.
+
+#### KB001 Same web address
+
+Each page needs its own web address, so only one of them could be published. Rename one of the files or folders so their names differ by more than punctuation or capital letters.
+
+#### KB002 No web address
+
+Web addresses are made from the letters and numbers in a name, and this name has none. Rename the file or folder to include some words.
+
+#### KB003 Broken link
+
+Readers following the link get a missing page or a missing image. Check the spelling and capital letters of the file name. Links between docs start from the top of the repository, e.g. `/R/R%20Style%20Guide.md`.
+
+#### KB004 Document details can't be used
+
+The details between the `---` lines at the top of a doc set its title, order and review date. Write each detail as `name: value` on its own line, e.g. `last_reviewed: 2026-11-01`. See "Document details" in this guide.
+
+#### KB005 Image has no description
+
+People using screen readers hear nothing for an image without a description (alt text). Describe what the image shows inside the square brackets, e.g. `![Posit Workbench new session dialog](new-session.png)`.
+
+#### KB006 Character not allowed in a file name
+
+Windows doesn't allow `?`, `:`, `*`, `"`, `<`, `>`, `|` or `\` in file names, so anyone working on a Windows laptop can't download the docs with Git. `#` and `%` are allowed on Windows, but links to the file have to write them as `%23` and `%25`, which is easy to get wrong. Spaces at the start or end of a name are dropped on Windows. Remove the character or use a word instead, e.g. `What is Positron.md` rather than `What is Positron?.md`. The site's web address is made from the words in the name, so it doesn't change.
+
+### Suggestions
+
+These make docs easier to read and use. They never stop a pull request being merged.
+
+#### KB010 Code block has no language
+
+Naming the language shows the code with the right highlighting. Add the language after the opening backticks, e.g. ` ```r ` or ` ```bash `. Use ` ```text ` for output.
+
+#### KB011 Page title missing or repeated
+
+The level-one (`#`) heading is the page title. Without one the page is named after its file, and with two, screen reader users can't tell which is the main heading. Start the doc with one `#` heading, e.g. `# How to Access Posit Workbench`, and use `##` for its sections.
+
+#### KB012 Not published
+
+The site only publishes docs directly inside a section folder. Move the docs up into the section folder, or into a new section at the top of the repository.
+
+#### KB013 Headings skip a level
+
+Screen reader users move around a page by its headings, and a skipped level looks like missing content. Go down one level at a time, e.g. `##` then `###`, not `##` then `####`.
+
+#### KB014 Link text doesn't say where it goes
+
+Screen readers often list links on their own, where "click here" means nothing. Use the name of the page or what it does, e.g. `[request a Posit Workbench account](…)`.
+
+#### KB015 Numbered file name
+
+Numbers in a file name end up in the page's web address and navigation. Remove the number and set the position with `order:` in the document details instead.
+
+#### KB016 HTML in a doc
+
+HTML is harder to review and edit than Markdown, and some of it is removed when the site is built. Use Markdown instead where you can. `<br>` in tables and `<details>` are fine.
+
+#### KB017 Unknown document detail
+
+The site ignores details it doesn't recognise, which is often a misspelt name. Check the spelling against the list in "Document details" in this guide.

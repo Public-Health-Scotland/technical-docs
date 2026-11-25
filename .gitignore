@@ -1,6 +1,10 @@
-# image folder
-img/
-
 # html previews
 *.html
-.Rproj.user
+
+# R and editor files
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+.DS_Store
+.knowledge-base/
